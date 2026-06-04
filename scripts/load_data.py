@@ -103,7 +103,7 @@ DATA_FILES = {
     "hospital_services":    "hospital_db_services.json",
     "hospital_bills":       "hospital_db_bills.json",
     "hospital_payments":    "hospital_db_payments.json",
-    "hospital_tim_dokter":  "hospital_db_tim_dokter.json",
+    "hospital_tim_dokter":  "hospital_db_timdokter.json",
 }
 
 
