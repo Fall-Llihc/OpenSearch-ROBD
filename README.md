@@ -12,11 +12,11 @@
 
 ## 📋 Deskripsi Proyek
 
-Proyek ini merupakan Tugas Akhir Mata Kuliah **Basis Data Tidak Relasional** yang mengimplementasikan sistem QA berbasis RAG di atas **OpenSearch** sebagai vector/search database. Sistem mampu menjawab pertanyaan dalam Bahasa Indonesia mengenai data operasional rumah sakit secara real-time dengan jawaban yang akurat berdasarkan data nyata.
+Proyek ini merupakan Tugas Terakhir Mata Kuliah **Rekayasa dan Organisasi Sistem Big Data** yang mengimplementasikan sistem QA berbasis RAG di atas **OpenSearch** sebagai vector/search database. Sistem mampu menjawab pertanyaan dalam Bahasa Indonesia mengenai data operasional rumah sakit secara real-time dengan jawaban yang akurat berdasarkan data nyata.
 
 ### Pilihan Pendekatan
 
-Dari dua pilihan yang tersedia, kelompok memilih **Pilihan 1**: mentransformasi seluruh data MongoDB ke OpenSearch dan membangun QA module langsung di atasnya.
+Dari dua pilihan yang tersedia, kelompok kami memilih **Pilihan 1**: mentransformasi seluruh data MongoDB ke OpenSearch dan membangun QA module langsung di atasnya.
 
 **Alasan:**
 - Data tersedia dalam format MongoDB Extended JSON sehingga mudah di-ETL
@@ -41,17 +41,17 @@ Dari dua pilihan yang tersedia, kelompok memilih **Pilihan 1**: mentransformasi 
                             │ POST /ask
                             ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│              Backend — FastAPI Python (Railway)                  │
-│                                                                  │
-│  1. Keyword Routing  →  pilih index relevan                      │
-│  2. Aggregation Query →  count/sum/terms dari OpenSearch         │
-│  3. Document Search  →  sample dokumen relevan                   │
-│  4. Build Context    →  gabung statistik + sample                │
-│  5. Groq LLM         →  generate jawaban Bahasa Indonesia        │
-│  6. Strip Markdown   →  pastikan output plain text               │
+│              Backend — FastAPI Python (Railway)                 │
+│                                                                 │
+│  1. Keyword Routing  →  pilih index relevan                     │
+│  2. Aggregation Query →  count/sum/terms dari OpenSearch        │
+│  3. Document Search  →  sample dokumen relevan                  │
+│  4. Build Context    →  gabung statistik + sample               │
+│  5. Groq LLM         →  generate jawaban Bahasa Indonesia       │
+│  6. Strip Markdown   →  pastikan output plain text              │
 └──────────┬────────────────────────────────────────┬─────────────┘
-           │ Search + Aggregation                    │ Chat Completion
-           ▼                                         ▼
+           │ Search + Aggregation                   │ Chat Completion
+           ▼                                        ▼
 ┌──────────────────────────┐             ┌───────────────────────┐
 │  OpenSearch (Bonsai.io)  │             │  Groq API             │
 │  8 indices · 8.000 docs  │             │  llama-3.3-70b /      │
@@ -394,16 +394,18 @@ Konfigurasi di **Vercel Dashboard → Settings**:
 
 | Nama | NIM | Peran |
 |------|-----|-------|
-| Anggota 1 | 1301210001 | Project Manager · Backend Lead · RAG Pipeline |
-| Anggota 2 | 1301210002 | Data Engineer · ETL · OpenSearch Mapping |
-| Anggota 3 | 1301210003 | Frontend Developer · UI/UX · Vercel Deploy |
-| Anggota 4 | 1301210004 | QA Testing · Railway Deploy · Dokumentasi |
+| Arkhan Falih Fahrie Puspita | 103052330051 | Project Manager · Backend Lead · RAG Pipeline |
+| Azzahra Sabryna Anggara | 103052300018 | QA Testing · Railway Deploy · Dokumentasi |
+| Dyan Maharani Az Zahra | 103052300081 | Frontend Developer · UI/UX · Vercel Deploy |
+| Kevin Jonathan Rotty | 103052330047 | Data Engineer · ETL · OpenSearch Mapping  |
 
 ---
 
-## 📄 Lisensi
+## 
 
-Proyek ini dibuat untuk keperluan akademis — Tugas Akhir Mata Kuliah Basis Data Tidak Relasional, Universitas Telkom, 2026.
+<div align="center">
+Proyek ini dibuat sebagai Tugas Terakhir Mata Kuliah Rekayasa dan Organisasi Sistem Big Data <br> Telkom University <br> 2026.
+</div>
 
 ---
 
