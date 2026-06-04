@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
 from opensearchpy import OpenSearch
-import anthropic
+from groq import Groq
 
 app = FastAPI(title="Hospital QA API", version="1.0.0")
 
@@ -32,9 +32,9 @@ os_client = OpenSearch(
     ssl_show_warn=False,
 )
 
-# ── Anthropic ──────────────────────────────────────────────────────────────────
-anthropic_client = anthropic.Anthropic(
-    api_key=os.getenv("ANTHROPIC_API_KEY", "")
+# ── Groq ──────────────────────────────────────────────────────────────────────
+groq_client = Groq(
+    api_key=os.getenv("GROQ_API_KEY", "")
 )
 
 # ── Index names ────────────────────────────────────────────────────────────────
@@ -132,8 +132,8 @@ def build_context(results: list) -> str:
     return "\n\n".join(parts)
 
 
-# ── Ask Claude ────────────────────────────────────────────────────────────────
-def ask_claude(question: str, context: str) -> str:
+# ── Ask Groq ──────────────────────────────────────────────────────────────────
+def ask_groq(question: str, context: str) -> str:
     system = """Kamu adalah asisten QA untuk Rumah Sakit Sehat Selalu.
 Jawab pertanyaan berdasarkan data yang diberikan dari database rumah sakit.
 Gunakan Bahasa Indonesia yang jelas dan profesional.
@@ -154,18 +154,22 @@ Dokter spesialis neurologi yang tersedia:
 
 Total: 2 dokter"""
 
-    msg = anthropic_client.messages.create(
-        model="claude-sonnet-4-20250514",
+    chat = groq_client.chat.completions.create(
+        model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
         max_tokens=1024,
-        system=system,
+        temperature=0.3,
         messages=[
+            {"role": "system", "content": system},
             {
                 "role": "user",
-                "content": f"Data dari OpenSearch:\n{context}\n\nPertanyaan: {question}",
-            }
+                "content": f"Data dari OpenSearch:
+{context}
+
+Pertanyaan: {question}",
+            },
         ],
     )
-    raw = msg.content[0].text
+    raw = chat.choices[0].message.content
     return strip_markdown(raw)
 
 
@@ -191,7 +195,7 @@ def ask(req: AskRequest):
 
     results = search_opensearch(req.question, size=req.max_results)
     context = build_context(results)
-    answer = ask_claude(req.question, context)
+    answer = ask_groq(req.question, context)
 
     sources = [
         {
