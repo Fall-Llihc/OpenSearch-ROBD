@@ -82,33 +82,68 @@ def strip_markdown(text: str) -> str:
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
-# ── Search OpenSearch ──────────────────────────────────────────────────────────
+# ── Search OpenSearch — pakai multi_search (msh_search) ───────────────────────
 def search_opensearch(query: str, size: int = 8) -> list:
+    client = get_os_client()
     results = []
+
+    # Bangun multi-search request sekaligus
+    body = []
     for index in INDICES:
-        try:
-            resp = get_os_client().search(
-                index=index,
-                body={
-                    "query": {
-                        "multi_match": {
-                            "query": query,
-                            "fields": ["*"],
-                            "fuzziness": "AUTO",
-                            "type": "best_fields",
+        body.append({"index": index})
+        body.append({
+            "query": {
+                "bool": {
+                    "should": [
+                        {
+                            "multi_match": {
+                                "query": query,
+                                "fields": ["*"],
+                                "type": "best_fields",
+                            }
+                        },
+                        {
+                            "match_all": {}
                         }
+                    ]
+                }
+            },
+            "size": size,
+        })
+
+    try:
+        resp = client.msearch(body=body)
+        for i, r in enumerate(resp["responses"]):
+            if "hits" not in r:
+                continue
+            for hit in r["hits"]["hits"]:
+                if hit["_score"] and hit["_score"] > 0:
+                    results.append({
+                        "index": INDICES[i],
+                        "score": hit["_score"],
+                        "data": hit["_source"],
+                    })
+    except Exception as e:
+        print(f"msearch error: {e}")
+        # Fallback: query satu per satu
+        for index in INDICES:
+            try:
+                r = client.search(
+                    index=index,
+                    body={
+                        "query": {"match_all": {}},
+                        "size": 3,
                     },
-                    "size": size,
-                },
-            )
-            for hit in resp["hits"]["hits"]:
-                results.append({
-                    "index": index,
-                    "score": hit["_score"],
-                    "data": hit["_source"],
-                })
-        except Exception as e:
-            print(f"Search error on {index}: {e}")
+                )
+                for hit in r["hits"]["hits"]:
+                    results.append({
+                        "index": index,
+                        "score": 1.0,
+                        "data": hit["_source"],
+                    })
+            except Exception as e2:
+                print(f"fallback error {index}: {e2}")
+
     results.sort(key=lambda x: x["score"], reverse=True)
     return results[:size * 2]
 
@@ -203,20 +238,32 @@ def debug():
     result["groq_key_set"] = bool(os.getenv("GROQ_API_KEY", ""))
     result["groq_model"] = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
     result["opensearch_url_set"] = bool(os.getenv("OPENSEARCH_URL", ""))
-    result["opensearch_host"] = os.getenv("OPENSEARCH_HOST", "not set")
 
-    # Test search langsung
+    # Test search tiap index satu per satu
+    search_results = {}
+    client = get_os_client()
+    for index in INDICES:
+        try:
+            r = client.search(
+                index=index,
+                body={"query": {"match_all": {}}, "size": 1},
+            )
+            search_results[index] = r["hits"]["total"]["value"]
+        except Exception as e:
+            search_results[index] = f"ERROR: {str(e)}"
+    result["index_counts"] = search_results
+
+    # Test msearch
     try:
-        resp = get_os_client().search(
-            index="hospital_departments",
-            body={"query": {"match_all": {}}, "size": 3},
-        )
-        hits = [h["_source"] for h in resp["hits"]["hits"]]
-        result["opensearch_search"] = "ok"
-        result["opensearch_sample"] = hits
+        body = []
+        for index in INDICES:
+            body.append({"index": index})
+            body.append({"query": {"match_all": {}}, "size": 1})
+        resp = client.msearch(body=body)
+        result["msearch_status"] = "ok"
+        result["msearch_responses"] = len(resp["responses"])
     except Exception as e:
-        result["opensearch_search"] = "error"
-        result["opensearch_error"] = str(e)
+        result["msearch_status"] = f"ERROR: {str(e)}"
 
     # Test Groq
     try:
@@ -226,9 +273,7 @@ def debug():
             messages=[{"role": "user", "content": "hi"}],
         )
         result["groq_status"] = "ok"
-        result["groq_response"] = chat.choices[0].message.content
     except Exception as e:
-        result["groq_status"] = "error"
-        result["groq_error"] = str(e)
+        result["groq_status"] = f"ERROR: {str(e)}"
 
     return result
