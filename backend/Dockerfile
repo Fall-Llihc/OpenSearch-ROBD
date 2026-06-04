@@ -9,5 +9,4 @@ COPY . .
 
 EXPOSE 8000
 
-# Railway inject $PORT otomatis — shell form agar variable expansion bekerja
-CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]

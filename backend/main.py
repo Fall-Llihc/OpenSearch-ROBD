@@ -18,24 +18,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── OpenSearch ─────────────────────────────────────────────────────────────────
-OPENSEARCH_HOST = os.getenv("OPENSEARCH_HOST", "localhost")
-OPENSEARCH_PORT = int(os.getenv("OPENSEARCH_PORT", "9200"))
-OPENSEARCH_USER = os.getenv("OPENSEARCH_USER", "admin")
-OPENSEARCH_PASS = os.getenv("OPENSEARCH_PASS", "admin")
+# ── OpenSearch (lazy — tidak crash saat startup) ───────────────────────────────
+def get_os_client():
+    return OpenSearch(
+        hosts=[{"host": os.getenv("OPENSEARCH_HOST", "localhost"),
+                "port": int(os.getenv("OPENSEARCH_PORT", "9200"))}],
+        http_auth=(os.getenv("OPENSEARCH_USER", "admin"),
+                   os.getenv("OPENSEARCH_PASS", "admin")),
+        use_ssl=False,
+        verify_certs=False,
+        ssl_show_warn=False,
+    )
 
-os_client = OpenSearch(
-    hosts=[{"host": OPENSEARCH_HOST, "port": OPENSEARCH_PORT}],
-    http_auth=(OPENSEARCH_USER, OPENSEARCH_PASS),
-    use_ssl=False,
-    verify_certs=False,
-    ssl_show_warn=False,
-)
-
-# ── Groq ──────────────────────────────────────────────────────────────────────
-groq_client = Groq(
-    api_key=os.getenv("GROQ_API_KEY", "")
-)
+# ── Groq (lazy — tidak crash saat startup) ────────────────────────────────────
+def get_groq_client():
+    return Groq(api_key=os.getenv("GROQ_API_KEY", ""))
 
 # ── Index names ────────────────────────────────────────────────────────────────
 INDICES = [
@@ -92,7 +89,7 @@ def search_opensearch(query: str, size: int = 8) -> list:
     results = []
     for index in INDICES:
         try:
-            resp = os_client.search(
+            resp = get_os_client().search(
                 index=index,
                 body={
                     "query": {
@@ -154,7 +151,7 @@ Dokter spesialis neurologi yang tersedia:
 
 Total: 2 dokter"""
 
-    chat = groq_client.chat.completions.create(
+    chat = get_groq_client().chat.completions.create(
         model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
         max_tokens=1024,
         temperature=0.3,
@@ -162,10 +159,7 @@ Total: 2 dokter"""
             {"role": "system", "content": system},
             {
                 "role": "user",
-                "content": f"Data dari OpenSearch:
-{context}
-
-Pertanyaan: {question}",
+                "content": "Data dari OpenSearch:\n" + context + "\n\nPertanyaan: " + question,
             },
         ],
     )
@@ -182,7 +176,7 @@ def root():
 @app.get("/health")
 def health():
     try:
-        info = os_client.info()
+        info = get_os_client().info()
         return {"status": "healthy", "opensearch": info["version"]["number"]}
     except Exception as e:
         return {"status": "degraded", "error": str(e)}
@@ -220,7 +214,7 @@ def stats():
     data = {}
     for index in INDICES:
         try:
-            count = os_client.count(index=index)["count"]
+            count = get_os_client().count(index=index)["count"]
             data[index.replace("hospital_", "")] = count
         except Exception:
             data[index.replace("hospital_", "")] = 0
