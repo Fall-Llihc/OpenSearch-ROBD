@@ -162,21 +162,24 @@ def main():
     parser.add_argument("--port",     type=int, default=9200)
     parser.add_argument("--user",     default="admin")
     parser.add_argument("--password", default="admin")
+    parser.add_argument("--ssl",      action="store_true", help="Use HTTPS/SSL")
     parser.add_argument("--data-dir", default="./data",
                         help="Directory containing the 8 JSON files")
     args = parser.parse_args()
 
+    use_ssl = args.ssl or args.port == 443
+
     print("=" * 55)
     print("  HOSPITAL DATA LOADER — Rumah Sakit Sehat Selalu")
     print("=" * 55)
-    print(f"  Target : {args.host}:{args.port}")
+    print(f"  Target : {'https' if use_ssl else 'http'}://{args.host}:{args.port}")
     print(f"  Data   : {args.data_dir}")
     print("=" * 55 + "\n")
 
     client = OpenSearch(
         hosts=[{"host": args.host, "port": args.port}],
         http_auth=(args.user, args.password),
-        use_ssl=False,
+        use_ssl=use_ssl,
         verify_certs=False,
         ssl_show_warn=False,
     )
