@@ -1,12 +1,16 @@
 import os
 import re
 import json
+from urllib.parse import urlparse
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
 from opensearchpy import OpenSearch
 from groq import Groq
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI(title="Hospital QA API", version="1.0.0")
 
@@ -20,12 +24,25 @@ app.add_middleware(
 
 # ── OpenSearch (lazy — tidak crash saat startup) ───────────────────────────────
 def get_os_client():
+    url = os.getenv("OPENSEARCH_URL")
+    if url:
+        parsed = urlparse(url)
+        host = parsed.hostname
+        port = parsed.port or (443 if parsed.scheme == "https" else 9200)
+        user = parsed.username or os.getenv("OPENSEARCH_USER", "admin")
+        password = parsed.password or os.getenv("OPENSEARCH_PASS", "admin")
+        use_ssl = parsed.scheme == "https"
+    else:
+        host = os.getenv("OPENSEARCH_HOST", "localhost")
+        port = int(os.getenv("OPENSEARCH_PORT", "9200"))
+        user = os.getenv("OPENSEARCH_USER", "admin")
+        password = os.getenv("OPENSEARCH_PASS", "admin")
+        use_ssl = os.getenv("OPENSEARCH_USE_SSL", "false").lower() == "true"
+
     return OpenSearch(
-        hosts=[{"host": os.getenv("OPENSEARCH_HOST", "localhost"),
-                "port": int(os.getenv("OPENSEARCH_PORT", "9200"))}],
-        http_auth=(os.getenv("OPENSEARCH_USER", "admin"),
-                   os.getenv("OPENSEARCH_PASS", "admin")),
-        use_ssl=False,
+        hosts=[{"host": host, "port": port}],
+        http_auth=(user, password),
+        use_ssl=use_ssl,
         verify_certs=False,
         ssl_show_warn=False,
     )

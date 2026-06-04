@@ -1,0 +1,7000 @@
+[{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbcdc"
+  },
+  "dept_id": 1,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbce4"
+  },
+  "dept_id": 2,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbcec"
+  },
+  "dept_id": 3,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbcf4"
+  },
+  "dept_id": 4,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbcfc"
+  },
+  "dept_id": 5,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd04"
+  },
+  "dept_id": 6,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd0c"
+  },
+  "dept_id": 7,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd14"
+  },
+  "dept_id": 8,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd1c"
+  },
+  "dept_id": 9,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd24"
+  },
+  "dept_id": 10,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd2c"
+  },
+  "dept_id": 11,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd34"
+  },
+  "dept_id": 12,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd3c"
+  },
+  "dept_id": 13,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd44"
+  },
+  "dept_id": 14,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd4c"
+  },
+  "dept_id": 15,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd54"
+  },
+  "dept_id": 16,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd5c"
+  },
+  "dept_id": 17,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd64"
+  },
+  "dept_id": 18,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd6c"
+  },
+  "dept_id": 19,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd74"
+  },
+  "dept_id": 20,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd7c"
+  },
+  "dept_id": 21,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd84"
+  },
+  "dept_id": 22,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbd8c"
+  },
+  "dept_id": 23,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbd94"
+  },
+  "dept_id": 24,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbd9c"
+  },
+  "dept_id": 25,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbda4"
+  },
+  "dept_id": 26,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdac"
+  },
+  "dept_id": 27,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdb4"
+  },
+  "dept_id": 28,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdbc"
+  },
+  "dept_id": 29,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdc4"
+  },
+  "dept_id": 30,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdcc"
+  },
+  "dept_id": 31,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdd4"
+  },
+  "dept_id": 32,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbddc"
+  },
+  "dept_id": 33,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbde4"
+  },
+  "dept_id": 34,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdec"
+  },
+  "dept_id": 35,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdf4"
+  },
+  "dept_id": 36,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdfc"
+  },
+  "dept_id": 37,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe04"
+  },
+  "dept_id": 38,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe0c"
+  },
+  "dept_id": 39,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe14"
+  },
+  "dept_id": 40,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe1c"
+  },
+  "dept_id": 41,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe24"
+  },
+  "dept_id": 42,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe2c"
+  },
+  "dept_id": 43,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe34"
+  },
+  "dept_id": 44,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe3c"
+  },
+  "dept_id": 45,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe44"
+  },
+  "dept_id": 46,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe4c"
+  },
+  "dept_id": 47,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe54"
+  },
+  "dept_id": 48,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe5c"
+  },
+  "dept_id": 49,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe64"
+  },
+  "dept_id": 50,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe6c"
+  },
+  "dept_id": 51,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe74"
+  },
+  "dept_id": 52,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe7c"
+  },
+  "dept_id": 53,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe84"
+  },
+  "dept_id": 54,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe8c"
+  },
+  "dept_id": 55,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe94"
+  },
+  "dept_id": 56,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe9c"
+  },
+  "dept_id": 57,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbea4"
+  },
+  "dept_id": 58,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbeac"
+  },
+  "dept_id": 59,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbeb4"
+  },
+  "dept_id": 60,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbebc"
+  },
+  "dept_id": 61,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbec4"
+  },
+  "dept_id": 62,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbecc"
+  },
+  "dept_id": 63,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbed4"
+  },
+  "dept_id": 64,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbedc"
+  },
+  "dept_id": 65,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbee4"
+  },
+  "dept_id": 66,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbeec"
+  },
+  "dept_id": 67,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbef4"
+  },
+  "dept_id": 68,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbefc"
+  },
+  "dept_id": 69,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf04"
+  },
+  "dept_id": 70,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf0c"
+  },
+  "dept_id": 71,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf14"
+  },
+  "dept_id": 72,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf1c"
+  },
+  "dept_id": 73,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf24"
+  },
+  "dept_id": 74,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf2c"
+  },
+  "dept_id": 75,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf34"
+  },
+  "dept_id": 76,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf3c"
+  },
+  "dept_id": 77,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf44"
+  },
+  "dept_id": 78,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf4c"
+  },
+  "dept_id": 79,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf54"
+  },
+  "dept_id": 80,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf5c"
+  },
+  "dept_id": 81,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf64"
+  },
+  "dept_id": 82,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf6c"
+  },
+  "dept_id": 83,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf74"
+  },
+  "dept_id": 84,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf7c"
+  },
+  "dept_id": 85,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf84"
+  },
+  "dept_id": 86,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf8c"
+  },
+  "dept_id": 87,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf94"
+  },
+  "dept_id": 88,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf9c"
+  },
+  "dept_id": 89,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfa4"
+  },
+  "dept_id": 90,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfac"
+  },
+  "dept_id": 91,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfb4"
+  },
+  "dept_id": 92,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfbc"
+  },
+  "dept_id": 93,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfc4"
+  },
+  "dept_id": 94,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfcc"
+  },
+  "dept_id": 95,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfd4"
+  },
+  "dept_id": 96,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfdc"
+  },
+  "dept_id": 97,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfe4"
+  },
+  "dept_id": 98,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfec"
+  },
+  "dept_id": 99,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbff4"
+  },
+  "dept_id": 100,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbffc"
+  },
+  "dept_id": 101,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc004"
+  },
+  "dept_id": 102,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc00c"
+  },
+  "dept_id": 103,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc014"
+  },
+  "dept_id": 104,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc01c"
+  },
+  "dept_id": 105,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc024"
+  },
+  "dept_id": 106,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc02c"
+  },
+  "dept_id": 107,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc034"
+  },
+  "dept_id": 108,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc03c"
+  },
+  "dept_id": 109,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc044"
+  },
+  "dept_id": 110,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc04c"
+  },
+  "dept_id": 111,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc054"
+  },
+  "dept_id": 112,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc05c"
+  },
+  "dept_id": 113,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc064"
+  },
+  "dept_id": 114,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc06c"
+  },
+  "dept_id": 115,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc074"
+  },
+  "dept_id": 116,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc07c"
+  },
+  "dept_id": 117,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc084"
+  },
+  "dept_id": 118,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc08c"
+  },
+  "dept_id": 119,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc094"
+  },
+  "dept_id": 120,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc09c"
+  },
+  "dept_id": 121,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0a4"
+  },
+  "dept_id": 122,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0ac"
+  },
+  "dept_id": 123,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0b4"
+  },
+  "dept_id": 124,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0bc"
+  },
+  "dept_id": 125,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0c4"
+  },
+  "dept_id": 126,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0cc"
+  },
+  "dept_id": 127,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0d4"
+  },
+  "dept_id": 128,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0dc"
+  },
+  "dept_id": 129,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0e4"
+  },
+  "dept_id": 130,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0ec"
+  },
+  "dept_id": 131,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0f4"
+  },
+  "dept_id": 132,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0fc"
+  },
+  "dept_id": 133,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc104"
+  },
+  "dept_id": 134,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc10c"
+  },
+  "dept_id": 135,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc114"
+  },
+  "dept_id": 136,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc11c"
+  },
+  "dept_id": 137,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc124"
+  },
+  "dept_id": 138,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc12c"
+  },
+  "dept_id": 139,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc134"
+  },
+  "dept_id": 140,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc13c"
+  },
+  "dept_id": 141,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc144"
+  },
+  "dept_id": 142,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc14c"
+  },
+  "dept_id": 143,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc154"
+  },
+  "dept_id": 144,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc15c"
+  },
+  "dept_id": 145,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc164"
+  },
+  "dept_id": 146,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc16c"
+  },
+  "dept_id": 147,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc174"
+  },
+  "dept_id": 148,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc17c"
+  },
+  "dept_id": 149,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc184"
+  },
+  "dept_id": 150,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc18c"
+  },
+  "dept_id": 151,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc194"
+  },
+  "dept_id": 152,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc19c"
+  },
+  "dept_id": 153,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1a4"
+  },
+  "dept_id": 154,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1ac"
+  },
+  "dept_id": 155,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1b4"
+  },
+  "dept_id": 156,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1bc"
+  },
+  "dept_id": 157,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1c4"
+  },
+  "dept_id": 158,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1cc"
+  },
+  "dept_id": 159,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1d4"
+  },
+  "dept_id": 160,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1dc"
+  },
+  "dept_id": 161,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1e4"
+  },
+  "dept_id": 162,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1ec"
+  },
+  "dept_id": 163,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1f4"
+  },
+  "dept_id": 164,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1fc"
+  },
+  "dept_id": 165,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc204"
+  },
+  "dept_id": 166,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc20c"
+  },
+  "dept_id": 167,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc214"
+  },
+  "dept_id": 168,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc21c"
+  },
+  "dept_id": 169,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc224"
+  },
+  "dept_id": 170,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc22c"
+  },
+  "dept_id": 171,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc234"
+  },
+  "dept_id": 172,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc23c"
+  },
+  "dept_id": 173,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc244"
+  },
+  "dept_id": 174,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc24c"
+  },
+  "dept_id": 175,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc254"
+  },
+  "dept_id": 176,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc25c"
+  },
+  "dept_id": 177,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc264"
+  },
+  "dept_id": 178,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc26c"
+  },
+  "dept_id": 179,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc274"
+  },
+  "dept_id": 180,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc27c"
+  },
+  "dept_id": 181,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc284"
+  },
+  "dept_id": 182,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc28c"
+  },
+  "dept_id": 183,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc294"
+  },
+  "dept_id": 184,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc29c"
+  },
+  "dept_id": 185,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2a4"
+  },
+  "dept_id": 186,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2ac"
+  },
+  "dept_id": 187,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2b4"
+  },
+  "dept_id": 188,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2bc"
+  },
+  "dept_id": 189,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2c4"
+  },
+  "dept_id": 190,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2cc"
+  },
+  "dept_id": 191,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2d4"
+  },
+  "dept_id": 192,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2dc"
+  },
+  "dept_id": 193,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2e4"
+  },
+  "dept_id": 194,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2ec"
+  },
+  "dept_id": 195,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2f4"
+  },
+  "dept_id": 196,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2fc"
+  },
+  "dept_id": 197,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc304"
+  },
+  "dept_id": 198,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc30c"
+  },
+  "dept_id": 199,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc314"
+  },
+  "dept_id": 200,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc31c"
+  },
+  "dept_id": 201,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc324"
+  },
+  "dept_id": 202,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc32c"
+  },
+  "dept_id": 203,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc334"
+  },
+  "dept_id": 204,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc33c"
+  },
+  "dept_id": 205,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc344"
+  },
+  "dept_id": 206,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc34c"
+  },
+  "dept_id": 207,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc354"
+  },
+  "dept_id": 208,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc35c"
+  },
+  "dept_id": 209,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc364"
+  },
+  "dept_id": 210,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc36c"
+  },
+  "dept_id": 211,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc374"
+  },
+  "dept_id": 212,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc37c"
+  },
+  "dept_id": 213,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc384"
+  },
+  "dept_id": 214,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc38c"
+  },
+  "dept_id": 215,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc394"
+  },
+  "dept_id": 216,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc39c"
+  },
+  "dept_id": 217,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3a4"
+  },
+  "dept_id": 218,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3ac"
+  },
+  "dept_id": 219,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3b4"
+  },
+  "dept_id": 220,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3bc"
+  },
+  "dept_id": 221,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3c4"
+  },
+  "dept_id": 222,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3cc"
+  },
+  "dept_id": 223,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3d4"
+  },
+  "dept_id": 224,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3dc"
+  },
+  "dept_id": 225,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3e4"
+  },
+  "dept_id": 226,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3ec"
+  },
+  "dept_id": 227,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3f4"
+  },
+  "dept_id": 228,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3fc"
+  },
+  "dept_id": 229,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc404"
+  },
+  "dept_id": 230,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc40c"
+  },
+  "dept_id": 231,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc414"
+  },
+  "dept_id": 232,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc41c"
+  },
+  "dept_id": 233,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc424"
+  },
+  "dept_id": 234,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc42c"
+  },
+  "dept_id": 235,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc434"
+  },
+  "dept_id": 236,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc43c"
+  },
+  "dept_id": 237,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc444"
+  },
+  "dept_id": 238,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc44c"
+  },
+  "dept_id": 239,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc454"
+  },
+  "dept_id": 240,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc45c"
+  },
+  "dept_id": 241,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc464"
+  },
+  "dept_id": 242,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc46c"
+  },
+  "dept_id": 243,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc474"
+  },
+  "dept_id": 244,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc47c"
+  },
+  "dept_id": 245,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc484"
+  },
+  "dept_id": 246,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc48c"
+  },
+  "dept_id": 247,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc494"
+  },
+  "dept_id": 248,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc49c"
+  },
+  "dept_id": 249,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc4a4"
+  },
+  "dept_id": 250,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc4ac"
+  },
+  "dept_id": 251,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc4b4"
+  },
+  "dept_id": 252,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4bc"
+  },
+  "dept_id": 253,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4c4"
+  },
+  "dept_id": 254,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4cc"
+  },
+  "dept_id": 255,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4d4"
+  },
+  "dept_id": 256,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4dc"
+  },
+  "dept_id": 257,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4e4"
+  },
+  "dept_id": 258,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4ec"
+  },
+  "dept_id": 259,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4f4"
+  },
+  "dept_id": 260,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4fc"
+  },
+  "dept_id": 261,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc504"
+  },
+  "dept_id": 262,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc50c"
+  },
+  "dept_id": 263,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc514"
+  },
+  "dept_id": 264,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc51c"
+  },
+  "dept_id": 265,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc524"
+  },
+  "dept_id": 266,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc52c"
+  },
+  "dept_id": 267,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc534"
+  },
+  "dept_id": 268,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc53c"
+  },
+  "dept_id": 269,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc544"
+  },
+  "dept_id": 270,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc54c"
+  },
+  "dept_id": 271,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc554"
+  },
+  "dept_id": 272,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc55c"
+  },
+  "dept_id": 273,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc564"
+  },
+  "dept_id": 274,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc56c"
+  },
+  "dept_id": 275,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc574"
+  },
+  "dept_id": 276,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc57c"
+  },
+  "dept_id": 277,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc584"
+  },
+  "dept_id": 278,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc58c"
+  },
+  "dept_id": 279,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc594"
+  },
+  "dept_id": 280,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc59c"
+  },
+  "dept_id": 281,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5a4"
+  },
+  "dept_id": 282,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5ac"
+  },
+  "dept_id": 283,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5b4"
+  },
+  "dept_id": 284,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5bc"
+  },
+  "dept_id": 285,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5c4"
+  },
+  "dept_id": 286,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5cc"
+  },
+  "dept_id": 287,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5d4"
+  },
+  "dept_id": 288,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5dc"
+  },
+  "dept_id": 289,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5e4"
+  },
+  "dept_id": 290,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5ec"
+  },
+  "dept_id": 291,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5f4"
+  },
+  "dept_id": 292,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5fc"
+  },
+  "dept_id": 293,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc604"
+  },
+  "dept_id": 294,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc60c"
+  },
+  "dept_id": 295,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc614"
+  },
+  "dept_id": 296,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc61c"
+  },
+  "dept_id": 297,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc624"
+  },
+  "dept_id": 298,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc62c"
+  },
+  "dept_id": 299,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc634"
+  },
+  "dept_id": 300,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc63c"
+  },
+  "dept_id": 301,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc644"
+  },
+  "dept_id": 302,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc64c"
+  },
+  "dept_id": 303,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc654"
+  },
+  "dept_id": 304,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc65c"
+  },
+  "dept_id": 305,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc664"
+  },
+  "dept_id": 306,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc66c"
+  },
+  "dept_id": 307,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc674"
+  },
+  "dept_id": 308,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc67c"
+  },
+  "dept_id": 309,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc684"
+  },
+  "dept_id": 310,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc68c"
+  },
+  "dept_id": 311,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc694"
+  },
+  "dept_id": 312,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc69c"
+  },
+  "dept_id": 313,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6a4"
+  },
+  "dept_id": 314,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6ac"
+  },
+  "dept_id": 315,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6b4"
+  },
+  "dept_id": 316,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6bc"
+  },
+  "dept_id": 317,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6c4"
+  },
+  "dept_id": 318,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6cc"
+  },
+  "dept_id": 319,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6d4"
+  },
+  "dept_id": 320,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc6dc"
+  },
+  "dept_id": 321,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc6e4"
+  },
+  "dept_id": 322,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc6ec"
+  },
+  "dept_id": 323,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc6f4"
+  },
+  "dept_id": 324,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc6fc"
+  },
+  "dept_id": 325,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc704"
+  },
+  "dept_id": 326,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc70c"
+  },
+  "dept_id": 327,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc714"
+  },
+  "dept_id": 328,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc71c"
+  },
+  "dept_id": 329,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc724"
+  },
+  "dept_id": 330,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc72c"
+  },
+  "dept_id": 331,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc734"
+  },
+  "dept_id": 332,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc73c"
+  },
+  "dept_id": 333,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc744"
+  },
+  "dept_id": 334,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc74c"
+  },
+  "dept_id": 335,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc754"
+  },
+  "dept_id": 336,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc75c"
+  },
+  "dept_id": 337,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc764"
+  },
+  "dept_id": 338,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc76c"
+  },
+  "dept_id": 339,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc774"
+  },
+  "dept_id": 340,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc77c"
+  },
+  "dept_id": 341,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc784"
+  },
+  "dept_id": 342,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc78c"
+  },
+  "dept_id": 343,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc794"
+  },
+  "dept_id": 344,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc79c"
+  },
+  "dept_id": 345,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7a4"
+  },
+  "dept_id": 346,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7ac"
+  },
+  "dept_id": 347,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7b4"
+  },
+  "dept_id": 348,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7bc"
+  },
+  "dept_id": 349,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7c4"
+  },
+  "dept_id": 350,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7cc"
+  },
+  "dept_id": 351,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7d4"
+  },
+  "dept_id": 352,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7dc"
+  },
+  "dept_id": 353,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7e4"
+  },
+  "dept_id": 354,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7ec"
+  },
+  "dept_id": 355,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7f4"
+  },
+  "dept_id": 356,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7fc"
+  },
+  "dept_id": 357,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc804"
+  },
+  "dept_id": 358,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc80c"
+  },
+  "dept_id": 359,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc814"
+  },
+  "dept_id": 360,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc81c"
+  },
+  "dept_id": 361,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc824"
+  },
+  "dept_id": 362,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc82c"
+  },
+  "dept_id": 363,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc834"
+  },
+  "dept_id": 364,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc83c"
+  },
+  "dept_id": 365,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc844"
+  },
+  "dept_id": 366,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc84c"
+  },
+  "dept_id": 367,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc854"
+  },
+  "dept_id": 368,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc85c"
+  },
+  "dept_id": 369,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc864"
+  },
+  "dept_id": 370,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc86c"
+  },
+  "dept_id": 371,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc874"
+  },
+  "dept_id": 372,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc87c"
+  },
+  "dept_id": 373,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc884"
+  },
+  "dept_id": 374,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc88c"
+  },
+  "dept_id": 375,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc894"
+  },
+  "dept_id": 376,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc89c"
+  },
+  "dept_id": 377,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8a4"
+  },
+  "dept_id": 378,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8ac"
+  },
+  "dept_id": 379,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8b4"
+  },
+  "dept_id": 380,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8bc"
+  },
+  "dept_id": 381,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8c4"
+  },
+  "dept_id": 382,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8cc"
+  },
+  "dept_id": 383,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8d4"
+  },
+  "dept_id": 384,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8dc"
+  },
+  "dept_id": 385,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8e4"
+  },
+  "dept_id": 386,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8ec"
+  },
+  "dept_id": 387,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8f4"
+  },
+  "dept_id": 388,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8fc"
+  },
+  "dept_id": 389,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc904"
+  },
+  "dept_id": 390,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc90c"
+  },
+  "dept_id": 391,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc914"
+  },
+  "dept_id": 392,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc91c"
+  },
+  "dept_id": 393,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc924"
+  },
+  "dept_id": 394,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc92c"
+  },
+  "dept_id": 395,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc934"
+  },
+  "dept_id": 396,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc93c"
+  },
+  "dept_id": 397,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc944"
+  },
+  "dept_id": 398,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc94c"
+  },
+  "dept_id": 399,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc954"
+  },
+  "dept_id": 400,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc95c"
+  },
+  "dept_id": 401,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc964"
+  },
+  "dept_id": 402,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc96c"
+  },
+  "dept_id": 403,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc974"
+  },
+  "dept_id": 404,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc97c"
+  },
+  "dept_id": 405,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc984"
+  },
+  "dept_id": 406,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc98c"
+  },
+  "dept_id": 407,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc994"
+  },
+  "dept_id": 408,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc99c"
+  },
+  "dept_id": 409,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9a4"
+  },
+  "dept_id": 410,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9ac"
+  },
+  "dept_id": 411,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9b4"
+  },
+  "dept_id": 412,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9bc"
+  },
+  "dept_id": 413,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9c4"
+  },
+  "dept_id": 414,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9cc"
+  },
+  "dept_id": 415,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9d4"
+  },
+  "dept_id": 416,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9dc"
+  },
+  "dept_id": 417,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9e4"
+  },
+  "dept_id": 418,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9ec"
+  },
+  "dept_id": 419,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9f4"
+  },
+  "dept_id": 420,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9fc"
+  },
+  "dept_id": 421,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca04"
+  },
+  "dept_id": 422,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca0c"
+  },
+  "dept_id": 423,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca14"
+  },
+  "dept_id": 424,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca1c"
+  },
+  "dept_id": 425,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca24"
+  },
+  "dept_id": 426,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca2c"
+  },
+  "dept_id": 427,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca34"
+  },
+  "dept_id": 428,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca3c"
+  },
+  "dept_id": 429,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca44"
+  },
+  "dept_id": 430,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca4c"
+  },
+  "dept_id": 431,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca54"
+  },
+  "dept_id": 432,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca5c"
+  },
+  "dept_id": 433,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca64"
+  },
+  "dept_id": 434,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca6c"
+  },
+  "dept_id": 435,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca74"
+  },
+  "dept_id": 436,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca7c"
+  },
+  "dept_id": 437,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca84"
+  },
+  "dept_id": 438,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca8c"
+  },
+  "dept_id": 439,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca94"
+  },
+  "dept_id": 440,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca9c"
+  },
+  "dept_id": 441,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fcaa4"
+  },
+  "dept_id": 442,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcaac"
+  },
+  "dept_id": 443,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcab4"
+  },
+  "dept_id": 444,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcabc"
+  },
+  "dept_id": 445,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcac4"
+  },
+  "dept_id": 446,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcacc"
+  },
+  "dept_id": 447,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcad4"
+  },
+  "dept_id": 448,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcadc"
+  },
+  "dept_id": 449,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcae4"
+  },
+  "dept_id": 450,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcaec"
+  },
+  "dept_id": 451,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcaf4"
+  },
+  "dept_id": 452,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcafc"
+  },
+  "dept_id": 453,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb04"
+  },
+  "dept_id": 454,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb0c"
+  },
+  "dept_id": 455,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb14"
+  },
+  "dept_id": 456,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb1c"
+  },
+  "dept_id": 457,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb24"
+  },
+  "dept_id": 458,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb2c"
+  },
+  "dept_id": 459,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb34"
+  },
+  "dept_id": 460,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb3c"
+  },
+  "dept_id": 461,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb44"
+  },
+  "dept_id": 462,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb4c"
+  },
+  "dept_id": 463,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb54"
+  },
+  "dept_id": 464,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb5c"
+  },
+  "dept_id": 465,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb64"
+  },
+  "dept_id": 466,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb6c"
+  },
+  "dept_id": 467,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb74"
+  },
+  "dept_id": 468,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb7c"
+  },
+  "dept_id": 469,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb84"
+  },
+  "dept_id": 470,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb8c"
+  },
+  "dept_id": 471,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb94"
+  },
+  "dept_id": 472,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb9c"
+  },
+  "dept_id": 473,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcba4"
+  },
+  "dept_id": 474,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcbac"
+  },
+  "dept_id": 475,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbb4"
+  },
+  "dept_id": 476,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbbc"
+  },
+  "dept_id": 477,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbc4"
+  },
+  "dept_id": 478,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbcc"
+  },
+  "dept_id": 479,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbd4"
+  },
+  "dept_id": 480,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbdc"
+  },
+  "dept_id": 481,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbe4"
+  },
+  "dept_id": 482,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbec"
+  },
+  "dept_id": 483,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbf4"
+  },
+  "dept_id": 484,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbfc"
+  },
+  "dept_id": 485,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc04"
+  },
+  "dept_id": 486,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc0c"
+  },
+  "dept_id": 487,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc14"
+  },
+  "dept_id": 488,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc1c"
+  },
+  "dept_id": 489,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc24"
+  },
+  "dept_id": 490,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc2c"
+  },
+  "dept_id": 491,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc34"
+  },
+  "dept_id": 492,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc3c"
+  },
+  "dept_id": 493,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc44"
+  },
+  "dept_id": 494,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc4c"
+  },
+  "dept_id": 495,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc54"
+  },
+  "dept_id": 496,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc5c"
+  },
+  "dept_id": 497,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc64"
+  },
+  "dept_id": 498,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc6c"
+  },
+  "dept_id": 499,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc74"
+  },
+  "dept_id": 500,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc7c"
+  },
+  "dept_id": 501,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc84"
+  },
+  "dept_id": 502,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc8c"
+  },
+  "dept_id": 503,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc94"
+  },
+  "dept_id": 504,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc9c"
+  },
+  "dept_id": 505,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcca4"
+  },
+  "dept_id": 506,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fccac"
+  },
+  "dept_id": 507,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fccb4"
+  },
+  "dept_id": 508,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fccbc"
+  },
+  "dept_id": 509,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fccc4"
+  },
+  "dept_id": 510,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcccc"
+  },
+  "dept_id": 511,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fccd4"
+  },
+  "dept_id": 512,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fccdc"
+  },
+  "dept_id": 513,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcce4"
+  },
+  "dept_id": 514,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fccec"
+  },
+  "dept_id": 515,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fccf4"
+  },
+  "dept_id": 516,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fccfc"
+  },
+  "dept_id": 517,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd04"
+  },
+  "dept_id": 518,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd0c"
+  },
+  "dept_id": 519,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd14"
+  },
+  "dept_id": 520,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd1c"
+  },
+  "dept_id": 521,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd24"
+  },
+  "dept_id": 522,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd2c"
+  },
+  "dept_id": 523,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd34"
+  },
+  "dept_id": 524,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd3c"
+  },
+  "dept_id": 525,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd44"
+  },
+  "dept_id": 526,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd4c"
+  },
+  "dept_id": 527,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd54"
+  },
+  "dept_id": 528,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd5c"
+  },
+  "dept_id": 529,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd64"
+  },
+  "dept_id": 530,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd6c"
+  },
+  "dept_id": 531,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd74"
+  },
+  "dept_id": 532,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd7c"
+  },
+  "dept_id": 533,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd84"
+  },
+  "dept_id": 534,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd8c"
+  },
+  "dept_id": 535,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd94"
+  },
+  "dept_id": 536,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd9c"
+  },
+  "dept_id": 537,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcda4"
+  },
+  "dept_id": 538,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcdac"
+  },
+  "dept_id": 539,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcdb4"
+  },
+  "dept_id": 540,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdbc"
+  },
+  "dept_id": 541,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdc4"
+  },
+  "dept_id": 542,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdcc"
+  },
+  "dept_id": 543,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdd4"
+  },
+  "dept_id": 544,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcddc"
+  },
+  "dept_id": 545,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcde4"
+  },
+  "dept_id": 546,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdec"
+  },
+  "dept_id": 547,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdf4"
+  },
+  "dept_id": 548,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdfc"
+  },
+  "dept_id": 549,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce04"
+  },
+  "dept_id": 550,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce0c"
+  },
+  "dept_id": 551,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce14"
+  },
+  "dept_id": 552,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce1c"
+  },
+  "dept_id": 553,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce24"
+  },
+  "dept_id": 554,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce2c"
+  },
+  "dept_id": 555,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce34"
+  },
+  "dept_id": 556,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce3c"
+  },
+  "dept_id": 557,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce44"
+  },
+  "dept_id": 558,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce4c"
+  },
+  "dept_id": 559,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce54"
+  },
+  "dept_id": 560,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce5c"
+  },
+  "dept_id": 561,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce64"
+  },
+  "dept_id": 562,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce6c"
+  },
+  "dept_id": 563,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce74"
+  },
+  "dept_id": 564,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce7c"
+  },
+  "dept_id": 565,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce84"
+  },
+  "dept_id": 566,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce8c"
+  },
+  "dept_id": 567,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce94"
+  },
+  "dept_id": 568,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce9c"
+  },
+  "dept_id": 569,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcea4"
+  },
+  "dept_id": 570,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fceac"
+  },
+  "dept_id": 571,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fceb4"
+  },
+  "dept_id": 572,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcebc"
+  },
+  "dept_id": 573,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcec4"
+  },
+  "dept_id": 574,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcecc"
+  },
+  "dept_id": 575,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fced4"
+  },
+  "dept_id": 576,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcedc"
+  },
+  "dept_id": 577,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcee4"
+  },
+  "dept_id": 578,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fceec"
+  },
+  "dept_id": 579,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcef4"
+  },
+  "dept_id": 580,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcefc"
+  },
+  "dept_id": 581,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcf04"
+  },
+  "dept_id": 582,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf0c"
+  },
+  "dept_id": 583,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf14"
+  },
+  "dept_id": 584,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf1c"
+  },
+  "dept_id": 585,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf24"
+  },
+  "dept_id": 586,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf2c"
+  },
+  "dept_id": 587,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf34"
+  },
+  "dept_id": 588,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf3c"
+  },
+  "dept_id": 589,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf44"
+  },
+  "dept_id": 590,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf4c"
+  },
+  "dept_id": 591,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf54"
+  },
+  "dept_id": 592,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf5c"
+  },
+  "dept_id": 593,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf64"
+  },
+  "dept_id": 594,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf6c"
+  },
+  "dept_id": 595,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf74"
+  },
+  "dept_id": 596,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf7c"
+  },
+  "dept_id": 597,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf84"
+  },
+  "dept_id": 598,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf8c"
+  },
+  "dept_id": 599,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf94"
+  },
+  "dept_id": 600,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf9c"
+  },
+  "dept_id": 601,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfa4"
+  },
+  "dept_id": 602,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfac"
+  },
+  "dept_id": 603,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfb4"
+  },
+  "dept_id": 604,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfbc"
+  },
+  "dept_id": 605,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfc4"
+  },
+  "dept_id": 606,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfcc"
+  },
+  "dept_id": 607,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfd4"
+  },
+  "dept_id": 608,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfdc"
+  },
+  "dept_id": 609,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfe4"
+  },
+  "dept_id": 610,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfec"
+  },
+  "dept_id": 611,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcff4"
+  },
+  "dept_id": 612,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcffc"
+  },
+  "dept_id": 613,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd004"
+  },
+  "dept_id": 614,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd00c"
+  },
+  "dept_id": 615,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd014"
+  },
+  "dept_id": 616,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd01c"
+  },
+  "dept_id": 617,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd024"
+  },
+  "dept_id": 618,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd02c"
+  },
+  "dept_id": 619,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd034"
+  },
+  "dept_id": 620,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd03c"
+  },
+  "dept_id": 621,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd044"
+  },
+  "dept_id": 622,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd04c"
+  },
+  "dept_id": 623,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd054"
+  },
+  "dept_id": 624,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd05c"
+  },
+  "dept_id": 625,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd064"
+  },
+  "dept_id": 626,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd06c"
+  },
+  "dept_id": 627,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd074"
+  },
+  "dept_id": 628,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd07c"
+  },
+  "dept_id": 629,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd084"
+  },
+  "dept_id": 630,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd08c"
+  },
+  "dept_id": 631,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd094"
+  },
+  "dept_id": 632,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd09c"
+  },
+  "dept_id": 633,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0a4"
+  },
+  "dept_id": 634,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0ac"
+  },
+  "dept_id": 635,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0b4"
+  },
+  "dept_id": 636,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0bc"
+  },
+  "dept_id": 637,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0c4"
+  },
+  "dept_id": 638,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0cc"
+  },
+  "dept_id": 639,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0d4"
+  },
+  "dept_id": 640,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0dc"
+  },
+  "dept_id": 641,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0e4"
+  },
+  "dept_id": 642,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0ec"
+  },
+  "dept_id": 643,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0f4"
+  },
+  "dept_id": 644,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0fc"
+  },
+  "dept_id": 645,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd104"
+  },
+  "dept_id": 646,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd10c"
+  },
+  "dept_id": 647,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd114"
+  },
+  "dept_id": 648,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd11c"
+  },
+  "dept_id": 649,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd124"
+  },
+  "dept_id": 650,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd12c"
+  },
+  "dept_id": 651,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd134"
+  },
+  "dept_id": 652,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd13c"
+  },
+  "dept_id": 653,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd144"
+  },
+  "dept_id": 654,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd14c"
+  },
+  "dept_id": 655,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd154"
+  },
+  "dept_id": 656,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd15c"
+  },
+  "dept_id": 657,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd164"
+  },
+  "dept_id": 658,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd16c"
+  },
+  "dept_id": 659,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd174"
+  },
+  "dept_id": 660,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd17c"
+  },
+  "dept_id": 661,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd184"
+  },
+  "dept_id": 662,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd18c"
+  },
+  "dept_id": 663,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd194"
+  },
+  "dept_id": 664,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd19c"
+  },
+  "dept_id": 665,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1a4"
+  },
+  "dept_id": 666,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1ac"
+  },
+  "dept_id": 667,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1b4"
+  },
+  "dept_id": 668,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1bc"
+  },
+  "dept_id": 669,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1c4"
+  },
+  "dept_id": 670,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1cc"
+  },
+  "dept_id": 671,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1d4"
+  },
+  "dept_id": 672,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1dc"
+  },
+  "dept_id": 673,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1e4"
+  },
+  "dept_id": 674,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1ec"
+  },
+  "dept_id": 675,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1f4"
+  },
+  "dept_id": 676,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1fc"
+  },
+  "dept_id": 677,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd204"
+  },
+  "dept_id": 678,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd20c"
+  },
+  "dept_id": 679,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd214"
+  },
+  "dept_id": 680,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd21c"
+  },
+  "dept_id": 681,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd224"
+  },
+  "dept_id": 682,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd22c"
+  },
+  "dept_id": 683,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd234"
+  },
+  "dept_id": 684,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd23c"
+  },
+  "dept_id": 685,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd244"
+  },
+  "dept_id": 686,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd24c"
+  },
+  "dept_id": 687,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd254"
+  },
+  "dept_id": 688,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd25c"
+  },
+  "dept_id": 689,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd264"
+  },
+  "dept_id": 690,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd26c"
+  },
+  "dept_id": 691,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd274"
+  },
+  "dept_id": 692,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd27c"
+  },
+  "dept_id": 693,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd284"
+  },
+  "dept_id": 694,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd28c"
+  },
+  "dept_id": 695,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd294"
+  },
+  "dept_id": 696,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd29c"
+  },
+  "dept_id": 697,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2a4"
+  },
+  "dept_id": 698,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2ac"
+  },
+  "dept_id": 699,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2b4"
+  },
+  "dept_id": 700,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2bc"
+  },
+  "dept_id": 701,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2c4"
+  },
+  "dept_id": 702,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2cc"
+  },
+  "dept_id": 703,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2d4"
+  },
+  "dept_id": 704,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2dc"
+  },
+  "dept_id": 705,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2e4"
+  },
+  "dept_id": 706,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2ec"
+  },
+  "dept_id": 707,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2f4"
+  },
+  "dept_id": 708,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2fc"
+  },
+  "dept_id": 709,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd304"
+  },
+  "dept_id": 710,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd30c"
+  },
+  "dept_id": 711,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd314"
+  },
+  "dept_id": 712,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd31c"
+  },
+  "dept_id": 713,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd324"
+  },
+  "dept_id": 714,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd32c"
+  },
+  "dept_id": 715,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd334"
+  },
+  "dept_id": 716,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd33c"
+  },
+  "dept_id": 717,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd344"
+  },
+  "dept_id": 718,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd34c"
+  },
+  "dept_id": 719,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd354"
+  },
+  "dept_id": 720,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd35c"
+  },
+  "dept_id": 721,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd364"
+  },
+  "dept_id": 722,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd36c"
+  },
+  "dept_id": 723,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd374"
+  },
+  "dept_id": 724,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd37c"
+  },
+  "dept_id": 725,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd384"
+  },
+  "dept_id": 726,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd38c"
+  },
+  "dept_id": 727,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd394"
+  },
+  "dept_id": 728,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd39c"
+  },
+  "dept_id": 729,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd3a4"
+  },
+  "dept_id": 730,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd3ac"
+  },
+  "dept_id": 731,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3b4"
+  },
+  "dept_id": 732,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3bc"
+  },
+  "dept_id": 733,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3c4"
+  },
+  "dept_id": 734,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3cc"
+  },
+  "dept_id": 735,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3d4"
+  },
+  "dept_id": 736,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3dc"
+  },
+  "dept_id": 737,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3e4"
+  },
+  "dept_id": 738,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3ec"
+  },
+  "dept_id": 739,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3f4"
+  },
+  "dept_id": 740,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3fc"
+  },
+  "dept_id": 741,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd404"
+  },
+  "dept_id": 742,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd40c"
+  },
+  "dept_id": 743,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd414"
+  },
+  "dept_id": 744,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd41c"
+  },
+  "dept_id": 745,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd424"
+  },
+  "dept_id": 746,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd42c"
+  },
+  "dept_id": 747,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd434"
+  },
+  "dept_id": 748,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd43c"
+  },
+  "dept_id": 749,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd444"
+  },
+  "dept_id": 750,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd44c"
+  },
+  "dept_id": 751,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd454"
+  },
+  "dept_id": 752,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd45c"
+  },
+  "dept_id": 753,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd464"
+  },
+  "dept_id": 754,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd46c"
+  },
+  "dept_id": 755,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd474"
+  },
+  "dept_id": 756,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd47c"
+  },
+  "dept_id": 757,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd484"
+  },
+  "dept_id": 758,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd48c"
+  },
+  "dept_id": 759,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd494"
+  },
+  "dept_id": 760,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd49c"
+  },
+  "dept_id": 761,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4a4"
+  },
+  "dept_id": 762,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4ac"
+  },
+  "dept_id": 763,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4b4"
+  },
+  "dept_id": 764,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4bc"
+  },
+  "dept_id": 765,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4c4"
+  },
+  "dept_id": 766,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4cc"
+  },
+  "dept_id": 767,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4d4"
+  },
+  "dept_id": 768,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd4dc"
+  },
+  "dept_id": 769,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd4e4"
+  },
+  "dept_id": 770,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd4ec"
+  },
+  "dept_id": 771,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd4f4"
+  },
+  "dept_id": 772,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd4fc"
+  },
+  "dept_id": 773,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd504"
+  },
+  "dept_id": 774,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd50c"
+  },
+  "dept_id": 775,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd514"
+  },
+  "dept_id": 776,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd51c"
+  },
+  "dept_id": 777,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd524"
+  },
+  "dept_id": 778,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd52c"
+  },
+  "dept_id": 779,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd534"
+  },
+  "dept_id": 780,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd53c"
+  },
+  "dept_id": 781,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd544"
+  },
+  "dept_id": 782,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd54c"
+  },
+  "dept_id": 783,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd554"
+  },
+  "dept_id": 784,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd55c"
+  },
+  "dept_id": 785,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd564"
+  },
+  "dept_id": 786,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd56c"
+  },
+  "dept_id": 787,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd574"
+  },
+  "dept_id": 788,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd57c"
+  },
+  "dept_id": 789,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd584"
+  },
+  "dept_id": 790,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd58c"
+  },
+  "dept_id": 791,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd594"
+  },
+  "dept_id": 792,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd59c"
+  },
+  "dept_id": 793,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5a4"
+  },
+  "dept_id": 794,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5ac"
+  },
+  "dept_id": 795,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5b4"
+  },
+  "dept_id": 796,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5bc"
+  },
+  "dept_id": 797,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5c4"
+  },
+  "dept_id": 798,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5cc"
+  },
+  "dept_id": 799,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5d4"
+  },
+  "dept_id": 800,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5dc"
+  },
+  "dept_id": 801,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5e4"
+  },
+  "dept_id": 802,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5ec"
+  },
+  "dept_id": 803,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5f4"
+  },
+  "dept_id": 804,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5fc"
+  },
+  "dept_id": 805,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd604"
+  },
+  "dept_id": 806,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd60c"
+  },
+  "dept_id": 807,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd614"
+  },
+  "dept_id": 808,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd61c"
+  },
+  "dept_id": 809,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd624"
+  },
+  "dept_id": 810,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd62c"
+  },
+  "dept_id": 811,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd634"
+  },
+  "dept_id": 812,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd63c"
+  },
+  "dept_id": 813,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd644"
+  },
+  "dept_id": 814,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd64c"
+  },
+  "dept_id": 815,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd654"
+  },
+  "dept_id": 816,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd65c"
+  },
+  "dept_id": 817,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd664"
+  },
+  "dept_id": 818,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd66c"
+  },
+  "dept_id": 819,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd674"
+  },
+  "dept_id": 820,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd67c"
+  },
+  "dept_id": 821,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd684"
+  },
+  "dept_id": 822,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd68c"
+  },
+  "dept_id": 823,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd694"
+  },
+  "dept_id": 824,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd69c"
+  },
+  "dept_id": 825,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6a4"
+  },
+  "dept_id": 826,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6ac"
+  },
+  "dept_id": 827,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6b4"
+  },
+  "dept_id": 828,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6bc"
+  },
+  "dept_id": 829,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6c4"
+  },
+  "dept_id": 830,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6cc"
+  },
+  "dept_id": 831,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6d4"
+  },
+  "dept_id": 832,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6dc"
+  },
+  "dept_id": 833,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6e4"
+  },
+  "dept_id": 834,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6ec"
+  },
+  "dept_id": 835,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6f4"
+  },
+  "dept_id": 836,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6fc"
+  },
+  "dept_id": 837,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd704"
+  },
+  "dept_id": 838,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd70c"
+  },
+  "dept_id": 839,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd714"
+  },
+  "dept_id": 840,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd71c"
+  },
+  "dept_id": 841,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd724"
+  },
+  "dept_id": 842,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd72c"
+  },
+  "dept_id": 843,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd734"
+  },
+  "dept_id": 844,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd73c"
+  },
+  "dept_id": 845,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd744"
+  },
+  "dept_id": 846,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd74c"
+  },
+  "dept_id": 847,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd754"
+  },
+  "dept_id": 848,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd75c"
+  },
+  "dept_id": 849,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd764"
+  },
+  "dept_id": 850,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd76c"
+  },
+  "dept_id": 851,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd774"
+  },
+  "dept_id": 852,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd77c"
+  },
+  "dept_id": 853,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd784"
+  },
+  "dept_id": 854,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd78c"
+  },
+  "dept_id": 855,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd794"
+  },
+  "dept_id": 856,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd79c"
+  },
+  "dept_id": 857,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7a4"
+  },
+  "dept_id": 858,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7ac"
+  },
+  "dept_id": 859,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7b4"
+  },
+  "dept_id": 860,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7bc"
+  },
+  "dept_id": 861,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7c4"
+  },
+  "dept_id": 862,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7cc"
+  },
+  "dept_id": 863,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7d4"
+  },
+  "dept_id": 864,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7dc"
+  },
+  "dept_id": 865,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7e4"
+  },
+  "dept_id": 866,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7ec"
+  },
+  "dept_id": 867,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7f4"
+  },
+  "dept_id": 868,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7fc"
+  },
+  "dept_id": 869,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd804"
+  },
+  "dept_id": 870,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd80c"
+  },
+  "dept_id": 871,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd814"
+  },
+  "dept_id": 872,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd81c"
+  },
+  "dept_id": 873,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd824"
+  },
+  "dept_id": 874,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd82c"
+  },
+  "dept_id": 875,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd834"
+  },
+  "dept_id": 876,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd83c"
+  },
+  "dept_id": 877,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd844"
+  },
+  "dept_id": 878,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd84c"
+  },
+  "dept_id": 879,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd854"
+  },
+  "dept_id": 880,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd85c"
+  },
+  "dept_id": 881,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd864"
+  },
+  "dept_id": 882,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd86c"
+  },
+  "dept_id": 883,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd874"
+  },
+  "dept_id": 884,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd87c"
+  },
+  "dept_id": 885,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd884"
+  },
+  "dept_id": 886,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd88c"
+  },
+  "dept_id": 887,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd894"
+  },
+  "dept_id": 888,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd89c"
+  },
+  "dept_id": 889,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8a4"
+  },
+  "dept_id": 890,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8ac"
+  },
+  "dept_id": 891,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8b4"
+  },
+  "dept_id": 892,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8bc"
+  },
+  "dept_id": 893,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8c4"
+  },
+  "dept_id": 894,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8cc"
+  },
+  "dept_id": 895,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8d4"
+  },
+  "dept_id": 896,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8dc"
+  },
+  "dept_id": 897,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8e4"
+  },
+  "dept_id": 898,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8ec"
+  },
+  "dept_id": 899,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8f4"
+  },
+  "dept_id": 900,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8fc"
+  },
+  "dept_id": 901,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd904"
+  },
+  "dept_id": 902,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd90c"
+  },
+  "dept_id": 903,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd914"
+  },
+  "dept_id": 904,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd91c"
+  },
+  "dept_id": 905,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd924"
+  },
+  "dept_id": 906,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd92c"
+  },
+  "dept_id": 907,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd934"
+  },
+  "dept_id": 908,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd93c"
+  },
+  "dept_id": 909,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd944"
+  },
+  "dept_id": 910,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd94c"
+  },
+  "dept_id": 911,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd954"
+  },
+  "dept_id": 912,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd95c"
+  },
+  "dept_id": 913,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd964"
+  },
+  "dept_id": 914,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd96c"
+  },
+  "dept_id": 915,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd974"
+  },
+  "dept_id": 916,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd97c"
+  },
+  "dept_id": 917,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd984"
+  },
+  "dept_id": 918,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd98c"
+  },
+  "dept_id": 919,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd994"
+  },
+  "dept_id": 920,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd99c"
+  },
+  "dept_id": 921,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd9a4"
+  },
+  "dept_id": 922,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9ac"
+  },
+  "dept_id": 923,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9b4"
+  },
+  "dept_id": 924,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9bc"
+  },
+  "dept_id": 925,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9c4"
+  },
+  "dept_id": 926,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9cc"
+  },
+  "dept_id": 927,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9d4"
+  },
+  "dept_id": 928,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9dc"
+  },
+  "dept_id": 929,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9e4"
+  },
+  "dept_id": 930,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9ec"
+  },
+  "dept_id": 931,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9f4"
+  },
+  "dept_id": 932,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9fc"
+  },
+  "dept_id": 933,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda04"
+  },
+  "dept_id": 934,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda0c"
+  },
+  "dept_id": 935,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda14"
+  },
+  "dept_id": 936,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda1c"
+  },
+  "dept_id": 937,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda24"
+  },
+  "dept_id": 938,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda2c"
+  },
+  "dept_id": 939,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda34"
+  },
+  "dept_id": 940,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda3c"
+  },
+  "dept_id": 941,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda44"
+  },
+  "dept_id": 942,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda4c"
+  },
+  "dept_id": 943,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda54"
+  },
+  "dept_id": 944,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda5c"
+  },
+  "dept_id": 945,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda64"
+  },
+  "dept_id": 946,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda6c"
+  },
+  "dept_id": 947,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda74"
+  },
+  "dept_id": 948,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda7c"
+  },
+  "dept_id": 949,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda84"
+  },
+  "dept_id": 950,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda8c"
+  },
+  "dept_id": 951,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda94"
+  },
+  "dept_id": 952,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda9c"
+  },
+  "dept_id": 953,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdaa4"
+  },
+  "dept_id": 954,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdaac"
+  },
+  "dept_id": 955,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdab4"
+  },
+  "dept_id": 956,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdabc"
+  },
+  "dept_id": 957,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdac4"
+  },
+  "dept_id": 958,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdacc"
+  },
+  "dept_id": 959,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdad4"
+  },
+  "dept_id": 960,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdadc"
+  },
+  "dept_id": 961,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdae4"
+  },
+  "dept_id": 962,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdaec"
+  },
+  "dept_id": 963,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdaf4"
+  },
+  "dept_id": 964,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdafc"
+  },
+  "dept_id": 965,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb04"
+  },
+  "dept_id": 966,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb0c"
+  },
+  "dept_id": 967,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb14"
+  },
+  "dept_id": 968,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb1c"
+  },
+  "dept_id": 969,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb24"
+  },
+  "dept_id": 970,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb2c"
+  },
+  "dept_id": 971,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb34"
+  },
+  "dept_id": 972,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb3c"
+  },
+  "dept_id": 973,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb44"
+  },
+  "dept_id": 974,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb4c"
+  },
+  "dept_id": 975,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb54"
+  },
+  "dept_id": 976,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb5c"
+  },
+  "dept_id": 977,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb64"
+  },
+  "dept_id": 978,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb6c"
+  },
+  "dept_id": 979,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb74"
+  },
+  "dept_id": 980,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb7c"
+  },
+  "dept_id": 981,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb84"
+  },
+  "dept_id": 982,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb8c"
+  },
+  "dept_id": 983,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb94"
+  },
+  "dept_id": 984,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb9c"
+  },
+  "dept_id": 985,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdba4"
+  },
+  "dept_id": 986,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbac"
+  },
+  "dept_id": 987,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbb4"
+  },
+  "dept_id": 988,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbbc"
+  },
+  "dept_id": 989,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbc4"
+  },
+  "dept_id": 990,
+  "nama_departemen": "Kardiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbcc"
+  },
+  "dept_id": 991,
+  "nama_departemen": "Neurologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbd4"
+  },
+  "dept_id": 992,
+  "nama_departemen": "Pediatri"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbdc"
+  },
+  "dept_id": 993,
+  "nama_departemen": "Ortopedi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbe4"
+  },
+  "dept_id": 994,
+  "nama_departemen": "Radiologi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbec"
+  },
+  "dept_id": 995,
+  "nama_departemen": "Bedah Umum"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbf4"
+  },
+  "dept_id": 996,
+  "nama_departemen": "Penyakit Dalam"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbfc"
+  },
+  "dept_id": 997,
+  "nama_departemen": "Mata"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdc04"
+  },
+  "dept_id": 998,
+  "nama_departemen": "THT"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdc0c"
+  },
+  "dept_id": 999,
+  "nama_departemen": "Gigi"
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdc14"
+  },
+  "dept_id": 1000,
+  "nama_departemen": "Kardiologi"
+}]

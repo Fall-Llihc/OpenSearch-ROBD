@@ -1,0 +1,7000 @@
+[{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbcdf"
+  },
+  "doctor_id": 1,
+  "team_id": 1
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbce7"
+  },
+  "doctor_id": 2,
+  "team_id": 2
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbcef"
+  },
+  "doctor_id": 3,
+  "team_id": 3
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbcf7"
+  },
+  "doctor_id": 4,
+  "team_id": 4
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbcff"
+  },
+  "doctor_id": 5,
+  "team_id": 5
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd07"
+  },
+  "doctor_id": 6,
+  "team_id": 6
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd0f"
+  },
+  "doctor_id": 7,
+  "team_id": 7
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd17"
+  },
+  "doctor_id": 8,
+  "team_id": 8
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd1f"
+  },
+  "doctor_id": 9,
+  "team_id": 9
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd27"
+  },
+  "doctor_id": 10,
+  "team_id": 10
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd2f"
+  },
+  "doctor_id": 11,
+  "team_id": 11
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd37"
+  },
+  "doctor_id": 12,
+  "team_id": 12
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd3f"
+  },
+  "doctor_id": 13,
+  "team_id": 13
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd47"
+  },
+  "doctor_id": 14,
+  "team_id": 14
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd4f"
+  },
+  "doctor_id": 15,
+  "team_id": 15
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd57"
+  },
+  "doctor_id": 16,
+  "team_id": 16
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd5f"
+  },
+  "doctor_id": 17,
+  "team_id": 17
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd67"
+  },
+  "doctor_id": 18,
+  "team_id": 18
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd6f"
+  },
+  "doctor_id": 19,
+  "team_id": 19
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd77"
+  },
+  "doctor_id": 20,
+  "team_id": 20
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd7f"
+  },
+  "doctor_id": 21,
+  "team_id": 21
+},
+{
+  "_id": {
+    "$oid": "6a0db5a7bbea034bfb8fbd87"
+  },
+  "doctor_id": 22,
+  "team_id": 22
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbd8f"
+  },
+  "doctor_id": 23,
+  "team_id": 23
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbd97"
+  },
+  "doctor_id": 24,
+  "team_id": 24
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbd9f"
+  },
+  "doctor_id": 25,
+  "team_id": 25
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbda7"
+  },
+  "doctor_id": 26,
+  "team_id": 26
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdaf"
+  },
+  "doctor_id": 27,
+  "team_id": 27
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdb7"
+  },
+  "doctor_id": 28,
+  "team_id": 28
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdbf"
+  },
+  "doctor_id": 29,
+  "team_id": 29
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdc7"
+  },
+  "doctor_id": 30,
+  "team_id": 30
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdcf"
+  },
+  "doctor_id": 31,
+  "team_id": 31
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdd7"
+  },
+  "doctor_id": 32,
+  "team_id": 32
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbddf"
+  },
+  "doctor_id": 33,
+  "team_id": 33
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbde7"
+  },
+  "doctor_id": 34,
+  "team_id": 34
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdef"
+  },
+  "doctor_id": 35,
+  "team_id": 35
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdf7"
+  },
+  "doctor_id": 36,
+  "team_id": 36
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbdff"
+  },
+  "doctor_id": 37,
+  "team_id": 37
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe07"
+  },
+  "doctor_id": 38,
+  "team_id": 38
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe0f"
+  },
+  "doctor_id": 39,
+  "team_id": 39
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe17"
+  },
+  "doctor_id": 40,
+  "team_id": 40
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe1f"
+  },
+  "doctor_id": 41,
+  "team_id": 41
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe27"
+  },
+  "doctor_id": 42,
+  "team_id": 42
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe2f"
+  },
+  "doctor_id": 43,
+  "team_id": 43
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe37"
+  },
+  "doctor_id": 44,
+  "team_id": 44
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe3f"
+  },
+  "doctor_id": 45,
+  "team_id": 45
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe47"
+  },
+  "doctor_id": 46,
+  "team_id": 46
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe4f"
+  },
+  "doctor_id": 47,
+  "team_id": 47
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe57"
+  },
+  "doctor_id": 48,
+  "team_id": 48
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe5f"
+  },
+  "doctor_id": 49,
+  "team_id": 49
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe67"
+  },
+  "doctor_id": 50,
+  "team_id": 50
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe6f"
+  },
+  "doctor_id": 51,
+  "team_id": 51
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe77"
+  },
+  "doctor_id": 52,
+  "team_id": 52
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe7f"
+  },
+  "doctor_id": 53,
+  "team_id": 53
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe87"
+  },
+  "doctor_id": 54,
+  "team_id": 54
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe8f"
+  },
+  "doctor_id": 55,
+  "team_id": 55
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe97"
+  },
+  "doctor_id": 56,
+  "team_id": 56
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbe9f"
+  },
+  "doctor_id": 57,
+  "team_id": 57
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbea7"
+  },
+  "doctor_id": 58,
+  "team_id": 58
+},
+{
+  "_id": {
+    "$oid": "6a0db5a8bbea034bfb8fbeaf"
+  },
+  "doctor_id": 59,
+  "team_id": 59
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbeb7"
+  },
+  "doctor_id": 60,
+  "team_id": 60
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbebf"
+  },
+  "doctor_id": 61,
+  "team_id": 61
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbec7"
+  },
+  "doctor_id": 62,
+  "team_id": 62
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbecf"
+  },
+  "doctor_id": 63,
+  "team_id": 63
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbed7"
+  },
+  "doctor_id": 64,
+  "team_id": 64
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbedf"
+  },
+  "doctor_id": 65,
+  "team_id": 65
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbee7"
+  },
+  "doctor_id": 66,
+  "team_id": 66
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbeef"
+  },
+  "doctor_id": 67,
+  "team_id": 67
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbef7"
+  },
+  "doctor_id": 68,
+  "team_id": 68
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbeff"
+  },
+  "doctor_id": 69,
+  "team_id": 69
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf07"
+  },
+  "doctor_id": 70,
+  "team_id": 70
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf0f"
+  },
+  "doctor_id": 71,
+  "team_id": 71
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf17"
+  },
+  "doctor_id": 72,
+  "team_id": 72
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf1f"
+  },
+  "doctor_id": 73,
+  "team_id": 73
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf27"
+  },
+  "doctor_id": 74,
+  "team_id": 74
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf2f"
+  },
+  "doctor_id": 75,
+  "team_id": 75
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf37"
+  },
+  "doctor_id": 76,
+  "team_id": 76
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf3f"
+  },
+  "doctor_id": 77,
+  "team_id": 77
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf47"
+  },
+  "doctor_id": 78,
+  "team_id": 78
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf4f"
+  },
+  "doctor_id": 79,
+  "team_id": 79
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf57"
+  },
+  "doctor_id": 80,
+  "team_id": 80
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf5f"
+  },
+  "doctor_id": 81,
+  "team_id": 81
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf67"
+  },
+  "doctor_id": 82,
+  "team_id": 82
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf6f"
+  },
+  "doctor_id": 83,
+  "team_id": 83
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf77"
+  },
+  "doctor_id": 84,
+  "team_id": 84
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf7f"
+  },
+  "doctor_id": 85,
+  "team_id": 85
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf87"
+  },
+  "doctor_id": 86,
+  "team_id": 86
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf8f"
+  },
+  "doctor_id": 87,
+  "team_id": 87
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf97"
+  },
+  "doctor_id": 88,
+  "team_id": 88
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbf9f"
+  },
+  "doctor_id": 89,
+  "team_id": 89
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfa7"
+  },
+  "doctor_id": 90,
+  "team_id": 90
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfaf"
+  },
+  "doctor_id": 91,
+  "team_id": 91
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfb7"
+  },
+  "doctor_id": 92,
+  "team_id": 92
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfbf"
+  },
+  "doctor_id": 93,
+  "team_id": 93
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfc7"
+  },
+  "doctor_id": 94,
+  "team_id": 94
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfcf"
+  },
+  "doctor_id": 95,
+  "team_id": 95
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfd7"
+  },
+  "doctor_id": 96,
+  "team_id": 96
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfdf"
+  },
+  "doctor_id": 97,
+  "team_id": 97
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfe7"
+  },
+  "doctor_id": 98,
+  "team_id": 98
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbfef"
+  },
+  "doctor_id": 99,
+  "team_id": 99
+},
+{
+  "_id": {
+    "$oid": "6a0db5a9bbea034bfb8fbff7"
+  },
+  "doctor_id": 100,
+  "team_id": 100
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fbfff"
+  },
+  "doctor_id": 101,
+  "team_id": 101
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc007"
+  },
+  "doctor_id": 102,
+  "team_id": 102
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc00f"
+  },
+  "doctor_id": 103,
+  "team_id": 103
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc017"
+  },
+  "doctor_id": 104,
+  "team_id": 104
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc01f"
+  },
+  "doctor_id": 105,
+  "team_id": 105
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc027"
+  },
+  "doctor_id": 106,
+  "team_id": 106
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc02f"
+  },
+  "doctor_id": 107,
+  "team_id": 107
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc037"
+  },
+  "doctor_id": 108,
+  "team_id": 108
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc03f"
+  },
+  "doctor_id": 109,
+  "team_id": 109
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc047"
+  },
+  "doctor_id": 110,
+  "team_id": 110
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc04f"
+  },
+  "doctor_id": 111,
+  "team_id": 111
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc057"
+  },
+  "doctor_id": 112,
+  "team_id": 112
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc05f"
+  },
+  "doctor_id": 113,
+  "team_id": 113
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc067"
+  },
+  "doctor_id": 114,
+  "team_id": 114
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc06f"
+  },
+  "doctor_id": 115,
+  "team_id": 115
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc077"
+  },
+  "doctor_id": 116,
+  "team_id": 116
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc07f"
+  },
+  "doctor_id": 117,
+  "team_id": 117
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc087"
+  },
+  "doctor_id": 118,
+  "team_id": 118
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc08f"
+  },
+  "doctor_id": 119,
+  "team_id": 119
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc097"
+  },
+  "doctor_id": 120,
+  "team_id": 120
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc09f"
+  },
+  "doctor_id": 121,
+  "team_id": 121
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0a7"
+  },
+  "doctor_id": 122,
+  "team_id": 122
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0af"
+  },
+  "doctor_id": 123,
+  "team_id": 123
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0b7"
+  },
+  "doctor_id": 124,
+  "team_id": 124
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0bf"
+  },
+  "doctor_id": 125,
+  "team_id": 125
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0c7"
+  },
+  "doctor_id": 126,
+  "team_id": 126
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0cf"
+  },
+  "doctor_id": 127,
+  "team_id": 127
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0d7"
+  },
+  "doctor_id": 128,
+  "team_id": 128
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0df"
+  },
+  "doctor_id": 129,
+  "team_id": 129
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0e7"
+  },
+  "doctor_id": 130,
+  "team_id": 130
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0ef"
+  },
+  "doctor_id": 131,
+  "team_id": 131
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0f7"
+  },
+  "doctor_id": 132,
+  "team_id": 132
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc0ff"
+  },
+  "doctor_id": 133,
+  "team_id": 133
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc107"
+  },
+  "doctor_id": 134,
+  "team_id": 134
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc10f"
+  },
+  "doctor_id": 135,
+  "team_id": 135
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc117"
+  },
+  "doctor_id": 136,
+  "team_id": 136
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc11f"
+  },
+  "doctor_id": 137,
+  "team_id": 137
+},
+{
+  "_id": {
+    "$oid": "6a0db5aabbea034bfb8fc127"
+  },
+  "doctor_id": 138,
+  "team_id": 138
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc12f"
+  },
+  "doctor_id": 139,
+  "team_id": 139
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc137"
+  },
+  "doctor_id": 140,
+  "team_id": 140
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc13f"
+  },
+  "doctor_id": 141,
+  "team_id": 141
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc147"
+  },
+  "doctor_id": 142,
+  "team_id": 142
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc14f"
+  },
+  "doctor_id": 143,
+  "team_id": 143
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc157"
+  },
+  "doctor_id": 144,
+  "team_id": 144
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc15f"
+  },
+  "doctor_id": 145,
+  "team_id": 145
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc167"
+  },
+  "doctor_id": 146,
+  "team_id": 146
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc16f"
+  },
+  "doctor_id": 147,
+  "team_id": 147
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc177"
+  },
+  "doctor_id": 148,
+  "team_id": 148
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc17f"
+  },
+  "doctor_id": 149,
+  "team_id": 149
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc187"
+  },
+  "doctor_id": 150,
+  "team_id": 150
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc18f"
+  },
+  "doctor_id": 151,
+  "team_id": 151
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc197"
+  },
+  "doctor_id": 152,
+  "team_id": 152
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc19f"
+  },
+  "doctor_id": 153,
+  "team_id": 153
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1a7"
+  },
+  "doctor_id": 154,
+  "team_id": 154
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1af"
+  },
+  "doctor_id": 155,
+  "team_id": 155
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1b7"
+  },
+  "doctor_id": 156,
+  "team_id": 156
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1bf"
+  },
+  "doctor_id": 157,
+  "team_id": 157
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1c7"
+  },
+  "doctor_id": 158,
+  "team_id": 158
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1cf"
+  },
+  "doctor_id": 159,
+  "team_id": 159
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1d7"
+  },
+  "doctor_id": 160,
+  "team_id": 160
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1df"
+  },
+  "doctor_id": 161,
+  "team_id": 161
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1e7"
+  },
+  "doctor_id": 162,
+  "team_id": 162
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1ef"
+  },
+  "doctor_id": 163,
+  "team_id": 163
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1f7"
+  },
+  "doctor_id": 164,
+  "team_id": 164
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc1ff"
+  },
+  "doctor_id": 165,
+  "team_id": 165
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc207"
+  },
+  "doctor_id": 166,
+  "team_id": 166
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc20f"
+  },
+  "doctor_id": 167,
+  "team_id": 167
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc217"
+  },
+  "doctor_id": 168,
+  "team_id": 168
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc21f"
+  },
+  "doctor_id": 169,
+  "team_id": 169
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc227"
+  },
+  "doctor_id": 170,
+  "team_id": 170
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc22f"
+  },
+  "doctor_id": 171,
+  "team_id": 171
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc237"
+  },
+  "doctor_id": 172,
+  "team_id": 172
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc23f"
+  },
+  "doctor_id": 173,
+  "team_id": 173
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc247"
+  },
+  "doctor_id": 174,
+  "team_id": 174
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc24f"
+  },
+  "doctor_id": 175,
+  "team_id": 175
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc257"
+  },
+  "doctor_id": 176,
+  "team_id": 176
+},
+{
+  "_id": {
+    "$oid": "6a0db5abbbea034bfb8fc25f"
+  },
+  "doctor_id": 177,
+  "team_id": 177
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc267"
+  },
+  "doctor_id": 178,
+  "team_id": 178
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc26f"
+  },
+  "doctor_id": 179,
+  "team_id": 179
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc277"
+  },
+  "doctor_id": 180,
+  "team_id": 180
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc27f"
+  },
+  "doctor_id": 181,
+  "team_id": 181
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc287"
+  },
+  "doctor_id": 182,
+  "team_id": 182
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc28f"
+  },
+  "doctor_id": 183,
+  "team_id": 183
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc297"
+  },
+  "doctor_id": 184,
+  "team_id": 184
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc29f"
+  },
+  "doctor_id": 185,
+  "team_id": 185
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2a7"
+  },
+  "doctor_id": 186,
+  "team_id": 186
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2af"
+  },
+  "doctor_id": 187,
+  "team_id": 187
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2b7"
+  },
+  "doctor_id": 188,
+  "team_id": 188
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2bf"
+  },
+  "doctor_id": 189,
+  "team_id": 189
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2c7"
+  },
+  "doctor_id": 190,
+  "team_id": 190
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2cf"
+  },
+  "doctor_id": 191,
+  "team_id": 191
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2d7"
+  },
+  "doctor_id": 192,
+  "team_id": 192
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2df"
+  },
+  "doctor_id": 193,
+  "team_id": 193
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2e7"
+  },
+  "doctor_id": 194,
+  "team_id": 194
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2ef"
+  },
+  "doctor_id": 195,
+  "team_id": 195
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2f7"
+  },
+  "doctor_id": 196,
+  "team_id": 196
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc2ff"
+  },
+  "doctor_id": 197,
+  "team_id": 197
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc307"
+  },
+  "doctor_id": 198,
+  "team_id": 198
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc30f"
+  },
+  "doctor_id": 199,
+  "team_id": 199
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc317"
+  },
+  "doctor_id": 200,
+  "team_id": 200
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc31f"
+  },
+  "doctor_id": 201,
+  "team_id": 201
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc327"
+  },
+  "doctor_id": 202,
+  "team_id": 202
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc32f"
+  },
+  "doctor_id": 203,
+  "team_id": 203
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc337"
+  },
+  "doctor_id": 204,
+  "team_id": 204
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc33f"
+  },
+  "doctor_id": 205,
+  "team_id": 205
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc347"
+  },
+  "doctor_id": 206,
+  "team_id": 206
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc34f"
+  },
+  "doctor_id": 207,
+  "team_id": 207
+},
+{
+  "_id": {
+    "$oid": "6a0db5acbbea034bfb8fc357"
+  },
+  "doctor_id": 208,
+  "team_id": 208
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc35f"
+  },
+  "doctor_id": 209,
+  "team_id": 209
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc367"
+  },
+  "doctor_id": 210,
+  "team_id": 210
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc36f"
+  },
+  "doctor_id": 211,
+  "team_id": 211
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc377"
+  },
+  "doctor_id": 212,
+  "team_id": 212
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc37f"
+  },
+  "doctor_id": 213,
+  "team_id": 213
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc387"
+  },
+  "doctor_id": 214,
+  "team_id": 214
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc38f"
+  },
+  "doctor_id": 215,
+  "team_id": 215
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc397"
+  },
+  "doctor_id": 216,
+  "team_id": 216
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc39f"
+  },
+  "doctor_id": 217,
+  "team_id": 217
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3a7"
+  },
+  "doctor_id": 218,
+  "team_id": 218
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3af"
+  },
+  "doctor_id": 219,
+  "team_id": 219
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3b7"
+  },
+  "doctor_id": 220,
+  "team_id": 220
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3bf"
+  },
+  "doctor_id": 221,
+  "team_id": 221
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3c7"
+  },
+  "doctor_id": 222,
+  "team_id": 222
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3cf"
+  },
+  "doctor_id": 223,
+  "team_id": 223
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3d7"
+  },
+  "doctor_id": 224,
+  "team_id": 224
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3df"
+  },
+  "doctor_id": 225,
+  "team_id": 225
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3e7"
+  },
+  "doctor_id": 226,
+  "team_id": 226
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3ef"
+  },
+  "doctor_id": 227,
+  "team_id": 227
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3f7"
+  },
+  "doctor_id": 228,
+  "team_id": 228
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc3ff"
+  },
+  "doctor_id": 229,
+  "team_id": 229
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc407"
+  },
+  "doctor_id": 230,
+  "team_id": 230
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc40f"
+  },
+  "doctor_id": 231,
+  "team_id": 231
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc417"
+  },
+  "doctor_id": 232,
+  "team_id": 232
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc41f"
+  },
+  "doctor_id": 233,
+  "team_id": 233
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc427"
+  },
+  "doctor_id": 234,
+  "team_id": 234
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc42f"
+  },
+  "doctor_id": 235,
+  "team_id": 235
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc437"
+  },
+  "doctor_id": 236,
+  "team_id": 236
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc43f"
+  },
+  "doctor_id": 237,
+  "team_id": 237
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc447"
+  },
+  "doctor_id": 238,
+  "team_id": 238
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc44f"
+  },
+  "doctor_id": 239,
+  "team_id": 239
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc457"
+  },
+  "doctor_id": 240,
+  "team_id": 240
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc45f"
+  },
+  "doctor_id": 241,
+  "team_id": 241
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc467"
+  },
+  "doctor_id": 242,
+  "team_id": 242
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc46f"
+  },
+  "doctor_id": 243,
+  "team_id": 243
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc477"
+  },
+  "doctor_id": 244,
+  "team_id": 244
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc47f"
+  },
+  "doctor_id": 245,
+  "team_id": 245
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc487"
+  },
+  "doctor_id": 246,
+  "team_id": 246
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc48f"
+  },
+  "doctor_id": 247,
+  "team_id": 247
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc497"
+  },
+  "doctor_id": 248,
+  "team_id": 248
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc49f"
+  },
+  "doctor_id": 249,
+  "team_id": 249
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc4a7"
+  },
+  "doctor_id": 250,
+  "team_id": 250
+},
+{
+  "_id": {
+    "$oid": "6a0db5adbbea034bfb8fc4af"
+  },
+  "doctor_id": 251,
+  "team_id": 251
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4b7"
+  },
+  "doctor_id": 252,
+  "team_id": 252
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4bf"
+  },
+  "doctor_id": 253,
+  "team_id": 253
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4c7"
+  },
+  "doctor_id": 254,
+  "team_id": 254
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4cf"
+  },
+  "doctor_id": 255,
+  "team_id": 255
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4d7"
+  },
+  "doctor_id": 256,
+  "team_id": 256
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4df"
+  },
+  "doctor_id": 257,
+  "team_id": 257
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4e7"
+  },
+  "doctor_id": 258,
+  "team_id": 258
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4ef"
+  },
+  "doctor_id": 259,
+  "team_id": 259
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4f7"
+  },
+  "doctor_id": 260,
+  "team_id": 260
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc4ff"
+  },
+  "doctor_id": 261,
+  "team_id": 261
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc507"
+  },
+  "doctor_id": 262,
+  "team_id": 262
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc50f"
+  },
+  "doctor_id": 263,
+  "team_id": 263
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc517"
+  },
+  "doctor_id": 264,
+  "team_id": 264
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc51f"
+  },
+  "doctor_id": 265,
+  "team_id": 265
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc527"
+  },
+  "doctor_id": 266,
+  "team_id": 266
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc52f"
+  },
+  "doctor_id": 267,
+  "team_id": 267
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc537"
+  },
+  "doctor_id": 268,
+  "team_id": 268
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc53f"
+  },
+  "doctor_id": 269,
+  "team_id": 269
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc547"
+  },
+  "doctor_id": 270,
+  "team_id": 270
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc54f"
+  },
+  "doctor_id": 271,
+  "team_id": 271
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc557"
+  },
+  "doctor_id": 272,
+  "team_id": 272
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc55f"
+  },
+  "doctor_id": 273,
+  "team_id": 273
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc567"
+  },
+  "doctor_id": 274,
+  "team_id": 274
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc56f"
+  },
+  "doctor_id": 275,
+  "team_id": 275
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc577"
+  },
+  "doctor_id": 276,
+  "team_id": 276
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc57f"
+  },
+  "doctor_id": 277,
+  "team_id": 277
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc587"
+  },
+  "doctor_id": 278,
+  "team_id": 278
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc58f"
+  },
+  "doctor_id": 279,
+  "team_id": 279
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc597"
+  },
+  "doctor_id": 280,
+  "team_id": 280
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc59f"
+  },
+  "doctor_id": 281,
+  "team_id": 281
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5a7"
+  },
+  "doctor_id": 282,
+  "team_id": 282
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5af"
+  },
+  "doctor_id": 283,
+  "team_id": 283
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5b7"
+  },
+  "doctor_id": 284,
+  "team_id": 284
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5bf"
+  },
+  "doctor_id": 285,
+  "team_id": 285
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5c7"
+  },
+  "doctor_id": 286,
+  "team_id": 286
+},
+{
+  "_id": {
+    "$oid": "6a0db5aebbea034bfb8fc5cf"
+  },
+  "doctor_id": 287,
+  "team_id": 287
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5d7"
+  },
+  "doctor_id": 288,
+  "team_id": 288
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5df"
+  },
+  "doctor_id": 289,
+  "team_id": 289
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5e7"
+  },
+  "doctor_id": 290,
+  "team_id": 290
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5ef"
+  },
+  "doctor_id": 291,
+  "team_id": 291
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5f7"
+  },
+  "doctor_id": 292,
+  "team_id": 292
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc5ff"
+  },
+  "doctor_id": 293,
+  "team_id": 293
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc607"
+  },
+  "doctor_id": 294,
+  "team_id": 294
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc60f"
+  },
+  "doctor_id": 295,
+  "team_id": 295
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc617"
+  },
+  "doctor_id": 296,
+  "team_id": 296
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc61f"
+  },
+  "doctor_id": 297,
+  "team_id": 297
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc627"
+  },
+  "doctor_id": 298,
+  "team_id": 298
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc62f"
+  },
+  "doctor_id": 299,
+  "team_id": 299
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc637"
+  },
+  "doctor_id": 300,
+  "team_id": 300
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc63f"
+  },
+  "doctor_id": 301,
+  "team_id": 301
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc647"
+  },
+  "doctor_id": 302,
+  "team_id": 302
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc64f"
+  },
+  "doctor_id": 303,
+  "team_id": 303
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc657"
+  },
+  "doctor_id": 304,
+  "team_id": 304
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc65f"
+  },
+  "doctor_id": 305,
+  "team_id": 305
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc667"
+  },
+  "doctor_id": 306,
+  "team_id": 306
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc66f"
+  },
+  "doctor_id": 307,
+  "team_id": 307
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc677"
+  },
+  "doctor_id": 308,
+  "team_id": 308
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc67f"
+  },
+  "doctor_id": 309,
+  "team_id": 309
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc687"
+  },
+  "doctor_id": 310,
+  "team_id": 310
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc68f"
+  },
+  "doctor_id": 311,
+  "team_id": 311
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc697"
+  },
+  "doctor_id": 312,
+  "team_id": 312
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc69f"
+  },
+  "doctor_id": 313,
+  "team_id": 313
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6a7"
+  },
+  "doctor_id": 314,
+  "team_id": 314
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6af"
+  },
+  "doctor_id": 315,
+  "team_id": 315
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6b7"
+  },
+  "doctor_id": 316,
+  "team_id": 316
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6bf"
+  },
+  "doctor_id": 317,
+  "team_id": 317
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6c7"
+  },
+  "doctor_id": 318,
+  "team_id": 318
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6cf"
+  },
+  "doctor_id": 319,
+  "team_id": 319
+},
+{
+  "_id": {
+    "$oid": "6a0db5afbbea034bfb8fc6d7"
+  },
+  "doctor_id": 320,
+  "team_id": 320
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc6df"
+  },
+  "doctor_id": 321,
+  "team_id": 321
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc6e7"
+  },
+  "doctor_id": 322,
+  "team_id": 322
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc6ef"
+  },
+  "doctor_id": 323,
+  "team_id": 323
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc6f7"
+  },
+  "doctor_id": 324,
+  "team_id": 324
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc6ff"
+  },
+  "doctor_id": 325,
+  "team_id": 325
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc707"
+  },
+  "doctor_id": 326,
+  "team_id": 326
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc70f"
+  },
+  "doctor_id": 327,
+  "team_id": 327
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc717"
+  },
+  "doctor_id": 328,
+  "team_id": 328
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc71f"
+  },
+  "doctor_id": 329,
+  "team_id": 329
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc727"
+  },
+  "doctor_id": 330,
+  "team_id": 330
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc72f"
+  },
+  "doctor_id": 331,
+  "team_id": 331
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc737"
+  },
+  "doctor_id": 332,
+  "team_id": 332
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc73f"
+  },
+  "doctor_id": 333,
+  "team_id": 333
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc747"
+  },
+  "doctor_id": 334,
+  "team_id": 334
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc74f"
+  },
+  "doctor_id": 335,
+  "team_id": 335
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc757"
+  },
+  "doctor_id": 336,
+  "team_id": 336
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc75f"
+  },
+  "doctor_id": 337,
+  "team_id": 337
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc767"
+  },
+  "doctor_id": 338,
+  "team_id": 338
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc76f"
+  },
+  "doctor_id": 339,
+  "team_id": 339
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc777"
+  },
+  "doctor_id": 340,
+  "team_id": 340
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc77f"
+  },
+  "doctor_id": 341,
+  "team_id": 341
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc787"
+  },
+  "doctor_id": 342,
+  "team_id": 342
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc78f"
+  },
+  "doctor_id": 343,
+  "team_id": 343
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc797"
+  },
+  "doctor_id": 344,
+  "team_id": 344
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc79f"
+  },
+  "doctor_id": 345,
+  "team_id": 345
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7a7"
+  },
+  "doctor_id": 346,
+  "team_id": 346
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7af"
+  },
+  "doctor_id": 347,
+  "team_id": 347
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7b7"
+  },
+  "doctor_id": 348,
+  "team_id": 348
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7bf"
+  },
+  "doctor_id": 349,
+  "team_id": 349
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7c7"
+  },
+  "doctor_id": 350,
+  "team_id": 350
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7cf"
+  },
+  "doctor_id": 351,
+  "team_id": 351
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7d7"
+  },
+  "doctor_id": 352,
+  "team_id": 352
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7df"
+  },
+  "doctor_id": 353,
+  "team_id": 353
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7e7"
+  },
+  "doctor_id": 354,
+  "team_id": 354
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7ef"
+  },
+  "doctor_id": 355,
+  "team_id": 355
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7f7"
+  },
+  "doctor_id": 356,
+  "team_id": 356
+},
+{
+  "_id": {
+    "$oid": "6a0db5b0bbea034bfb8fc7ff"
+  },
+  "doctor_id": 357,
+  "team_id": 357
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc807"
+  },
+  "doctor_id": 358,
+  "team_id": 358
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc80f"
+  },
+  "doctor_id": 359,
+  "team_id": 359
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc817"
+  },
+  "doctor_id": 360,
+  "team_id": 360
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc81f"
+  },
+  "doctor_id": 361,
+  "team_id": 361
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc827"
+  },
+  "doctor_id": 362,
+  "team_id": 362
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc82f"
+  },
+  "doctor_id": 363,
+  "team_id": 363
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc837"
+  },
+  "doctor_id": 364,
+  "team_id": 364
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc83f"
+  },
+  "doctor_id": 365,
+  "team_id": 365
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc847"
+  },
+  "doctor_id": 366,
+  "team_id": 366
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc84f"
+  },
+  "doctor_id": 367,
+  "team_id": 367
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc857"
+  },
+  "doctor_id": 368,
+  "team_id": 368
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc85f"
+  },
+  "doctor_id": 369,
+  "team_id": 369
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc867"
+  },
+  "doctor_id": 370,
+  "team_id": 370
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc86f"
+  },
+  "doctor_id": 371,
+  "team_id": 371
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc877"
+  },
+  "doctor_id": 372,
+  "team_id": 372
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc87f"
+  },
+  "doctor_id": 373,
+  "team_id": 373
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc887"
+  },
+  "doctor_id": 374,
+  "team_id": 374
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc88f"
+  },
+  "doctor_id": 375,
+  "team_id": 375
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc897"
+  },
+  "doctor_id": 376,
+  "team_id": 376
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc89f"
+  },
+  "doctor_id": 377,
+  "team_id": 377
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8a7"
+  },
+  "doctor_id": 378,
+  "team_id": 378
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8af"
+  },
+  "doctor_id": 379,
+  "team_id": 379
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8b7"
+  },
+  "doctor_id": 380,
+  "team_id": 380
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8bf"
+  },
+  "doctor_id": 381,
+  "team_id": 381
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8c7"
+  },
+  "doctor_id": 382,
+  "team_id": 382
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8cf"
+  },
+  "doctor_id": 383,
+  "team_id": 383
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8d7"
+  },
+  "doctor_id": 384,
+  "team_id": 384
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8df"
+  },
+  "doctor_id": 385,
+  "team_id": 385
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8e7"
+  },
+  "doctor_id": 386,
+  "team_id": 386
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8ef"
+  },
+  "doctor_id": 387,
+  "team_id": 387
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8f7"
+  },
+  "doctor_id": 388,
+  "team_id": 388
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc8ff"
+  },
+  "doctor_id": 389,
+  "team_id": 389
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc907"
+  },
+  "doctor_id": 390,
+  "team_id": 390
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc90f"
+  },
+  "doctor_id": 391,
+  "team_id": 391
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc917"
+  },
+  "doctor_id": 392,
+  "team_id": 392
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc91f"
+  },
+  "doctor_id": 393,
+  "team_id": 393
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc927"
+  },
+  "doctor_id": 394,
+  "team_id": 394
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc92f"
+  },
+  "doctor_id": 395,
+  "team_id": 395
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc937"
+  },
+  "doctor_id": 396,
+  "team_id": 396
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc93f"
+  },
+  "doctor_id": 397,
+  "team_id": 397
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc947"
+  },
+  "doctor_id": 398,
+  "team_id": 398
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc94f"
+  },
+  "doctor_id": 399,
+  "team_id": 399
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc957"
+  },
+  "doctor_id": 400,
+  "team_id": 400
+},
+{
+  "_id": {
+    "$oid": "6a0db5b1bbea034bfb8fc95f"
+  },
+  "doctor_id": 401,
+  "team_id": 401
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc967"
+  },
+  "doctor_id": 402,
+  "team_id": 402
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc96f"
+  },
+  "doctor_id": 403,
+  "team_id": 403
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc977"
+  },
+  "doctor_id": 404,
+  "team_id": 404
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc97f"
+  },
+  "doctor_id": 405,
+  "team_id": 405
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc987"
+  },
+  "doctor_id": 406,
+  "team_id": 406
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc98f"
+  },
+  "doctor_id": 407,
+  "team_id": 407
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc997"
+  },
+  "doctor_id": 408,
+  "team_id": 408
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc99f"
+  },
+  "doctor_id": 409,
+  "team_id": 409
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9a7"
+  },
+  "doctor_id": 410,
+  "team_id": 410
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9af"
+  },
+  "doctor_id": 411,
+  "team_id": 411
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9b7"
+  },
+  "doctor_id": 412,
+  "team_id": 412
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9bf"
+  },
+  "doctor_id": 413,
+  "team_id": 413
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9c7"
+  },
+  "doctor_id": 414,
+  "team_id": 414
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9cf"
+  },
+  "doctor_id": 415,
+  "team_id": 415
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9d7"
+  },
+  "doctor_id": 416,
+  "team_id": 416
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9df"
+  },
+  "doctor_id": 417,
+  "team_id": 417
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9e7"
+  },
+  "doctor_id": 418,
+  "team_id": 418
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9ef"
+  },
+  "doctor_id": 419,
+  "team_id": 419
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9f7"
+  },
+  "doctor_id": 420,
+  "team_id": 420
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fc9ff"
+  },
+  "doctor_id": 421,
+  "team_id": 421
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca07"
+  },
+  "doctor_id": 422,
+  "team_id": 422
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca0f"
+  },
+  "doctor_id": 423,
+  "team_id": 423
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca17"
+  },
+  "doctor_id": 424,
+  "team_id": 424
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca1f"
+  },
+  "doctor_id": 425,
+  "team_id": 425
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca27"
+  },
+  "doctor_id": 426,
+  "team_id": 426
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca2f"
+  },
+  "doctor_id": 427,
+  "team_id": 427
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca37"
+  },
+  "doctor_id": 428,
+  "team_id": 428
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca3f"
+  },
+  "doctor_id": 429,
+  "team_id": 429
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca47"
+  },
+  "doctor_id": 430,
+  "team_id": 430
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca4f"
+  },
+  "doctor_id": 431,
+  "team_id": 431
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca57"
+  },
+  "doctor_id": 432,
+  "team_id": 432
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca5f"
+  },
+  "doctor_id": 433,
+  "team_id": 433
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca67"
+  },
+  "doctor_id": 434,
+  "team_id": 434
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca6f"
+  },
+  "doctor_id": 435,
+  "team_id": 435
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca77"
+  },
+  "doctor_id": 436,
+  "team_id": 436
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca7f"
+  },
+  "doctor_id": 437,
+  "team_id": 437
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca87"
+  },
+  "doctor_id": 438,
+  "team_id": 438
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca8f"
+  },
+  "doctor_id": 439,
+  "team_id": 439
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca97"
+  },
+  "doctor_id": 440,
+  "team_id": 440
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fca9f"
+  },
+  "doctor_id": 441,
+  "team_id": 441
+},
+{
+  "_id": {
+    "$oid": "6a0db5b2bbea034bfb8fcaa7"
+  },
+  "doctor_id": 442,
+  "team_id": 442
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcaaf"
+  },
+  "doctor_id": 443,
+  "team_id": 443
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcab7"
+  },
+  "doctor_id": 444,
+  "team_id": 444
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcabf"
+  },
+  "doctor_id": 445,
+  "team_id": 445
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcac7"
+  },
+  "doctor_id": 446,
+  "team_id": 446
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcacf"
+  },
+  "doctor_id": 447,
+  "team_id": 447
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcad7"
+  },
+  "doctor_id": 448,
+  "team_id": 448
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcadf"
+  },
+  "doctor_id": 449,
+  "team_id": 449
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcae7"
+  },
+  "doctor_id": 450,
+  "team_id": 450
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcaef"
+  },
+  "doctor_id": 451,
+  "team_id": 451
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcaf7"
+  },
+  "doctor_id": 452,
+  "team_id": 452
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcaff"
+  },
+  "doctor_id": 453,
+  "team_id": 453
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb07"
+  },
+  "doctor_id": 454,
+  "team_id": 454
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb0f"
+  },
+  "doctor_id": 455,
+  "team_id": 455
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb17"
+  },
+  "doctor_id": 456,
+  "team_id": 456
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb1f"
+  },
+  "doctor_id": 457,
+  "team_id": 457
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb27"
+  },
+  "doctor_id": 458,
+  "team_id": 458
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb2f"
+  },
+  "doctor_id": 459,
+  "team_id": 459
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb37"
+  },
+  "doctor_id": 460,
+  "team_id": 460
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb3f"
+  },
+  "doctor_id": 461,
+  "team_id": 461
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb47"
+  },
+  "doctor_id": 462,
+  "team_id": 462
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb4f"
+  },
+  "doctor_id": 463,
+  "team_id": 463
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb57"
+  },
+  "doctor_id": 464,
+  "team_id": 464
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb5f"
+  },
+  "doctor_id": 465,
+  "team_id": 465
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb67"
+  },
+  "doctor_id": 466,
+  "team_id": 466
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb6f"
+  },
+  "doctor_id": 467,
+  "team_id": 467
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb77"
+  },
+  "doctor_id": 468,
+  "team_id": 468
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb7f"
+  },
+  "doctor_id": 469,
+  "team_id": 469
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb87"
+  },
+  "doctor_id": 470,
+  "team_id": 470
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb8f"
+  },
+  "doctor_id": 471,
+  "team_id": 471
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb97"
+  },
+  "doctor_id": 472,
+  "team_id": 472
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcb9f"
+  },
+  "doctor_id": 473,
+  "team_id": 473
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcba7"
+  },
+  "doctor_id": 474,
+  "team_id": 474
+},
+{
+  "_id": {
+    "$oid": "6a0db5b3bbea034bfb8fcbaf"
+  },
+  "doctor_id": 475,
+  "team_id": 475
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbb7"
+  },
+  "doctor_id": 476,
+  "team_id": 476
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbbf"
+  },
+  "doctor_id": 477,
+  "team_id": 477
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbc7"
+  },
+  "doctor_id": 478,
+  "team_id": 478
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbcf"
+  },
+  "doctor_id": 479,
+  "team_id": 479
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbd7"
+  },
+  "doctor_id": 480,
+  "team_id": 480
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbdf"
+  },
+  "doctor_id": 481,
+  "team_id": 481
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbe7"
+  },
+  "doctor_id": 482,
+  "team_id": 482
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbef"
+  },
+  "doctor_id": 483,
+  "team_id": 483
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbf7"
+  },
+  "doctor_id": 484,
+  "team_id": 484
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcbff"
+  },
+  "doctor_id": 485,
+  "team_id": 485
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc07"
+  },
+  "doctor_id": 486,
+  "team_id": 486
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc0f"
+  },
+  "doctor_id": 487,
+  "team_id": 487
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc17"
+  },
+  "doctor_id": 488,
+  "team_id": 488
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc1f"
+  },
+  "doctor_id": 489,
+  "team_id": 489
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc27"
+  },
+  "doctor_id": 490,
+  "team_id": 490
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc2f"
+  },
+  "doctor_id": 491,
+  "team_id": 491
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc37"
+  },
+  "doctor_id": 492,
+  "team_id": 492
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc3f"
+  },
+  "doctor_id": 493,
+  "team_id": 493
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc47"
+  },
+  "doctor_id": 494,
+  "team_id": 494
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc4f"
+  },
+  "doctor_id": 495,
+  "team_id": 495
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc57"
+  },
+  "doctor_id": 496,
+  "team_id": 496
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc5f"
+  },
+  "doctor_id": 497,
+  "team_id": 497
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc67"
+  },
+  "doctor_id": 498,
+  "team_id": 498
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc6f"
+  },
+  "doctor_id": 499,
+  "team_id": 499
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc77"
+  },
+  "doctor_id": 500,
+  "team_id": 500
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc7f"
+  },
+  "doctor_id": 501,
+  "team_id": 501
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc87"
+  },
+  "doctor_id": 502,
+  "team_id": 502
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc8f"
+  },
+  "doctor_id": 503,
+  "team_id": 503
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc97"
+  },
+  "doctor_id": 504,
+  "team_id": 504
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcc9f"
+  },
+  "doctor_id": 505,
+  "team_id": 505
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fcca7"
+  },
+  "doctor_id": 506,
+  "team_id": 506
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fccaf"
+  },
+  "doctor_id": 507,
+  "team_id": 507
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fccb7"
+  },
+  "doctor_id": 508,
+  "team_id": 508
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fccbf"
+  },
+  "doctor_id": 509,
+  "team_id": 509
+},
+{
+  "_id": {
+    "$oid": "6a0db5b4bbea034bfb8fccc7"
+  },
+  "doctor_id": 510,
+  "team_id": 510
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcccf"
+  },
+  "doctor_id": 511,
+  "team_id": 511
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fccd7"
+  },
+  "doctor_id": 512,
+  "team_id": 512
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fccdf"
+  },
+  "doctor_id": 513,
+  "team_id": 513
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcce7"
+  },
+  "doctor_id": 514,
+  "team_id": 514
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fccef"
+  },
+  "doctor_id": 515,
+  "team_id": 515
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fccf7"
+  },
+  "doctor_id": 516,
+  "team_id": 516
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fccff"
+  },
+  "doctor_id": 517,
+  "team_id": 517
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd07"
+  },
+  "doctor_id": 518,
+  "team_id": 518
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd0f"
+  },
+  "doctor_id": 519,
+  "team_id": 519
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd17"
+  },
+  "doctor_id": 520,
+  "team_id": 520
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd1f"
+  },
+  "doctor_id": 521,
+  "team_id": 521
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd27"
+  },
+  "doctor_id": 522,
+  "team_id": 522
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd2f"
+  },
+  "doctor_id": 523,
+  "team_id": 523
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd37"
+  },
+  "doctor_id": 524,
+  "team_id": 524
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd3f"
+  },
+  "doctor_id": 525,
+  "team_id": 525
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd47"
+  },
+  "doctor_id": 526,
+  "team_id": 526
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd4f"
+  },
+  "doctor_id": 527,
+  "team_id": 527
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd57"
+  },
+  "doctor_id": 528,
+  "team_id": 528
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd5f"
+  },
+  "doctor_id": 529,
+  "team_id": 529
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd67"
+  },
+  "doctor_id": 530,
+  "team_id": 530
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd6f"
+  },
+  "doctor_id": 531,
+  "team_id": 531
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd77"
+  },
+  "doctor_id": 532,
+  "team_id": 532
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd7f"
+  },
+  "doctor_id": 533,
+  "team_id": 533
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd87"
+  },
+  "doctor_id": 534,
+  "team_id": 534
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd8f"
+  },
+  "doctor_id": 535,
+  "team_id": 535
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd97"
+  },
+  "doctor_id": 536,
+  "team_id": 536
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcd9f"
+  },
+  "doctor_id": 537,
+  "team_id": 537
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcda7"
+  },
+  "doctor_id": 538,
+  "team_id": 538
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcdaf"
+  },
+  "doctor_id": 539,
+  "team_id": 539
+},
+{
+  "_id": {
+    "$oid": "6a0db5b5bbea034bfb8fcdb7"
+  },
+  "doctor_id": 540,
+  "team_id": 540
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdbf"
+  },
+  "doctor_id": 541,
+  "team_id": 541
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdc7"
+  },
+  "doctor_id": 542,
+  "team_id": 542
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdcf"
+  },
+  "doctor_id": 543,
+  "team_id": 543
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdd7"
+  },
+  "doctor_id": 544,
+  "team_id": 544
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcddf"
+  },
+  "doctor_id": 545,
+  "team_id": 545
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcde7"
+  },
+  "doctor_id": 546,
+  "team_id": 546
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdef"
+  },
+  "doctor_id": 547,
+  "team_id": 547
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdf7"
+  },
+  "doctor_id": 548,
+  "team_id": 548
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcdff"
+  },
+  "doctor_id": 549,
+  "team_id": 549
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce07"
+  },
+  "doctor_id": 550,
+  "team_id": 550
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce0f"
+  },
+  "doctor_id": 551,
+  "team_id": 551
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce17"
+  },
+  "doctor_id": 552,
+  "team_id": 552
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce1f"
+  },
+  "doctor_id": 553,
+  "team_id": 553
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce27"
+  },
+  "doctor_id": 554,
+  "team_id": 554
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce2f"
+  },
+  "doctor_id": 555,
+  "team_id": 555
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce37"
+  },
+  "doctor_id": 556,
+  "team_id": 556
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce3f"
+  },
+  "doctor_id": 557,
+  "team_id": 557
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce47"
+  },
+  "doctor_id": 558,
+  "team_id": 558
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce4f"
+  },
+  "doctor_id": 559,
+  "team_id": 559
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce57"
+  },
+  "doctor_id": 560,
+  "team_id": 560
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce5f"
+  },
+  "doctor_id": 561,
+  "team_id": 561
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce67"
+  },
+  "doctor_id": 562,
+  "team_id": 562
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce6f"
+  },
+  "doctor_id": 563,
+  "team_id": 563
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce77"
+  },
+  "doctor_id": 564,
+  "team_id": 564
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce7f"
+  },
+  "doctor_id": 565,
+  "team_id": 565
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce87"
+  },
+  "doctor_id": 566,
+  "team_id": 566
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce8f"
+  },
+  "doctor_id": 567,
+  "team_id": 567
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce97"
+  },
+  "doctor_id": 568,
+  "team_id": 568
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fce9f"
+  },
+  "doctor_id": 569,
+  "team_id": 569
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcea7"
+  },
+  "doctor_id": 570,
+  "team_id": 570
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fceaf"
+  },
+  "doctor_id": 571,
+  "team_id": 571
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fceb7"
+  },
+  "doctor_id": 572,
+  "team_id": 572
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcebf"
+  },
+  "doctor_id": 573,
+  "team_id": 573
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcec7"
+  },
+  "doctor_id": 574,
+  "team_id": 574
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcecf"
+  },
+  "doctor_id": 575,
+  "team_id": 575
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fced7"
+  },
+  "doctor_id": 576,
+  "team_id": 576
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcedf"
+  },
+  "doctor_id": 577,
+  "team_id": 577
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcee7"
+  },
+  "doctor_id": 578,
+  "team_id": 578
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fceef"
+  },
+  "doctor_id": 579,
+  "team_id": 579
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcef7"
+  },
+  "doctor_id": 580,
+  "team_id": 580
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fceff"
+  },
+  "doctor_id": 581,
+  "team_id": 581
+},
+{
+  "_id": {
+    "$oid": "6a0db5b6bbea034bfb8fcf07"
+  },
+  "doctor_id": 582,
+  "team_id": 582
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf0f"
+  },
+  "doctor_id": 583,
+  "team_id": 583
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf17"
+  },
+  "doctor_id": 584,
+  "team_id": 584
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf1f"
+  },
+  "doctor_id": 585,
+  "team_id": 585
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf27"
+  },
+  "doctor_id": 586,
+  "team_id": 586
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf2f"
+  },
+  "doctor_id": 587,
+  "team_id": 587
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf37"
+  },
+  "doctor_id": 588,
+  "team_id": 588
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf3f"
+  },
+  "doctor_id": 589,
+  "team_id": 589
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf47"
+  },
+  "doctor_id": 590,
+  "team_id": 590
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf4f"
+  },
+  "doctor_id": 591,
+  "team_id": 591
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf57"
+  },
+  "doctor_id": 592,
+  "team_id": 592
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf5f"
+  },
+  "doctor_id": 593,
+  "team_id": 593
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf67"
+  },
+  "doctor_id": 594,
+  "team_id": 594
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf6f"
+  },
+  "doctor_id": 595,
+  "team_id": 595
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf77"
+  },
+  "doctor_id": 596,
+  "team_id": 596
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf7f"
+  },
+  "doctor_id": 597,
+  "team_id": 597
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf87"
+  },
+  "doctor_id": 598,
+  "team_id": 598
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf8f"
+  },
+  "doctor_id": 599,
+  "team_id": 599
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf97"
+  },
+  "doctor_id": 600,
+  "team_id": 600
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcf9f"
+  },
+  "doctor_id": 601,
+  "team_id": 601
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfa7"
+  },
+  "doctor_id": 602,
+  "team_id": 602
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfaf"
+  },
+  "doctor_id": 603,
+  "team_id": 603
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfb7"
+  },
+  "doctor_id": 604,
+  "team_id": 604
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfbf"
+  },
+  "doctor_id": 605,
+  "team_id": 605
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfc7"
+  },
+  "doctor_id": 606,
+  "team_id": 606
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfcf"
+  },
+  "doctor_id": 607,
+  "team_id": 607
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfd7"
+  },
+  "doctor_id": 608,
+  "team_id": 608
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfdf"
+  },
+  "doctor_id": 609,
+  "team_id": 609
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfe7"
+  },
+  "doctor_id": 610,
+  "team_id": 610
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfef"
+  },
+  "doctor_id": 611,
+  "team_id": 611
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcff7"
+  },
+  "doctor_id": 612,
+  "team_id": 612
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fcfff"
+  },
+  "doctor_id": 613,
+  "team_id": 613
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd007"
+  },
+  "doctor_id": 614,
+  "team_id": 614
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd00f"
+  },
+  "doctor_id": 615,
+  "team_id": 615
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd017"
+  },
+  "doctor_id": 616,
+  "team_id": 616
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd01f"
+  },
+  "doctor_id": 617,
+  "team_id": 617
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd027"
+  },
+  "doctor_id": 618,
+  "team_id": 618
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd02f"
+  },
+  "doctor_id": 619,
+  "team_id": 619
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd037"
+  },
+  "doctor_id": 620,
+  "team_id": 620
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd03f"
+  },
+  "doctor_id": 621,
+  "team_id": 621
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd047"
+  },
+  "doctor_id": 622,
+  "team_id": 622
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd04f"
+  },
+  "doctor_id": 623,
+  "team_id": 623
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd057"
+  },
+  "doctor_id": 624,
+  "team_id": 624
+},
+{
+  "_id": {
+    "$oid": "6a0db5b7bbea034bfb8fd05f"
+  },
+  "doctor_id": 625,
+  "team_id": 625
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd067"
+  },
+  "doctor_id": 626,
+  "team_id": 626
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd06f"
+  },
+  "doctor_id": 627,
+  "team_id": 627
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd077"
+  },
+  "doctor_id": 628,
+  "team_id": 628
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd07f"
+  },
+  "doctor_id": 629,
+  "team_id": 629
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd087"
+  },
+  "doctor_id": 630,
+  "team_id": 630
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd08f"
+  },
+  "doctor_id": 631,
+  "team_id": 631
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd097"
+  },
+  "doctor_id": 632,
+  "team_id": 632
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd09f"
+  },
+  "doctor_id": 633,
+  "team_id": 633
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0a7"
+  },
+  "doctor_id": 634,
+  "team_id": 634
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0af"
+  },
+  "doctor_id": 635,
+  "team_id": 635
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0b7"
+  },
+  "doctor_id": 636,
+  "team_id": 636
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0bf"
+  },
+  "doctor_id": 637,
+  "team_id": 637
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0c7"
+  },
+  "doctor_id": 638,
+  "team_id": 638
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0cf"
+  },
+  "doctor_id": 639,
+  "team_id": 639
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0d7"
+  },
+  "doctor_id": 640,
+  "team_id": 640
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0df"
+  },
+  "doctor_id": 641,
+  "team_id": 641
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0e7"
+  },
+  "doctor_id": 642,
+  "team_id": 642
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0ef"
+  },
+  "doctor_id": 643,
+  "team_id": 643
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0f7"
+  },
+  "doctor_id": 644,
+  "team_id": 644
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd0ff"
+  },
+  "doctor_id": 645,
+  "team_id": 645
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd107"
+  },
+  "doctor_id": 646,
+  "team_id": 646
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd10f"
+  },
+  "doctor_id": 647,
+  "team_id": 647
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd117"
+  },
+  "doctor_id": 648,
+  "team_id": 648
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd11f"
+  },
+  "doctor_id": 649,
+  "team_id": 649
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd127"
+  },
+  "doctor_id": 650,
+  "team_id": 650
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd12f"
+  },
+  "doctor_id": 651,
+  "team_id": 651
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd137"
+  },
+  "doctor_id": 652,
+  "team_id": 652
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd13f"
+  },
+  "doctor_id": 653,
+  "team_id": 653
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd147"
+  },
+  "doctor_id": 654,
+  "team_id": 654
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd14f"
+  },
+  "doctor_id": 655,
+  "team_id": 655
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd157"
+  },
+  "doctor_id": 656,
+  "team_id": 656
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd15f"
+  },
+  "doctor_id": 657,
+  "team_id": 657
+},
+{
+  "_id": {
+    "$oid": "6a0db5b8bbea034bfb8fd167"
+  },
+  "doctor_id": 658,
+  "team_id": 658
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd16f"
+  },
+  "doctor_id": 659,
+  "team_id": 659
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd177"
+  },
+  "doctor_id": 660,
+  "team_id": 660
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd17f"
+  },
+  "doctor_id": 661,
+  "team_id": 661
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd187"
+  },
+  "doctor_id": 662,
+  "team_id": 662
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd18f"
+  },
+  "doctor_id": 663,
+  "team_id": 663
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd197"
+  },
+  "doctor_id": 664,
+  "team_id": 664
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd19f"
+  },
+  "doctor_id": 665,
+  "team_id": 665
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1a7"
+  },
+  "doctor_id": 666,
+  "team_id": 666
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1af"
+  },
+  "doctor_id": 667,
+  "team_id": 667
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1b7"
+  },
+  "doctor_id": 668,
+  "team_id": 668
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1bf"
+  },
+  "doctor_id": 669,
+  "team_id": 669
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1c7"
+  },
+  "doctor_id": 670,
+  "team_id": 670
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1cf"
+  },
+  "doctor_id": 671,
+  "team_id": 671
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1d7"
+  },
+  "doctor_id": 672,
+  "team_id": 672
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1df"
+  },
+  "doctor_id": 673,
+  "team_id": 673
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1e7"
+  },
+  "doctor_id": 674,
+  "team_id": 674
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1ef"
+  },
+  "doctor_id": 675,
+  "team_id": 675
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1f7"
+  },
+  "doctor_id": 676,
+  "team_id": 676
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd1ff"
+  },
+  "doctor_id": 677,
+  "team_id": 677
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd207"
+  },
+  "doctor_id": 678,
+  "team_id": 678
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd20f"
+  },
+  "doctor_id": 679,
+  "team_id": 679
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd217"
+  },
+  "doctor_id": 680,
+  "team_id": 680
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd21f"
+  },
+  "doctor_id": 681,
+  "team_id": 681
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd227"
+  },
+  "doctor_id": 682,
+  "team_id": 682
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd22f"
+  },
+  "doctor_id": 683,
+  "team_id": 683
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd237"
+  },
+  "doctor_id": 684,
+  "team_id": 684
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd23f"
+  },
+  "doctor_id": 685,
+  "team_id": 685
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd247"
+  },
+  "doctor_id": 686,
+  "team_id": 686
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd24f"
+  },
+  "doctor_id": 687,
+  "team_id": 687
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd257"
+  },
+  "doctor_id": 688,
+  "team_id": 688
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd25f"
+  },
+  "doctor_id": 689,
+  "team_id": 689
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd267"
+  },
+  "doctor_id": 690,
+  "team_id": 690
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd26f"
+  },
+  "doctor_id": 691,
+  "team_id": 691
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd277"
+  },
+  "doctor_id": 692,
+  "team_id": 692
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd27f"
+  },
+  "doctor_id": 693,
+  "team_id": 693
+},
+{
+  "_id": {
+    "$oid": "6a0db5b9bbea034bfb8fd287"
+  },
+  "doctor_id": 694,
+  "team_id": 694
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd28f"
+  },
+  "doctor_id": 695,
+  "team_id": 695
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd297"
+  },
+  "doctor_id": 696,
+  "team_id": 696
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd29f"
+  },
+  "doctor_id": 697,
+  "team_id": 697
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2a7"
+  },
+  "doctor_id": 698,
+  "team_id": 698
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2af"
+  },
+  "doctor_id": 699,
+  "team_id": 699
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2b7"
+  },
+  "doctor_id": 700,
+  "team_id": 700
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2bf"
+  },
+  "doctor_id": 701,
+  "team_id": 701
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2c7"
+  },
+  "doctor_id": 702,
+  "team_id": 702
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2cf"
+  },
+  "doctor_id": 703,
+  "team_id": 703
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2d7"
+  },
+  "doctor_id": 704,
+  "team_id": 704
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2df"
+  },
+  "doctor_id": 705,
+  "team_id": 705
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2e7"
+  },
+  "doctor_id": 706,
+  "team_id": 706
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2ef"
+  },
+  "doctor_id": 707,
+  "team_id": 707
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2f7"
+  },
+  "doctor_id": 708,
+  "team_id": 708
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd2ff"
+  },
+  "doctor_id": 709,
+  "team_id": 709
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd307"
+  },
+  "doctor_id": 710,
+  "team_id": 710
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd30f"
+  },
+  "doctor_id": 711,
+  "team_id": 711
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd317"
+  },
+  "doctor_id": 712,
+  "team_id": 712
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd31f"
+  },
+  "doctor_id": 713,
+  "team_id": 713
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd327"
+  },
+  "doctor_id": 714,
+  "team_id": 714
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd32f"
+  },
+  "doctor_id": 715,
+  "team_id": 715
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd337"
+  },
+  "doctor_id": 716,
+  "team_id": 716
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd33f"
+  },
+  "doctor_id": 717,
+  "team_id": 717
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd347"
+  },
+  "doctor_id": 718,
+  "team_id": 718
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd34f"
+  },
+  "doctor_id": 719,
+  "team_id": 719
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd357"
+  },
+  "doctor_id": 720,
+  "team_id": 720
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd35f"
+  },
+  "doctor_id": 721,
+  "team_id": 721
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd367"
+  },
+  "doctor_id": 722,
+  "team_id": 722
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd36f"
+  },
+  "doctor_id": 723,
+  "team_id": 723
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd377"
+  },
+  "doctor_id": 724,
+  "team_id": 724
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd37f"
+  },
+  "doctor_id": 725,
+  "team_id": 725
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd387"
+  },
+  "doctor_id": 726,
+  "team_id": 726
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd38f"
+  },
+  "doctor_id": 727,
+  "team_id": 727
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd397"
+  },
+  "doctor_id": 728,
+  "team_id": 728
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd39f"
+  },
+  "doctor_id": 729,
+  "team_id": 729
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd3a7"
+  },
+  "doctor_id": 730,
+  "team_id": 730
+},
+{
+  "_id": {
+    "$oid": "6a0db5babbea034bfb8fd3af"
+  },
+  "doctor_id": 731,
+  "team_id": 731
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3b7"
+  },
+  "doctor_id": 732,
+  "team_id": 732
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3bf"
+  },
+  "doctor_id": 733,
+  "team_id": 733
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3c7"
+  },
+  "doctor_id": 734,
+  "team_id": 734
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3cf"
+  },
+  "doctor_id": 735,
+  "team_id": 735
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3d7"
+  },
+  "doctor_id": 736,
+  "team_id": 736
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3df"
+  },
+  "doctor_id": 737,
+  "team_id": 737
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3e7"
+  },
+  "doctor_id": 738,
+  "team_id": 738
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3ef"
+  },
+  "doctor_id": 739,
+  "team_id": 739
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3f7"
+  },
+  "doctor_id": 740,
+  "team_id": 740
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd3ff"
+  },
+  "doctor_id": 741,
+  "team_id": 741
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd407"
+  },
+  "doctor_id": 742,
+  "team_id": 742
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd40f"
+  },
+  "doctor_id": 743,
+  "team_id": 743
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd417"
+  },
+  "doctor_id": 744,
+  "team_id": 744
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd41f"
+  },
+  "doctor_id": 745,
+  "team_id": 745
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd427"
+  },
+  "doctor_id": 746,
+  "team_id": 746
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd42f"
+  },
+  "doctor_id": 747,
+  "team_id": 747
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd437"
+  },
+  "doctor_id": 748,
+  "team_id": 748
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd43f"
+  },
+  "doctor_id": 749,
+  "team_id": 749
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd447"
+  },
+  "doctor_id": 750,
+  "team_id": 750
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd44f"
+  },
+  "doctor_id": 751,
+  "team_id": 751
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd457"
+  },
+  "doctor_id": 752,
+  "team_id": 752
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd45f"
+  },
+  "doctor_id": 753,
+  "team_id": 753
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd467"
+  },
+  "doctor_id": 754,
+  "team_id": 754
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd46f"
+  },
+  "doctor_id": 755,
+  "team_id": 755
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd477"
+  },
+  "doctor_id": 756,
+  "team_id": 756
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd47f"
+  },
+  "doctor_id": 757,
+  "team_id": 757
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd487"
+  },
+  "doctor_id": 758,
+  "team_id": 758
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd48f"
+  },
+  "doctor_id": 759,
+  "team_id": 759
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd497"
+  },
+  "doctor_id": 760,
+  "team_id": 760
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd49f"
+  },
+  "doctor_id": 761,
+  "team_id": 761
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4a7"
+  },
+  "doctor_id": 762,
+  "team_id": 762
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4af"
+  },
+  "doctor_id": 763,
+  "team_id": 763
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4b7"
+  },
+  "doctor_id": 764,
+  "team_id": 764
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4bf"
+  },
+  "doctor_id": 765,
+  "team_id": 765
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4c7"
+  },
+  "doctor_id": 766,
+  "team_id": 766
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4cf"
+  },
+  "doctor_id": 767,
+  "team_id": 767
+},
+{
+  "_id": {
+    "$oid": "6a0db5bbbbea034bfb8fd4d7"
+  },
+  "doctor_id": 768,
+  "team_id": 768
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd4df"
+  },
+  "doctor_id": 769,
+  "team_id": 769
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd4e7"
+  },
+  "doctor_id": 770,
+  "team_id": 770
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd4ef"
+  },
+  "doctor_id": 771,
+  "team_id": 771
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd4f7"
+  },
+  "doctor_id": 772,
+  "team_id": 772
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd4ff"
+  },
+  "doctor_id": 773,
+  "team_id": 773
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd507"
+  },
+  "doctor_id": 774,
+  "team_id": 774
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd50f"
+  },
+  "doctor_id": 775,
+  "team_id": 775
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd517"
+  },
+  "doctor_id": 776,
+  "team_id": 776
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd51f"
+  },
+  "doctor_id": 777,
+  "team_id": 777
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd527"
+  },
+  "doctor_id": 778,
+  "team_id": 778
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd52f"
+  },
+  "doctor_id": 779,
+  "team_id": 779
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd537"
+  },
+  "doctor_id": 780,
+  "team_id": 780
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd53f"
+  },
+  "doctor_id": 781,
+  "team_id": 781
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd547"
+  },
+  "doctor_id": 782,
+  "team_id": 782
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd54f"
+  },
+  "doctor_id": 783,
+  "team_id": 783
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd557"
+  },
+  "doctor_id": 784,
+  "team_id": 784
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd55f"
+  },
+  "doctor_id": 785,
+  "team_id": 785
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd567"
+  },
+  "doctor_id": 786,
+  "team_id": 786
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd56f"
+  },
+  "doctor_id": 787,
+  "team_id": 787
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd577"
+  },
+  "doctor_id": 788,
+  "team_id": 788
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd57f"
+  },
+  "doctor_id": 789,
+  "team_id": 789
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd587"
+  },
+  "doctor_id": 790,
+  "team_id": 790
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd58f"
+  },
+  "doctor_id": 791,
+  "team_id": 791
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd597"
+  },
+  "doctor_id": 792,
+  "team_id": 792
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd59f"
+  },
+  "doctor_id": 793,
+  "team_id": 793
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5a7"
+  },
+  "doctor_id": 794,
+  "team_id": 794
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5af"
+  },
+  "doctor_id": 795,
+  "team_id": 795
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5b7"
+  },
+  "doctor_id": 796,
+  "team_id": 796
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5bf"
+  },
+  "doctor_id": 797,
+  "team_id": 797
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5c7"
+  },
+  "doctor_id": 798,
+  "team_id": 798
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5cf"
+  },
+  "doctor_id": 799,
+  "team_id": 799
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5d7"
+  },
+  "doctor_id": 800,
+  "team_id": 800
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5df"
+  },
+  "doctor_id": 801,
+  "team_id": 801
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5e7"
+  },
+  "doctor_id": 802,
+  "team_id": 802
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5ef"
+  },
+  "doctor_id": 803,
+  "team_id": 803
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5f7"
+  },
+  "doctor_id": 804,
+  "team_id": 804
+},
+{
+  "_id": {
+    "$oid": "6a0db5bcbbea034bfb8fd5ff"
+  },
+  "doctor_id": 805,
+  "team_id": 805
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd607"
+  },
+  "doctor_id": 806,
+  "team_id": 806
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd60f"
+  },
+  "doctor_id": 807,
+  "team_id": 807
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd617"
+  },
+  "doctor_id": 808,
+  "team_id": 808
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd61f"
+  },
+  "doctor_id": 809,
+  "team_id": 809
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd627"
+  },
+  "doctor_id": 810,
+  "team_id": 810
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd62f"
+  },
+  "doctor_id": 811,
+  "team_id": 811
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd637"
+  },
+  "doctor_id": 812,
+  "team_id": 812
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd63f"
+  },
+  "doctor_id": 813,
+  "team_id": 813
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd647"
+  },
+  "doctor_id": 814,
+  "team_id": 814
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd64f"
+  },
+  "doctor_id": 815,
+  "team_id": 815
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd657"
+  },
+  "doctor_id": 816,
+  "team_id": 816
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd65f"
+  },
+  "doctor_id": 817,
+  "team_id": 817
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd667"
+  },
+  "doctor_id": 818,
+  "team_id": 818
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd66f"
+  },
+  "doctor_id": 819,
+  "team_id": 819
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd677"
+  },
+  "doctor_id": 820,
+  "team_id": 820
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd67f"
+  },
+  "doctor_id": 821,
+  "team_id": 821
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd687"
+  },
+  "doctor_id": 822,
+  "team_id": 822
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd68f"
+  },
+  "doctor_id": 823,
+  "team_id": 823
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd697"
+  },
+  "doctor_id": 824,
+  "team_id": 824
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd69f"
+  },
+  "doctor_id": 825,
+  "team_id": 825
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6a7"
+  },
+  "doctor_id": 826,
+  "team_id": 826
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6af"
+  },
+  "doctor_id": 827,
+  "team_id": 827
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6b7"
+  },
+  "doctor_id": 828,
+  "team_id": 828
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6bf"
+  },
+  "doctor_id": 829,
+  "team_id": 829
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6c7"
+  },
+  "doctor_id": 830,
+  "team_id": 830
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6cf"
+  },
+  "doctor_id": 831,
+  "team_id": 831
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6d7"
+  },
+  "doctor_id": 832,
+  "team_id": 832
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6df"
+  },
+  "doctor_id": 833,
+  "team_id": 833
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6e7"
+  },
+  "doctor_id": 834,
+  "team_id": 834
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6ef"
+  },
+  "doctor_id": 835,
+  "team_id": 835
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6f7"
+  },
+  "doctor_id": 836,
+  "team_id": 836
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd6ff"
+  },
+  "doctor_id": 837,
+  "team_id": 837
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd707"
+  },
+  "doctor_id": 838,
+  "team_id": 838
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd70f"
+  },
+  "doctor_id": 839,
+  "team_id": 839
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd717"
+  },
+  "doctor_id": 840,
+  "team_id": 840
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd71f"
+  },
+  "doctor_id": 841,
+  "team_id": 841
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd727"
+  },
+  "doctor_id": 842,
+  "team_id": 842
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd72f"
+  },
+  "doctor_id": 843,
+  "team_id": 843
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd737"
+  },
+  "doctor_id": 844,
+  "team_id": 844
+},
+{
+  "_id": {
+    "$oid": "6a0db5bdbbea034bfb8fd73f"
+  },
+  "doctor_id": 845,
+  "team_id": 845
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd747"
+  },
+  "doctor_id": 846,
+  "team_id": 846
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd74f"
+  },
+  "doctor_id": 847,
+  "team_id": 847
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd757"
+  },
+  "doctor_id": 848,
+  "team_id": 848
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd75f"
+  },
+  "doctor_id": 849,
+  "team_id": 849
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd767"
+  },
+  "doctor_id": 850,
+  "team_id": 850
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd76f"
+  },
+  "doctor_id": 851,
+  "team_id": 851
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd777"
+  },
+  "doctor_id": 852,
+  "team_id": 852
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd77f"
+  },
+  "doctor_id": 853,
+  "team_id": 853
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd787"
+  },
+  "doctor_id": 854,
+  "team_id": 854
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd78f"
+  },
+  "doctor_id": 855,
+  "team_id": 855
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd797"
+  },
+  "doctor_id": 856,
+  "team_id": 856
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd79f"
+  },
+  "doctor_id": 857,
+  "team_id": 857
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7a7"
+  },
+  "doctor_id": 858,
+  "team_id": 858
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7af"
+  },
+  "doctor_id": 859,
+  "team_id": 859
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7b7"
+  },
+  "doctor_id": 860,
+  "team_id": 860
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7bf"
+  },
+  "doctor_id": 861,
+  "team_id": 861
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7c7"
+  },
+  "doctor_id": 862,
+  "team_id": 862
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7cf"
+  },
+  "doctor_id": 863,
+  "team_id": 863
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7d7"
+  },
+  "doctor_id": 864,
+  "team_id": 864
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7df"
+  },
+  "doctor_id": 865,
+  "team_id": 865
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7e7"
+  },
+  "doctor_id": 866,
+  "team_id": 866
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7ef"
+  },
+  "doctor_id": 867,
+  "team_id": 867
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7f7"
+  },
+  "doctor_id": 868,
+  "team_id": 868
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd7ff"
+  },
+  "doctor_id": 869,
+  "team_id": 869
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd807"
+  },
+  "doctor_id": 870,
+  "team_id": 870
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd80f"
+  },
+  "doctor_id": 871,
+  "team_id": 871
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd817"
+  },
+  "doctor_id": 872,
+  "team_id": 872
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd81f"
+  },
+  "doctor_id": 873,
+  "team_id": 873
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd827"
+  },
+  "doctor_id": 874,
+  "team_id": 874
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd82f"
+  },
+  "doctor_id": 875,
+  "team_id": 875
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd837"
+  },
+  "doctor_id": 876,
+  "team_id": 876
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd83f"
+  },
+  "doctor_id": 877,
+  "team_id": 877
+},
+{
+  "_id": {
+    "$oid": "6a0db5bebbea034bfb8fd847"
+  },
+  "doctor_id": 878,
+  "team_id": 878
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd84f"
+  },
+  "doctor_id": 879,
+  "team_id": 879
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd857"
+  },
+  "doctor_id": 880,
+  "team_id": 880
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd85f"
+  },
+  "doctor_id": 881,
+  "team_id": 881
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd867"
+  },
+  "doctor_id": 882,
+  "team_id": 882
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd86f"
+  },
+  "doctor_id": 883,
+  "team_id": 883
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd877"
+  },
+  "doctor_id": 884,
+  "team_id": 884
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd87f"
+  },
+  "doctor_id": 885,
+  "team_id": 885
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd887"
+  },
+  "doctor_id": 886,
+  "team_id": 886
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd88f"
+  },
+  "doctor_id": 887,
+  "team_id": 887
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd897"
+  },
+  "doctor_id": 888,
+  "team_id": 888
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd89f"
+  },
+  "doctor_id": 889,
+  "team_id": 889
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8a7"
+  },
+  "doctor_id": 890,
+  "team_id": 890
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8af"
+  },
+  "doctor_id": 891,
+  "team_id": 891
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8b7"
+  },
+  "doctor_id": 892,
+  "team_id": 892
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8bf"
+  },
+  "doctor_id": 893,
+  "team_id": 893
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8c7"
+  },
+  "doctor_id": 894,
+  "team_id": 894
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8cf"
+  },
+  "doctor_id": 895,
+  "team_id": 895
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8d7"
+  },
+  "doctor_id": 896,
+  "team_id": 896
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8df"
+  },
+  "doctor_id": 897,
+  "team_id": 897
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8e7"
+  },
+  "doctor_id": 898,
+  "team_id": 898
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8ef"
+  },
+  "doctor_id": 899,
+  "team_id": 899
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8f7"
+  },
+  "doctor_id": 900,
+  "team_id": 900
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd8ff"
+  },
+  "doctor_id": 901,
+  "team_id": 901
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd907"
+  },
+  "doctor_id": 902,
+  "team_id": 902
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd90f"
+  },
+  "doctor_id": 903,
+  "team_id": 903
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd917"
+  },
+  "doctor_id": 904,
+  "team_id": 904
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd91f"
+  },
+  "doctor_id": 905,
+  "team_id": 905
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd927"
+  },
+  "doctor_id": 906,
+  "team_id": 906
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd92f"
+  },
+  "doctor_id": 907,
+  "team_id": 907
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd937"
+  },
+  "doctor_id": 908,
+  "team_id": 908
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd93f"
+  },
+  "doctor_id": 909,
+  "team_id": 909
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd947"
+  },
+  "doctor_id": 910,
+  "team_id": 910
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd94f"
+  },
+  "doctor_id": 911,
+  "team_id": 911
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd957"
+  },
+  "doctor_id": 912,
+  "team_id": 912
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd95f"
+  },
+  "doctor_id": 913,
+  "team_id": 913
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd967"
+  },
+  "doctor_id": 914,
+  "team_id": 914
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd96f"
+  },
+  "doctor_id": 915,
+  "team_id": 915
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd977"
+  },
+  "doctor_id": 916,
+  "team_id": 916
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd97f"
+  },
+  "doctor_id": 917,
+  "team_id": 917
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd987"
+  },
+  "doctor_id": 918,
+  "team_id": 918
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd98f"
+  },
+  "doctor_id": 919,
+  "team_id": 919
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd997"
+  },
+  "doctor_id": 920,
+  "team_id": 920
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd99f"
+  },
+  "doctor_id": 921,
+  "team_id": 921
+},
+{
+  "_id": {
+    "$oid": "6a0db5bfbbea034bfb8fd9a7"
+  },
+  "doctor_id": 922,
+  "team_id": 922
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9af"
+  },
+  "doctor_id": 923,
+  "team_id": 923
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9b7"
+  },
+  "doctor_id": 924,
+  "team_id": 924
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9bf"
+  },
+  "doctor_id": 925,
+  "team_id": 925
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9c7"
+  },
+  "doctor_id": 926,
+  "team_id": 926
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9cf"
+  },
+  "doctor_id": 927,
+  "team_id": 927
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9d7"
+  },
+  "doctor_id": 928,
+  "team_id": 928
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9df"
+  },
+  "doctor_id": 929,
+  "team_id": 929
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9e7"
+  },
+  "doctor_id": 930,
+  "team_id": 930
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9ef"
+  },
+  "doctor_id": 931,
+  "team_id": 931
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9f7"
+  },
+  "doctor_id": 932,
+  "team_id": 932
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fd9ff"
+  },
+  "doctor_id": 933,
+  "team_id": 933
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda07"
+  },
+  "doctor_id": 934,
+  "team_id": 934
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda0f"
+  },
+  "doctor_id": 935,
+  "team_id": 935
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda17"
+  },
+  "doctor_id": 936,
+  "team_id": 936
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda1f"
+  },
+  "doctor_id": 937,
+  "team_id": 937
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda27"
+  },
+  "doctor_id": 938,
+  "team_id": 938
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda2f"
+  },
+  "doctor_id": 939,
+  "team_id": 939
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda37"
+  },
+  "doctor_id": 940,
+  "team_id": 940
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda3f"
+  },
+  "doctor_id": 941,
+  "team_id": 941
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda47"
+  },
+  "doctor_id": 942,
+  "team_id": 942
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda4f"
+  },
+  "doctor_id": 943,
+  "team_id": 943
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda57"
+  },
+  "doctor_id": 944,
+  "team_id": 944
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda5f"
+  },
+  "doctor_id": 945,
+  "team_id": 945
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda67"
+  },
+  "doctor_id": 946,
+  "team_id": 946
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda6f"
+  },
+  "doctor_id": 947,
+  "team_id": 947
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda77"
+  },
+  "doctor_id": 948,
+  "team_id": 948
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda7f"
+  },
+  "doctor_id": 949,
+  "team_id": 949
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda87"
+  },
+  "doctor_id": 950,
+  "team_id": 950
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda8f"
+  },
+  "doctor_id": 951,
+  "team_id": 951
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda97"
+  },
+  "doctor_id": 952,
+  "team_id": 952
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fda9f"
+  },
+  "doctor_id": 953,
+  "team_id": 953
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdaa7"
+  },
+  "doctor_id": 954,
+  "team_id": 954
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdaaf"
+  },
+  "doctor_id": 955,
+  "team_id": 955
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdab7"
+  },
+  "doctor_id": 956,
+  "team_id": 956
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdabf"
+  },
+  "doctor_id": 957,
+  "team_id": 957
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdac7"
+  },
+  "doctor_id": 958,
+  "team_id": 958
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdacf"
+  },
+  "doctor_id": 959,
+  "team_id": 959
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdad7"
+  },
+  "doctor_id": 960,
+  "team_id": 960
+},
+{
+  "_id": {
+    "$oid": "6a0db5c0bbea034bfb8fdadf"
+  },
+  "doctor_id": 961,
+  "team_id": 961
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdae7"
+  },
+  "doctor_id": 962,
+  "team_id": 962
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdaef"
+  },
+  "doctor_id": 963,
+  "team_id": 963
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdaf7"
+  },
+  "doctor_id": 964,
+  "team_id": 964
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdaff"
+  },
+  "doctor_id": 965,
+  "team_id": 965
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb07"
+  },
+  "doctor_id": 966,
+  "team_id": 966
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb0f"
+  },
+  "doctor_id": 967,
+  "team_id": 967
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb17"
+  },
+  "doctor_id": 968,
+  "team_id": 968
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb1f"
+  },
+  "doctor_id": 969,
+  "team_id": 969
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb27"
+  },
+  "doctor_id": 970,
+  "team_id": 970
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb2f"
+  },
+  "doctor_id": 971,
+  "team_id": 971
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb37"
+  },
+  "doctor_id": 972,
+  "team_id": 972
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb3f"
+  },
+  "doctor_id": 973,
+  "team_id": 973
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb47"
+  },
+  "doctor_id": 974,
+  "team_id": 974
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb4f"
+  },
+  "doctor_id": 975,
+  "team_id": 975
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb57"
+  },
+  "doctor_id": 976,
+  "team_id": 976
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb5f"
+  },
+  "doctor_id": 977,
+  "team_id": 977
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb67"
+  },
+  "doctor_id": 978,
+  "team_id": 978
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb6f"
+  },
+  "doctor_id": 979,
+  "team_id": 979
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb77"
+  },
+  "doctor_id": 980,
+  "team_id": 980
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb7f"
+  },
+  "doctor_id": 981,
+  "team_id": 981
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb87"
+  },
+  "doctor_id": 982,
+  "team_id": 982
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb8f"
+  },
+  "doctor_id": 983,
+  "team_id": 983
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb97"
+  },
+  "doctor_id": 984,
+  "team_id": 984
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdb9f"
+  },
+  "doctor_id": 985,
+  "team_id": 985
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdba7"
+  },
+  "doctor_id": 986,
+  "team_id": 986
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbaf"
+  },
+  "doctor_id": 987,
+  "team_id": 987
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbb7"
+  },
+  "doctor_id": 988,
+  "team_id": 988
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbbf"
+  },
+  "doctor_id": 989,
+  "team_id": 989
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbc7"
+  },
+  "doctor_id": 990,
+  "team_id": 990
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbcf"
+  },
+  "doctor_id": 991,
+  "team_id": 991
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbd7"
+  },
+  "doctor_id": 992,
+  "team_id": 992
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbdf"
+  },
+  "doctor_id": 993,
+  "team_id": 993
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbe7"
+  },
+  "doctor_id": 994,
+  "team_id": 994
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbef"
+  },
+  "doctor_id": 995,
+  "team_id": 995
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbf7"
+  },
+  "doctor_id": 996,
+  "team_id": 996
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdbff"
+  },
+  "doctor_id": 997,
+  "team_id": 997
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdc07"
+  },
+  "doctor_id": 998,
+  "team_id": 998
+},
+{
+  "_id": {
+    "$oid": "6a0db5c1bbea034bfb8fdc0f"
+  },
+  "doctor_id": 999,
+  "team_id": 999
+},
+{
+  "_id": {
+    "$oid": "6a0db5c2bbea034bfb8fdc17"
+  },
+  "doctor_id": 1000,
+  "team_id": 1000
+}]
