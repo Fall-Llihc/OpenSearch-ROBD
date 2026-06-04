@@ -82,70 +82,72 @@ def strip_markdown(text: str) -> str:
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
-# ── Search OpenSearch — pakai multi_search (msh_search) ───────────────────────
-def search_opensearch(query: str, size: int = 8) -> list:
+# ── Keyword routing — pilih index relevan berdasarkan kata kunci ───────────────
+def get_relevant_indices(question: str) -> list:
+    q = question.lower()
+    mapping = {
+        "hospital_doctors":     ["dokter","spesialis","neurologi","kardiologi","ortopedi",
+                                  "pediatri","radiologi","bedah","penyakit","mata","tht","gigi"],
+        "hospital_departments": ["departemen","dept","bagian","divisi"],
+        "hospital_patients":    ["pasien","bpjs","umum","asuransi"],
+        "hospital_services":    ["layanan","service","rawat","operasi","laboratorium",
+                                  "radiologi","tarif","biaya layanan","jenis"],
+        "hospital_bills":       ["tagihan","bill","biaya","lunas","belum","diproses","total biaya"],
+        "hospital_payments":    ["pembayaran","bayar","metode","tunai","transfer","kredit","qris"],
+        "hospital_teams":       ["tim","team"],
+        "hospital_tim_dokter":  ["tim dokter","penugasan"],
+    }
+    selected = []
+    for index, keywords in mapping.items():
+        if any(kw in q for kw in keywords):
+            selected.append(index)
+    # Kalau tidak ada yang match, ambil semua
+    return selected if selected else INDICES
+
+# ── Search OpenSearch ──────────────────────────────────────────────────────────
+def search_opensearch(question: str, size: int = 8) -> list:
     client = get_os_client()
     results = []
+    relevant = get_relevant_indices(question)
 
-    # Bangun multi-search request sekaligus
-    body = []
-    for index in INDICES:
-        body.append({"index": index})
-        body.append({
-            "query": {
-                "bool": {
-                    "should": [
-                        {
-                            "multi_match": {
-                                "query": query,
-                                "fields": ["*"],
-                                "type": "best_fields",
-                            }
-                        },
-                        {
-                            "match_all": {}
+    for index in relevant:
+        try:
+            # Coba text search dulu
+            resp = client.search(
+                index=index,
+                body={
+                    "query": {
+                        "multi_match": {
+                            "query": question,
+                            "fields": ["*"],
+                            "type": "best_fields",
                         }
-                    ]
-                }
-            },
-            "size": size,
-        })
-
-    try:
-        resp = client.msearch(body=body)
-        for i, r in enumerate(resp["responses"]):
-            if "hits" not in r:
-                continue
-            for hit in r["hits"]["hits"]:
-                if hit["_score"] and hit["_score"] > 0:
-                    results.append({
-                        "index": INDICES[i],
-                        "score": hit["_score"],
-                        "data": hit["_source"],
-                    })
-    except Exception as e:
-        print(f"msearch error: {e}")
-        # Fallback: query satu per satu
-        for index in INDICES:
-            try:
-                r = client.search(
-                    index=index,
-                    body={
-                        "query": {"match_all": {}},
-                        "size": 3,
                     },
+                    "size": size,
+                },
+            )
+            hits = resp["hits"]["hits"]
+
+            # Kalau tidak ada hasil, fallback ke match_all
+            if not hits:
+                resp = client.search(
+                    index=index,
+                    body={"query": {"match_all": {}}, "size": size},
                 )
-                for hit in r["hits"]["hits"]:
-                    results.append({
-                        "index": index,
-                        "score": 1.0,
-                        "data": hit["_source"],
-                    })
-            except Exception as e2:
-                print(f"fallback error {index}: {e2}")
+                hits = resp["hits"]["hits"]
+
+            for hit in hits:
+                results.append({
+                    "index": index,
+                    "score": hit.get("_score") or 1.0,
+                    "data": hit["_source"],
+                })
+        except Exception as e:
+            print(f"Search error {index}: {e}")
+            continue
 
     results.sort(key=lambda x: x["score"], reverse=True)
-    return results[:size * 2]
+    return results[:size * 3]
 
 # ── Build context ──────────────────────────────────────────────────────────────
 def build_context(results: list) -> str:
@@ -170,7 +172,8 @@ ATURAN FORMAT:
 - Jangan gunakan format bold, italic, heading, atau blockquote
 - Pisahkan bagian dengan baris kosong saja
 - Tulis angka mata uang dengan format: Rp 1.234.567
-- Jika data tidak cukup, katakan dengan jelas tanpa mengarang"""
+- Jika data tidak cukup, katakan dengan jelas tanpa mengarang
+- Data yang diberikan adalah SAMPEL dari total 1000 dokumen per koleksi"""
 
     chat = get_groq_client().chat.completions.create(
         model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
@@ -235,45 +238,26 @@ def stats():
 @app.get("/debug")
 def debug():
     result = {}
-    result["groq_key_set"] = bool(os.getenv("GROQ_API_KEY", ""))
-    result["groq_model"] = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
-    result["opensearch_url_set"] = bool(os.getenv("OPENSEARCH_URL", ""))
-
-    # Test search tiap index satu per satu
-    search_results = {}
     client = get_os_client()
+    counts = {}
     for index in INDICES:
         try:
-            r = client.search(
-                index=index,
-                body={"query": {"match_all": {}}, "size": 1},
-            )
-            search_results[index] = r["hits"]["total"]["value"]
+            r = client.search(index=index,
+                              body={"query": {"match_all": {}}, "size": 2})
+            counts[index] = {
+                "total": r["hits"]["total"]["value"],
+                "sample": [h["_source"] for h in r["hits"]["hits"]],
+            }
         except Exception as e:
-            search_results[index] = f"ERROR: {str(e)}"
-    result["index_counts"] = search_results
-
-    # Test msearch
+            counts[index] = {"error": str(e)}
+    result["indices"] = counts
     try:
-        body = []
-        for index in INDICES:
-            body.append({"index": index})
-            body.append({"query": {"match_all": {}}, "size": 1})
-        resp = client.msearch(body=body)
-        result["msearch_status"] = "ok"
-        result["msearch_responses"] = len(resp["responses"])
-    except Exception as e:
-        result["msearch_status"] = f"ERROR: {str(e)}"
-
-    # Test Groq
-    try:
-        chat = get_groq_client().chat.completions.create(
+        get_groq_client().chat.completions.create(
             model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
-            max_tokens=10,
+            max_tokens=5,
             messages=[{"role": "user", "content": "hi"}],
         )
-        result["groq_status"] = "ok"
+        result["groq"] = "ok"
     except Exception as e:
-        result["groq_status"] = f"ERROR: {str(e)}"
-
+        result["groq"] = str(e)
     return result
