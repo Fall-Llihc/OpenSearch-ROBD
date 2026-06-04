@@ -628,6 +628,73 @@ def build_join_context(question: str) -> str:
         except Exception as e:
             print(f"Join patient-bill error: {e}")
 
+    # ── Deteksi pola: detail bill tertentu (bill #N / bill N) ─────────────────
+    import re as _re2
+    bill_id_patterns = [
+        r'\bbill\s*#?\s*(\d+)\b',
+        r'\btagihan\s*#?\s*(\d+)\b',
+        r'\btagihan\s+ke[- ]?(\d+)\b',
+        r'\bfaktur\s*#?\s*(\d+)\b',
+    ]
+    bill_ids_mentioned = []
+    for pat in bill_id_patterns:
+        bill_ids_mentioned += [int(m) for m in _re2.findall(pat, q)]
+    bill_ids_mentioned = list(set(bill_ids_mentioned))
+
+    if bill_ids_mentioned:
+        try:
+            for bid in bill_ids_mentioned[:3]:
+                # Step 1: ambil bill exact by bill_id
+                b_resp = client.search(index="hospital_bills", body={
+                    "query": {"term": {"bill_id": bid}}, "size": 1
+                })
+                if not b_resp["hits"]["hits"]:
+                    parts.append(f"Bill #{bid}: tidak ditemukan.")
+                    continue
+                bill = b_resp["hits"]["hits"][0]["_source"]
+
+                # Step 2: join ke service
+                svc = None
+                if "service_id" in bill:
+                    s_resp = client.search(index="hospital_services", body={
+                        "query": {"term": {"service_id": bill["service_id"]}}, "size": 1
+                    })
+                    if s_resp["hits"]["hits"]:
+                        svc = s_resp["hits"]["hits"][0]["_source"]
+
+                # Step 3: join ke patient
+                pat = None
+                if "patient_id" in bill:
+                    p_resp = client.search(index="hospital_patients", body={
+                        "query": {"term": {"patient_id": bill["patient_id"]}}, "size": 1
+                    })
+                    if p_resp["hits"]["hits"]:
+                        pat = p_resp["hits"]["hits"][0]["_source"]
+
+                # Step 4: join ke payment
+                pay_resp = client.search(index="hospital_payments", body={
+                    "query": {"term": {"bill_id": bid}}, "size": 5
+                })
+                pays = [h["_source"] for h in pay_resp["hits"]["hits"]]
+
+                # Rangkum
+                parts.append(f"=== Detail Bill #{bid} ===")
+                parts.append(f"  Total biaya    : Rp {bill['total_biaya']:,}")
+                parts.append(f"  Status tagihan : {bill['status_tagihan']}")
+                parts.append(f"  Tanggal tagihan: {bill.get('tanggal_tagihan', '-')}")
+                if pat:
+                    parts.append(f"  Pasien         : {pat['nama_pasien']} (ID:{pat['patient_id']}) | Tipe: {pat['tipe_pasien']}")
+                if svc:
+                    parts.append(f"  Layanan        : {svc['nama_layanan']} | Jenis: {svc['jenis_layanan']} | Tarif dasar: Rp {svc['tarif_dasar']:,}")
+                if pays:
+                    parts.append(f"  Pembayaran ({len(pays)} transaksi):")
+                    for p in pays:
+                        parts.append(f"    - Rp {p['jumlah_bayar']:,} via {p['metode_pembayaran']} | Status: {p['status_pembayaran']} | Tgl: {p.get('tanggal_pembayaran','-')}")
+                else:
+                    parts.append(f"  Pembayaran     : Belum ada data pembayaran")
+        except Exception as e:
+            print(f"Join bill detail error: {e}")
+
     # ── Deteksi pola: dokter di departemen X ──────────────────────────────────
     if "departemen" in q and "dokter" in q:
         try:
@@ -646,6 +713,99 @@ def build_join_context(question: str) -> str:
                     parts.append(f"  - {d['nama_dokter']} | {d['spesialisasi']}")
         except Exception as e:
             print(f"Join dept-doctor error: {e}")
+
+    # ── Deteksi pola: layanan / service tertentu ───────────────────────────────
+    service_id_patterns = [r'\blayanan\s*#?\s*(\d+)\b', r'\bservice\s*#?\s*(\d+)\b']
+    svc_ids = []
+    for pat in service_id_patterns:
+        svc_ids += [int(m) for m in _re2.findall(pat, q)]
+    svc_ids = list(set(svc_ids))
+
+    if svc_ids:
+        try:
+            for sid in svc_ids[:3]:
+                s_resp = client.search(index="hospital_services", body={
+                    "query": {"term": {"service_id": sid}}, "size": 1
+                })
+                if s_resp["hits"]["hits"]:
+                    svc = s_resp["hits"]["hits"][0]["_source"]
+                    parts.append(f"=== Detail Layanan #{sid} ===")
+                    parts.append(f"  Nama    : {svc['nama_layanan']}")
+                    parts.append(f"  Jenis   : {svc['jenis_layanan']}")
+                    parts.append(f"  Tarif   : Rp {svc['tarif_dasar']:,}")
+        except Exception as e:
+            print(f"Join service detail error: {e}")
+
+    # ── Deteksi pola: pasien tertentu by ID ───────────────────────────────────
+    patient_id_patterns = [r'\bpasien\s*#?\s*(\d+)\b', r'\bpatient\s*#?\s*(\d+)\b']
+    pat_ids = []
+    for pat in patient_id_patterns:
+        pat_ids += [int(m) for m in _re2.findall(pat, q)]
+    pat_ids = list(set(pat_ids))
+
+    if pat_ids:
+        try:
+            for pid in pat_ids[:3]:
+                p_resp = client.search(index="hospital_patients", body={
+                    "query": {"term": {"patient_id": pid}}, "size": 1
+                })
+                if not p_resp["hits"]["hits"]:
+                    continue
+                patient = p_resp["hits"]["hits"][0]["_source"]
+
+                # Tagihan pasien ini
+                b_resp = client.search(index="hospital_bills", body={
+                    "query": {"term": {"patient_id": pid}}, "size": 20
+                })
+                bills_data = [h["_source"] for h in b_resp["hits"]["hits"]]
+
+                parts.append(f"=== Detail Pasien #{pid} ===")
+                parts.append(f"  Nama      : {patient['nama_pasien']}")
+                parts.append(f"  Tipe      : {patient['tipe_pasien']}")
+                parts.append(f"  Team ID   : {patient['team_id']}")
+                parts.append(f"  Tagihan ({len(bills_data)} total):")
+                for b in bills_data:
+                    # join service
+                    svc_r = client.search(index="hospital_services", body={
+                        "query": {"term": {"service_id": b["service_id"]}}, "size": 1
+                    })
+                    svc_name = svc_r["hits"]["hits"][0]["_source"]["nama_layanan"] if svc_r["hits"]["hits"] else "?"
+                    jenis    = svc_r["hits"]["hits"][0]["_source"]["jenis_layanan"] if svc_r["hits"]["hits"] else "?"
+                    parts.append(
+                        f"    Bill #{b['bill_id']}: Rp {b['total_biaya']:,} "
+                        f"({b['status_tagihan']}) | {svc_name} ({jenis}) | {b.get('tanggal_tagihan','-')}"
+                    )
+        except Exception as e:
+            print(f"Join patient detail error: {e}")
+
+    # ── Deteksi pola: dokter tertentu by ID ───────────────────────────────────
+    doctor_id_patterns = [r'\bdokter\s*#?\s*(\d+)\b', r'\bdr\.?\s*(\d+)\b']
+    doc_ids = []
+    for pat in doctor_id_patterns:
+        doc_ids += [int(m) for m in _re2.findall(pat, q)]
+    doc_ids = list(set(doc_ids))
+
+    if doc_ids and "pasien" not in q:  # kalau ada pasien, sudah dihandle di atas
+        try:
+            for did in doc_ids[:3]:
+                d_resp = client.search(index="hospital_doctors", body={
+                    "query": {"term": {"doctor_id": did}}, "size": 1
+                })
+                if not d_resp["hits"]["hits"]:
+                    continue
+                doc = d_resp["hits"]["hits"][0]["_source"]
+                # dept
+                dept_r = client.search(index="hospital_departments", body={
+                    "query": {"term": {"dept_id": doc["dept_id"]}}, "size": 1
+                })
+                dept_name = dept_r["hits"]["hits"][0]["_source"]["nama_departemen"] if dept_r["hits"]["hits"] else "?"
+
+                parts.append(f"=== Detail Dokter #{did} ===")
+                parts.append(f"  Nama         : {doc['nama_dokter']}")
+                parts.append(f"  Spesialisasi : {doc['spesialisasi']}")
+                parts.append(f"  Departemen   : {dept_name} (ID:{doc['dept_id']})")
+        except Exception as e:
+            print(f"Join doctor detail error: {e}")
 
     return "\n".join(parts) if parts else ""
 
