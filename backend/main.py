@@ -275,6 +275,168 @@ def build_agg_context(question: str) -> str:
 
     return "\n".join(parts) if parts else ""
 
+# ── Join Engine — resolve relasi antar collection di OpenSearch ────────────────
+def build_join_context(question: str) -> str:
+    """
+    Untuk pertanyaan relasional (dokter-pasien, pasien-tagihan, dll),
+    lakukan join manual antar index OpenSearch.
+
+    Relasi data:
+    doctors ──(doctor_id)──> tim_dokter ──(team_id)──> teams
+                                                          │
+                                                       (team_id)
+                                                          ▼
+    services <──(service_id)── bills <──(patient_id)── patients
+                                  │
+                               (bill_id)
+                                  ▼
+                              payments
+    """
+    client = get_os_client()
+    q = question.lower()
+    parts = []
+
+    # ── Deteksi pola: pasien siapa yang ditangani dokter X ─────────────────────
+    doc_patient_patterns = [
+        "pasien.*dokter", "dokter.*pasien", "ditangani dokter",
+        "pasien dari dokter", "pasien dokter", "dokter menangani"
+    ]
+    import re as _re
+    is_doc_patient = any(_re.search(p, q) for p in doc_patient_patterns)
+
+    if is_doc_patient or ("dokter" in q and "pasien" in q):
+        try:
+            # Cari dokter yang disebutkan di pertanyaan
+            resp = client.search(index="hospital_doctors", body={
+                "query": {"multi_match": {"query": question, "fields": ["nama_dokter", "spesialisasi"]}},
+                "size": 5,
+            })
+            matched_doctors = [h["_source"] for h in resp["hits"]["hits"]]
+
+            if not matched_doctors:
+                # Fallback: cari berdasarkan ID jika ada angka di pertanyaan
+                numbers = _re.findall(r'\b(\d+)\b', question)
+                if numbers:
+                    for num in numbers[:3]:
+                        r2 = client.search(index="hospital_doctors", body={
+                            "query": {"term": {"doctor_id": int(num)}}, "size": 1
+                        })
+                        matched_doctors += [h["_source"] for h in r2["hits"]["hits"]]
+
+            for doctor in matched_doctors[:3]:
+                doc_id = doctor["doctor_id"]
+                doc_name = doctor["nama_dokter"]
+                spec = doctor["spesialisasi"]
+
+                # Step 1: doctor_id → team_id via tim_dokter
+                tim_resp = client.search(index="hospital_tim_dokter", body={
+                    "query": {"term": {"doctor_id": doc_id}}, "size": 50
+                })
+                team_ids = [h["_source"]["team_id"] for h in tim_resp["hits"]["hits"]]
+
+                if not team_ids:
+                    parts.append(f"Dokter {doc_name} (ID:{doc_id}) belum ditugaskan ke tim manapun.")
+                    continue
+
+                # Step 2: team_id → patients
+                patient_resp = client.search(index="hospital_patients", body={
+                    "query": {"terms": {"team_id": team_ids}}, "size": 100
+                })
+                patients_data = [h["_source"] for h in patient_resp["hits"]["hits"]]
+
+                parts.append(f"Dokter: {doc_name} (ID:{doc_id}) | {spec}")
+                parts.append(f"Tim yang ditangani: {team_ids}")
+                parts.append(f"Jumlah pasien: {len(patients_data)}")
+
+                if patients_data:
+                    parts.append("Daftar pasien:")
+                    for p in patients_data:
+                        # Step 3: patient_id → bills
+                        bill_resp = client.search(index="hospital_bills", body={
+                            "query": {"term": {"patient_id": p["patient_id"]}}, "size": 10
+                        })
+                        bills_data = [h["_source"] for h in bill_resp["hits"]["hits"]]
+                        bill_info = ""
+                        if bills_data:
+                            b = bills_data[0]
+                            bill_info = f" | Tagihan: Rp {b['total_biaya']:,} ({b['status_tagihan']})"
+                        parts.append(
+                            f"  - {p['nama_pasien']} (ID:{p['patient_id']}) | "
+                            f"Tipe: {p['tipe_pasien']}{bill_info}"
+                        )
+        except Exception as e:
+            print(f"Join doctor-patient error: {e}")
+
+    # ── Deteksi pola: tagihan / riwayat pasien X ───────────────────────────────
+    patient_bill_patterns = ["tagihan.*pasien", "pasien.*tagihan", "riwayat pasien",
+                              "bayaran pasien", "biaya pasien"]
+    is_patient_bill = any(_re.search(p, q) for p in patient_bill_patterns)
+
+    if is_patient_bill or ("pasien" in q and ("tagihan" in q or "biaya" in q or "bayar" in q)):
+        try:
+            resp = client.search(index="hospital_patients", body={
+                "query": {"multi_match": {"query": question, "fields": ["nama_pasien", "tipe_pasien"]}},
+                "size": 5,
+            })
+            matched_patients = [h["_source"] for h in resp["hits"]["hits"]]
+
+            # Coba cari berdasarkan ID juga
+            numbers = _re.findall(r'\b(\d+)\b', question)
+            if numbers and not matched_patients:
+                for num in numbers[:2]:
+                    r2 = client.search(index="hospital_patients", body={
+                        "query": {"term": {"patient_id": int(num)}}, "size": 1
+                    })
+                    matched_patients += [h["_source"] for h in r2["hits"]["hits"]]
+
+            for patient in matched_patients[:3]:
+                pid = patient["patient_id"]
+                # bills
+                bill_resp = client.search(index="hospital_bills", body={
+                    "query": {"term": {"patient_id": pid}}, "size": 20
+                })
+                bills_data = [h["_source"] for h in bill_resp["hits"]["hits"]]
+
+                parts.append(f"Pasien: {patient['nama_pasien']} (ID:{pid}) | Tipe: {patient['tipe_pasien']}")
+                parts.append(f"Jumlah tagihan: {len(bills_data)}")
+                for b in bills_data:
+                    # payments for this bill
+                    pay_resp = client.search(index="hospital_payments", body={
+                        "query": {"term": {"bill_id": b["bill_id"]}}, "size": 5
+                    })
+                    pays = [h["_source"] for h in pay_resp["hits"]["hits"]]
+                    pay_info = ""
+                    if pays:
+                        pay_info = f" | Bayar: Rp {pays[0]['jumlah_bayar']:,} ({pays[0]['metode_pembayaran']}, {pays[0]['status_pembayaran']})"
+                    parts.append(
+                        f"  - Bill #{b['bill_id']}: Rp {b['total_biaya']:,} "
+                        f"({b['status_tagihan']}) tgl {b.get('tanggal_tagihan','?')}{pay_info}"
+                    )
+        except Exception as e:
+            print(f"Join patient-bill error: {e}")
+
+    # ── Deteksi pola: dokter di departemen X ──────────────────────────────────
+    if "departemen" in q and "dokter" in q:
+        try:
+            dept_resp = client.search(index="hospital_departments", body={
+                "query": {"multi_match": {"query": question, "fields": ["nama_departemen"]}},
+                "size": 3,
+            })
+            for dept in [h["_source"] for h in dept_resp["hits"]["hits"]][:2]:
+                doc_resp = client.search(index="hospital_doctors", body={
+                    "query": {"term": {"dept_id": dept["dept_id"]}}, "size": 20
+                })
+                docs = [h["_source"] for h in doc_resp["hits"]["hits"]]
+                parts.append(f"Departemen: {dept['nama_departemen']} (ID:{dept['dept_id']})")
+                parts.append(f"Jumlah dokter: {len(docs)}")
+                for d in docs[:10]:
+                    parts.append(f"  - {d['nama_dokter']} | {d['spesialisasi']}")
+        except Exception as e:
+            print(f"Join dept-doctor error: {e}")
+
+    return "\n".join(parts) if parts else ""
+
+
 # ── Search OpenSearch — sample dokumen ────────────────────────────────────────
 def search_opensearch(question: str, size: int = 8) -> list:
     client = get_os_client()
@@ -317,17 +479,24 @@ def search_opensearch(question: str, size: int = 8) -> list:
 def build_context(question: str, results: list) -> str:
     parts = []
 
-    # Selalu tambahkan aggregation context (angka nyata dari OpenSearch)
+    # 1. Join context — untuk pertanyaan relasional antar collection
+    join = build_join_context(question)
+    if join:
+        parts.append("=== DATA RELASI (JOIN ANTAR COLLECTION) ===")
+        parts.append(join)
+        parts.append("")
+
+    # 2. Aggregation context — untuk pertanyaan count/sum/group
     agg = build_agg_context(question)
     if agg:
         parts.append("=== STATISTIK NYATA DARI OPENSEARCH ===")
         parts.append(agg)
         parts.append("")
 
-    # Tambahkan sample dokumen sebagai konteks tambahan
+    # 3. Sample dokumen sebagai konteks tambahan
     if results:
         parts.append("=== SAMPLE DOKUMEN ===")
-        for r in results[:12]:
+        for r in results[:10]:
             idx = r["index"].replace("hospital_", "").upper()
             parts.append(f"[{idx}] {json.dumps(r['data'], ensure_ascii=False)}")
 
@@ -340,6 +509,7 @@ Jawab pertanyaan berdasarkan data yang diberikan dari database rumah sakit.
 Gunakan Bahasa Indonesia yang jelas dan profesional.
 
 PENTING:
+- Bagian "DATA RELASI" berisi hasil JOIN antar collection — gunakan ini untuk menjawab pertanyaan tentang relasi dokter-pasien, pasien-tagihan, dll.
 - Bagian "STATISTIK NYATA DARI OPENSEARCH" berisi angka yang AKURAT dari seluruh database.
 - Gunakan angka dari statistik tersebut untuk menjawab pertanyaan tentang total/jumlah/count.
 - Jangan menghitung sendiri dari sample dokumen untuk pertanyaan agregasi.
