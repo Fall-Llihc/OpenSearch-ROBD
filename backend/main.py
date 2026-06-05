@@ -881,11 +881,18 @@ def ask_groq(question: str, context: str) -> str:
 Jawab pertanyaan berdasarkan data yang diberikan dari database rumah sakit.
 Gunakan Bahasa Indonesia yang jelas dan profesional.
 
-PENTING:
-- Bagian "DATA RELASI" berisi hasil JOIN antar collection — gunakan ini untuk menjawab pertanyaan tentang relasi dokter-pasien, pasien-tagihan, dll.
-- Bagian "STATISTIK NYATA DARI OPENSEARCH" berisi angka yang AKURAT dari seluruh database.
-- Gunakan angka dari statistik tersebut untuk menjawab pertanyaan tentang total/jumlah/count.
-- Jangan menghitung sendiri dari sample dokumen untuk pertanyaan agregasi.
+PENTING — DATA:
+- Bagian "DATA RELASI" berisi hasil JOIN antar collection. Gunakan untuk pertanyaan relasi dokter-pasien, detail bill, dll.
+- Bagian "STATISTIK NYATA DARI OPENSEARCH" berisi angka AKURAT dari seluruh database. Gunakan untuk pertanyaan total/jumlah/count.
+- Jangan menghitung dari sample dokumen untuk pertanyaan agregasi — gunakan angka dari statistik.
+
+PENTING — MATEMATIKA:
+- Jika user tanya "total lunas DAN belum lunas", jumlahkan HANYA dua kategori tersebut, BUKAN total keseluruhan.
+- "Total keseluruhan" = semua status (Lunas + Belum Lunas + Diproses + dll).
+- "Total lunas" = hanya status Lunas.
+- "Total belum lunas" = hanya status Belum Lunas.
+- Selalu tunjukkan perhitungan jika menjumlahkan beberapa kategori. Contoh: "Rp X + Rp Y = Rp Z".
+- Jangan campurkan kategori yang tidak ditanyakan ke dalam hasil jumlah.
 
 ATURAN FORMAT:
 - Gunakan teks biasa tanpa markdown
