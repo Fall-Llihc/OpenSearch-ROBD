@@ -71,7 +71,7 @@ COST_CATEGORIES = {
 # ── Models ─────────────────────────────────────────────────────────────────────
 class AskRequest(BaseModel):
     question: str
-    max_results: Optional[int] = 8
+    max_results: Optional[int] = 4
 
 class AskResponse(BaseModel):
     answer: str
@@ -406,7 +406,7 @@ def search_opensearch(question: str, size: int = 8) -> list:
             continue
 
     results.sort(key=lambda x: x["score"], reverse=True)
-    return results[:size * 3]
+    return results[:size]
 
 
 # ── Build context ──────────────────────────────────────────────────────────────
@@ -415,15 +415,22 @@ def build_context(question: str, results: list) -> str:
 
     agg = build_agg_context(question)
     if agg:
+        # Potong aggregation jika terlalu panjang (max ~2000 karakter)
+        if len(agg) > 2000:
+            agg = agg[:2000] + "\n...(dipotong untuk efisiensi)"
         parts.append("=== STATISTIK BIAYA DARI OPENSEARCH ===")
         parts.append(agg)
         parts.append("")
 
     if results:
         parts.append("=== SAMPLE DOKUMEN TERKAIT ===")
-        for r in results[:8]:
+        for r in results[:3]:
             idx = r["index"].replace("cost_", "").upper()
-            parts.append(f"[{idx}] {json.dumps(r['data'], ensure_ascii=False)}")
+            # Hanya tampilkan field kunci, bukan seluruh dokumen
+            d = r["data"]
+            keys = ["nama_obat","nama_alat","nama_pemeriksaan","jabatan","jenis_utilitas","nama_departemen","periode","total_biaya_operasional","biaya_pemakaian_bulan","biaya_depresiasi_tahunan","total_kompensasi_bulanan","total_biaya","gaji_pokok"]
+            slim = {k: d[k] for k in keys if k in d}
+            parts.append(f"[{idx}] {json.dumps(slim, ensure_ascii=False)}")
 
     return "\n".join(parts) if parts else "Tidak ada data relevan ditemukan."
 
@@ -462,7 +469,7 @@ ATURAN FORMAT:
 
     chat = get_groq_client().chat.completions.create(
         model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
-        max_tokens=1500,
+        max_tokens=800,
         temperature=0.1,
         messages=[
             {"role": "system", "content": system},
