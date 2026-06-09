@@ -145,7 +145,9 @@ function SparklineChart({ data }) {
 
 /* ---- Department Cost Bars ---- */
 function DeptTable({ data }) {
-  const depts = (data.by_department || []).slice(0, 6);
+  const { formatRp } = window.HData;
+  // Tampilkan semua departemen, bukan hanya 6
+  const depts = (data.by_department || []);
   if (!depts.length) return (
     <div style={{ fontSize: 11, color: "var(--text-4)", padding: "8px 0" }}>Memuat data…</div>
   );
@@ -156,7 +158,7 @@ function DeptTable({ data }) {
         <div className="dept-row" key={i}>
           <div className="dept-info">
             <span className="dept-name">{d.name}</span>
-            <span className="dept-val mono">{d.total.toLocaleString("id-ID")} jt</span>
+            <span className="dept-val mono">{formatRp(d.total)}</span>
           </div>
           <div className="dept-bar-bg">
             <div className="dept-bar-fill" style={{ width: (d.total / maxVal * 100) + "%" }}></div>
