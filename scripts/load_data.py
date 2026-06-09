@@ -1,6 +1,12 @@
 """
-load_data.py — ETL: MongoDB JSON -> OpenSearch
-Rumah Sakit Sehat Selalu
+load_data.py — ETL: JSON Dataset -> OpenSearch
+Hospital Operational Cost Analytics — Analisis Biaya Operasional
+
+Chunking Strategy:
+  Menggunakan ENTITY-LEVEL CHUNKING: setiap dokumen JSON adalah 1 chunk
+  yang merepresentasikan 1 entitas biaya (1 item obat, 1 alat, 1 tes lab, dll).
+  Ini optimal karena setiap record bersifat self-contained dengan field numerik
+  yang langsung dapat diagregasi oleh OpenSearch DSL.
 
 Usage:
     python scripts/load_data.py
@@ -10,128 +16,152 @@ Usage:
 import json
 import argparse
 from pathlib import Path
-from datetime import datetime
 from opensearchpy import OpenSearch, helpers
 
 # ── Index mappings ─────────────────────────────────────────────────────────────
 MAPPINGS = {
-    "hospital_patients": {
+    "cost_obat": {
         "mappings": {
             "properties": {
-                "patient_id":  {"type": "integer"},
-                "team_id":     {"type": "integer"},
-                "tipe_pasien": {"type": "keyword"},
-                "nama_pasien": {"type": "text", "analyzer": "standard"},
+                "obat_id":                {"type": "integer"},
+                "nama_obat":              {"type": "text",    "analyzer": "standard",
+                                           "fields": {"keyword": {"type": "keyword"}}},
+                "kategori_obat":          {"type": "keyword"},
+                "satuan":                 {"type": "keyword"},
+                "harga_satuan":           {"type": "long"},
+                "stok_tersedia":          {"type": "integer"},
+                "dept_id":                {"type": "integer"},
+                "supplier":               {"type": "keyword"},
+                "tanggal_kadaluarsa":     {"type": "date", "format": "yyyy-MM-dd"},
+                "tanggal_pengadaan":      {"type": "date", "format": "yyyy-MM-dd"},
+                "total_pemakaian_bulan":  {"type": "integer"},
+                "biaya_pemakaian_bulan":  {"type": "long"},
             }
         }
     },
-    "hospital_doctors": {
+    "cost_alat_medis": {
         "mappings": {
             "properties": {
-                "doctor_id":   {"type": "integer"},
-                "dept_id":     {"type": "integer"},
-                "nama_dokter": {"type": "text", "analyzer": "standard"},
-                "spesialisasi":{"type": "keyword"},
+                "alat_id":                    {"type": "integer"},
+                "nama_alat":                  {"type": "text",    "analyzer": "standard",
+                                               "fields": {"keyword": {"type": "keyword"}}},
+                "jenis_alat":                 {"type": "keyword"},
+                "dept_id":                    {"type": "integer"},
+                "harga_beli":                 {"type": "long"},
+                "tahun_pembelian":            {"type": "integer"},
+                "masa_pakai_tahun":           {"type": "integer"},
+                "kondisi":                    {"type": "keyword"},
+                "biaya_servis_tahunan":       {"type": "long"},
+                "biaya_depresiasi_tahunan":   {"type": "long"},
+                "biaya_operasional_bulan":    {"type": "long"},
+                "vendor":                     {"type": "keyword"},
+                "tanggal_pembelian":          {"type": "date", "format": "yyyy-MM-dd"},
+                "last_maintenance":           {"type": "date", "format": "yyyy-MM-dd"},
+                "status_operasional":         {"type": "keyword"},
             }
         }
     },
-    "hospital_departments": {
+    "cost_lab": {
+        "mappings": {
+            "properties": {
+                "lab_id":                      {"type": "integer"},
+                "nama_pemeriksaan":            {"type": "text",    "analyzer": "standard",
+                                                "fields": {"keyword": {"type": "keyword"}}},
+                "jenis_pemeriksaan":           {"type": "keyword"},
+                "dept_id":                     {"type": "integer"},
+                "tarif_pemeriksaan":           {"type": "long"},
+                "biaya_reagent_per_tes":       {"type": "long"},
+                "volume_pemeriksaan_bulan":    {"type": "integer"},
+                "total_pendapatan_bulan":      {"type": "long"},
+                "total_biaya_reagent_bulan":   {"type": "long"},
+                "waktu_pengerjaan_menit":      {"type": "integer"},
+                "akreditasi_lis":              {"type": "boolean"},
+                "tanggal_update":              {"type": "date", "format": "yyyy-MM-dd"},
+            }
+        }
+    },
+    "cost_sdm": {
+        "mappings": {
+            "properties": {
+                "sdm_id":                    {"type": "integer"},
+                "nama_karyawan":             {"type": "text",    "analyzer": "standard"},
+                "jabatan":                   {"type": "keyword"},
+                "dept_id":                   {"type": "integer"},
+                "status_karyawan":           {"type": "keyword"},
+                "shift":                     {"type": "keyword"},
+                "gaji_pokok":                {"type": "long"},
+                "tunjangan":                 {"type": "long"},
+                "insentif_bulanan":          {"type": "long"},
+                "bpjs_kesehatan":            {"type": "long"},
+                "bpjs_ketenagakerjaan":      {"type": "long"},
+                "total_kompensasi_bulanan":  {"type": "long"},
+                "tahun_bergabung":           {"type": "integer"},
+                "hari_kerja_bulan":          {"type": "integer"},
+                "lembur_jam_bulan":          {"type": "integer"},
+                "biaya_lembur":              {"type": "long"},
+            }
+        }
+    },
+    "cost_utilitas": {
+        "mappings": {
+            "properties": {
+                "utilitas_id":      {"type": "integer"},
+                "periode":          {"type": "date", "format": "yyyy-MM-dd"},
+                "tahun":            {"type": "integer"},
+                "bulan":            {"type": "integer"},
+                "dept_id":          {"type": "integer"},
+                "nama_departemen":  {"type": "keyword"},
+                "jenis_utilitas":   {"type": "keyword"},
+                "konsumsi":         {"type": "long"},
+                "satuan":           {"type": "keyword"},
+                "tarif_per_unit":   {"type": "long"},
+                "total_biaya":      {"type": "long"},
+                "vendor":           {"type": "keyword"},
+                "status_pembayaran":{"type": "keyword"},
+            }
+        }
+    },
+    "cost_departments": {
         "mappings": {
             "properties": {
                 "dept_id":        {"type": "integer"},
-                "nama_departemen":{"type": "text", "analyzer": "standard"},
+                "nama_departemen":{"type": "text", "analyzer": "standard",
+                                   "fields": {"keyword": {"type": "keyword"}}},
+                "kode":           {"type": "keyword"},
             }
         }
     },
-    "hospital_teams": {
+    "cost_monthly": {
         "mappings": {
             "properties": {
-                "team_id": {"type": "integer"},
-                "nama_tim":{"type": "text", "analyzer": "standard"},
-            }
-        }
-    },
-    "hospital_services": {
-        "mappings": {
-            "properties": {
-                "service_id":   {"type": "integer"},
-                "nama_layanan": {"type": "text", "analyzer": "standard"},
-                "jenis_layanan":{"type": "keyword"},
-                "tarif_dasar":  {"type": "long"},
-            }
-        }
-    },
-    "hospital_bills": {
-        "mappings": {
-            "properties": {
-                "bill_id":        {"type": "integer"},
-                "patient_id":     {"type": "integer"},
-                "service_id":     {"type": "integer"},
-                "total_biaya":    {"type": "long"},
-                "status_tagihan": {"type": "keyword"},
-                "tanggal_tagihan":{"type": "date", "format": "yyyy-MM-dd"},
-            }
-        }
-    },
-    "hospital_payments": {
-        "mappings": {
-            "properties": {
-                "payment_id":          {"type": "integer"},
-                "bill_id":             {"type": "integer"},
-                "metode_pembayaran":   {"type": "keyword"},
-                "jumlah_bayar":        {"type": "long"},
-                "status_pembayaran":   {"type": "keyword"},
-                "tanggal_pembayaran":  {"type": "date", "format": "yyyy-MM-dd"},
-            }
-        }
-    },
-    "hospital_tim_dokter": {
-        "mappings": {
-            "properties": {
-                "doctor_id": {"type": "integer"},
-                "team_id":   {"type": "integer"},
+                "cost_id":                   {"type": "integer"},
+                "periode":                   {"type": "keyword"},
+                "tahun":                     {"type": "integer"},
+                "bulan":                     {"type": "integer"},
+                "dept_id":                   {"type": "integer"},
+                "nama_departemen":           {"type": "keyword"},
+                "biaya_obat":                {"type": "long"},
+                "biaya_alat_medis":          {"type": "long"},
+                "biaya_lab":                 {"type": "long"},
+                "biaya_sdm":                 {"type": "long"},
+                "biaya_utilitas":            {"type": "long"},
+                "total_biaya_operasional":   {"type": "long"},
+                "anggaran_bulan":            {"type": "long"},
+                "realisasi_vs_anggaran":     {"type": "float"},
             }
         }
     },
 }
 
 DATA_FILES = {
-    "hospital_patients":    "hospital_db_patients.json",
-    "hospital_doctors":     "hospital_db_doctors.json",
-    "hospital_departments": "hospital_db_departments.json",
-    "hospital_teams":       "hospital_db_teams.json",
-    "hospital_services":    "hospital_db_services.json",
-    "hospital_bills":       "hospital_db_bills.json",
-    "hospital_payments":    "hospital_db_payments.json",
-    "hospital_tim_dokter":  "hospital_db_tim_dokter.json",
+    "cost_obat":        "hospital_db_obat.json",
+    "cost_alat_medis":  "hospital_db_alat_medis.json",
+    "cost_lab":         "hospital_db_lab.json",
+    "cost_sdm":         "hospital_db_sdm.json",
+    "cost_utilitas":    "hospital_db_utilitas.json",
+    "cost_departments": "hospital_db_departments.json",
+    "cost_monthly":     "hospital_db_monthly_cost.json",
 }
-
-
-def clean_record(record: dict) -> dict:
-    """Strip MongoDB metadata, normalize $date -> yyyy-MM-dd string."""
-    out = {}
-    for k, v in record.items():
-        if k == "_id":
-            continue
-        if isinstance(v, dict):
-            if "$date" in v:
-                try:
-                    dt = datetime.fromisoformat(v["$date"].replace("Z", "+00:00"))
-                    out[k] = dt.strftime("%Y-%m-%d")
-                except Exception:
-                    out[k] = v["$date"]
-            elif "$oid" in v:
-                out[k] = v["$oid"]
-            else:
-                out[k] = v
-        else:
-            out[k] = v
-    return out
-
-
-def generate_actions(index_name: str, records: list):
-    for rec in records:
-        yield {"_index": index_name, "_source": clean_record(rec)}
 
 
 def load_one_index(client: OpenSearch, index_name: str, filepath: Path) -> int:
@@ -145,9 +175,13 @@ def load_one_index(client: OpenSearch, index_name: str, filepath: Path) -> int:
     with open(filepath, encoding="utf-8") as f:
         records = json.load(f)
 
+    def generate_actions(records):
+        for rec in records:
+            yield {"_index": index_name, "_source": rec}
+
     success, errors = helpers.bulk(
         client,
-        generate_actions(index_name, records),
+        generate_actions(records),
         chunk_size=500,
         raise_on_error=False,
     )
@@ -157,24 +191,23 @@ def load_one_index(client: OpenSearch, index_name: str, filepath: Path) -> int:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Load hospital data into OpenSearch")
+    parser = argparse.ArgumentParser(description="Load hospital cost data into OpenSearch")
     parser.add_argument("--host",     default="localhost")
     parser.add_argument("--port",     type=int, default=9200)
     parser.add_argument("--user",     default="admin")
     parser.add_argument("--password", default="admin")
-    parser.add_argument("--ssl",      action="store_true", help="Use HTTPS/SSL")
-    parser.add_argument("--data-dir", default="./data",
-                        help="Directory containing the 8 JSON files")
+    parser.add_argument("--ssl",      action="store_true")
+    parser.add_argument("--data-dir", default="./data")
     args = parser.parse_args()
 
     use_ssl = args.ssl or args.port == 443
 
-    print("=" * 55)
-    print("  HOSPITAL DATA LOADER — Rumah Sakit Sehat Selalu")
-    print("=" * 55)
+    print("=" * 60)
+    print("  HOSPITAL COST ANALYTICS — DATA LOADER")
+    print("=" * 60)
     print(f"  Target : {'https' if use_ssl else 'http'}://{args.host}:{args.port}")
     print(f"  Data   : {args.data_dir}")
-    print("=" * 55 + "\n")
+    print("=" * 60 + "\n")
 
     client = OpenSearch(
         hosts=[{"host": args.host, "port": args.port}],
@@ -204,9 +237,9 @@ def main():
         print(f"  + {count} documents indexed\n")
         total += count
 
-    print("=" * 55)
-    print(f"  DONE — {total} total documents indexed across 8 indices")
-    print("=" * 55)
+    print("=" * 60)
+    print(f"  DONE — {total:,} total documents indexed across 7 indices")
+    print("=" * 60)
 
 
 if __name__ == "__main__":

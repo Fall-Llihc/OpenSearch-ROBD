@@ -1,3 +1,9 @@
+"""
+main.py — Hospital Operational Cost Analytics API
+Analisis Biaya Operasional: Obat, Alat Medis, Lab, SDM, Utilitas
+RAG Pipeline: OpenSearch (retriever) + Groq LLM (generator)
+"""
+
 import os
 import re
 import json
@@ -8,7 +14,7 @@ from typing import Optional
 from opensearchpy import OpenSearch
 from groq import Groq
 
-app = FastAPI(title="Hospital QA API", version="1.0.0")
+app = FastAPI(title="Hospital Cost Analytics API", version="2.0.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -45,10 +51,22 @@ def get_groq_client():
 
 # ── Index names ────────────────────────────────────────────────────────────────
 INDICES = [
-    "hospital_patients", "hospital_doctors", "hospital_departments",
-    "hospital_teams", "hospital_services", "hospital_bills",
-    "hospital_payments", "hospital_tim_dokter",
+    "cost_obat",
+    "cost_alat_medis",
+    "cost_lab",
+    "cost_sdm",
+    "cost_utilitas",
+    "cost_departments",
+    "cost_monthly",
 ]
+
+COST_CATEGORIES = {
+    "obat":        "Biaya Obat & Farmasi",
+    "alat_medis":  "Biaya Alat Medis",
+    "lab":         "Biaya Laboratorium",
+    "sdm":         "Biaya SDM & Tenaga Kerja",
+    "utilitas":    "Biaya Utilitas & Overhead",
+}
 
 # ── Models ─────────────────────────────────────────────────────────────────────
 class AskRequest(BaseModel):
@@ -59,6 +77,12 @@ class AskResponse(BaseModel):
     answer: str
     sources: list
 
+class CostSummaryResponse(BaseModel):
+    by_category: dict
+    by_department: list
+    trend_monthly: list
+    top_items: dict
+
 # ── Strip markdown ─────────────────────────────────────────────────────────────
 def strip_markdown(text: str) -> str:
     text = re.sub(r"\*{1,3}(.+?)\*{1,3}", r"\1", text, flags=re.DOTALL)
@@ -68,32 +92,24 @@ def strip_markdown(text: str) -> str:
     text = re.sub(r"^[-*_]{3,}\s*$", "", text, flags=re.MULTILINE)
     text = re.sub(r"`(.+?)`", r"\1", text)
     text = re.sub(r"\[(.+?)\]\(.+?\)", r"\1", text)
-    text = re.sub(r"^[\*\+]\s+", "- ", text, flags=re.MULTILINE)
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
 # ── Intent detection ───────────────────────────────────────────────────────────
 def detect_intent(question: str) -> str:
-    """
-    Deteksi jenis pertanyaan:
-    - 'count'    : berapa jumlah / total / keseluruhan
-    - 'sum'      : total nilai / jumlah uang
-    - 'group'    : per kategori / breakdown
-    - 'list'     : tampilkan daftar / apa saja
-    - 'general'  : lainnya
-    """
     q = question.lower()
-    if any(k in q for k in ["berapa jumlah","berapa banyak","total pasien","total dokter",
-                              "keseluruhan","semua pasien","semua dokter","berapa orang",
-                              "berapa total","jumlah keseluruhan"]):
-        return "count"
-    if any(k in q for k in ["total tagihan","total pembayaran","total biaya","jumlah tagihan",
-                              "total nilai","berapa total tagihan","berapa total pembayaran"]):
+    if any(k in q for k in ["berapa total","total biaya","jumlah biaya","total pengeluaran",
+                              "berapa pengeluaran","keseluruhan biaya","biaya keseluruhan"]):
         return "sum"
-    if any(k in q for k in ["per tipe","per jenis","per spesialisasi","breakdown",
-                              "berapa bpjs","berapa umum","berapa asuransi"]):
-        return "group"
-    if any(k in q for k in ["apa saja","daftar","tampilkan","sebutkan","list"]):
+    if any(k in q for k in ["perbandingan","bandingkan","terbesar","terkecil","ranking",
+                              "tertinggi","terendah","terbanyak"]):
+        return "rank"
+    if any(k in q for k in ["tren","trend","per bulan","bulanan","historis","dari waktu"]):
+        return "trend"
+    if any(k in q for k in ["departemen mana","per departemen","breakdown dept",
+                              "departemen apa","setiap departemen"]):
+        return "by_dept"
+    if any(k in q for k in ["apa saja","daftar","sebutkan","tampilkan","list"]):
         return "list"
     return "general"
 
@@ -101,16 +117,19 @@ def detect_intent(question: str) -> str:
 def get_relevant_indices(question: str) -> list:
     q = question.lower()
     mapping = {
-        "hospital_doctors":     ["dokter","spesialis","neurologi","kardiologi","ortopedi",
-                                  "pediatri","radiologi","bedah","penyakit dalam","mata","tht","gigi"],
-        "hospital_departments": ["departemen","dept","bagian","divisi","poli"],
-        "hospital_patients":    ["pasien","bpjs","umum","asuransi","rekam medis"],
-        "hospital_services":    ["layanan","service","rawat","operasi","laboratorium",
-                                  "tarif","biaya layanan","jenis layanan"],
-        "hospital_bills":       ["tagihan","bill","biaya","lunas","belum lunas","diproses"],
-        "hospital_payments":    ["pembayaran","bayar","metode","tunai","transfer","kredit","qris"],
-        "hospital_teams":       ["tim","team","kelompok"],
-        "hospital_tim_dokter":  ["tim dokter","penugasan dokter"],
+        "cost_obat":        ["obat","farmasi","obat-obatan","apotek","antibiotik","analgesik",
+                             "cairan infus","supplier obat","stok obat","kadaluarsa"],
+        "cost_alat_medis":  ["alat","alat medis","peralatan","ventilator","mesin","mri","ct scan",
+                             "monitor","depresiasi","servis alat","kondisi alat","pemeliharaan"],
+        "cost_lab":         ["lab","laboratorium","pemeriksaan","reagen","reagent","tes lab",
+                             "uji lab","hematologi","kimia darah","pcr","mikrobiologi"],
+        "cost_sdm":         ["sdm","karyawan","pegawai","dokter","perawat","gaji","tunjangan",
+                             "insentif","lembur","bpjs","kompensasi","jabatan","tenaga kerja"],
+        "cost_utilitas":    ["utilitas","listrik","air","gas","internet","telekomunikasi",
+                             "limbah","gedung","hvac","ac","overhead","pln","pdam"],
+        "cost_monthly":     ["bulanan","per bulan","tren","trend","historis","anggaran",
+                             "realisasi","periode","total operasional","biaya operasional"],
+        "cost_departments": ["departemen","dept","bagian","instalasi","unit","divisi"],
     }
     selected = []
     for index, keywords in mapping.items():
@@ -118,699 +137,242 @@ def get_relevant_indices(question: str) -> list:
             selected.append(index)
     return selected if selected else INDICES
 
-# ── Aggregation context — semua jenis pertanyaan yang mungkin ─────────────────
+# ── Build aggregation context ──────────────────────────────────────────────────
 def build_agg_context(question: str) -> str:
-    """
-    Ambil statistik akurat dari OpenSearch untuk semua jenis pertanyaan:
-    count, sum, min, max, avg, top_hits, terms, date_histogram, dll.
-    """
     client = get_os_client()
     q = question.lower()
     parts = []
     relevant = get_relevant_indices(question)
 
-    try:
-        # ── 1. PASIEN ──────────────────────────────────────────────────────────
-        if "hospital_patients" in relevant or any(k in q for k in
-                ["pasien","bpjs","umum","asuransi","jumlah pasien","total pasien"]):
-            try:
-                r = client.search(index="hospital_patients", body={
-                    "size": 0,
-                    "aggs": {
-                        "total": {"value_count": {"field": "patient_id"}},
-                        "per_tipe": {"terms": {"field": "tipe_pasien", "size": 10}},
-                    }
-                })
-                agg = r["aggregations"]
-                total_p = client.count(index="hospital_patients")["count"]
-                parts.append(f"Total pasien keseluruhan: {total_p:,}")
-                parts.append("Rincian pasien per tipe:")
-                for b in agg["per_tipe"]["buckets"]:
-                    parts.append(f"  - {b['key']}: {b['doc_count']:,} pasien")
-            except Exception as e:
-                print(f"Pasien agg err: {e}")
-
-        # ── 2. DOKTER ──────────────────────────────────────────────────────────
-        if "hospital_doctors" in relevant or any(k in q for k in
-                ["dokter","spesialis","dokter spesialis","jumlah dokter","total dokter"]):
-            try:
-                total_d = client.count(index="hospital_doctors")["count"]
-                r = client.search(index="hospital_doctors", body={
-                    "size": 0,
-                    "aggs": {
-                        "per_spesialisasi": {
-                            "terms": {"field": "spesialisasi", "size": 20},
-                            "aggs": {
-                                "per_dept": {"terms": {"field": "dept_id", "size": 5}}
-                            }
-                        }
-                    }
-                })
-                parts.append(f"Total dokter keseluruhan: {total_d:,}")
-                parts.append("Rincian dokter per spesialisasi:")
-                for b in r["aggregations"]["per_spesialisasi"]["buckets"]:
-                    parts.append(f"  - {b['key']}: {b['doc_count']:,} dokter")
-            except Exception as e:
-                print(f"Dokter agg err: {e}")
-
-        # ── 3. DEPARTEMEN ──────────────────────────────────────────────────────
-        if "hospital_departments" in relevant or any(k in q for k in
-                ["departemen","dept","bagian","poli","jumlah departemen"]):
-            try:
-                r = client.search(index="hospital_departments", body={
-                    "query": {"match_all": {}},
-                    "size": 100,
-                    "sort": [{"dept_id": {"order": "asc"}}],
-                    "_source": ["dept_id","nama_departemen"]
-                })
-                depts = [h["_source"] for h in r["hits"]["hits"]]
-                total_dept = client.count(index="hospital_departments")["count"]
-                parts.append(f"Total departemen: {total_dept:,}")
-                parts.append("Daftar departemen:")
-                seen_dept = set()
-                for d in depts:
-                    name = d["nama_departemen"]
-                    if name not in seen_dept:
-                        seen_dept.add(name)
-                        parts.append(f"  - {name} (ID: {d['dept_id']})")
-            except Exception as e:
-                print(f"Dept agg err: {e}")
-
-        # ── 4. TAGIHAN — lengkap dengan min/max/top per status ─────────────────
-        if "hospital_bills" in relevant or any(k in q for k in
-                ["tagihan","lunas","belum lunas","diproses","biaya","bill",
-                 "terbesar","terkecil","tertinggi","terendah","paling besar",
-                 "paling kecil","paling mahal","paling murah","rata-rata tagihan"]):
-            try:
-                r = client.search(index="hospital_bills", body={
-                    "size": 0,
-                    "aggs": {
-                        "total_nilai":  {"sum": {"field": "total_biaya"}},
-                        "max_semua":    {"max": {"field": "total_biaya"}},
-                        "min_semua":    {"min": {"field": "total_biaya"}},
-                        "avg_semua":    {"avg": {"field": "total_biaya"}},
-                        "tagihan_terbesar_ever": {
-                            "top_hits": {
-                                "size": 1,
-                                "sort": [{"total_biaya": {"order": "desc"}}],
-                                "_source": ["bill_id","patient_id","total_biaya","status_tagihan","tanggal_tagihan"]
-                            }
-                        },
-                        "tagihan_terkecil_ever": {
-                            "top_hits": {
-                                "size": 1,
-                                "sort": [{"total_biaya": {"order": "asc"}}],
-                                "_source": ["bill_id","patient_id","total_biaya","status_tagihan","tanggal_tagihan"]
-                            }
-                        },
-                        "per_status": {
-                            "terms": {"field": "status_tagihan", "size": 10},
-                            "aggs": {
-                                "total":   {"sum": {"field": "total_biaya"}},
-                                "maximum": {"max": {"field": "total_biaya"}},
-                                "minimum": {"min": {"field": "total_biaya"}},
-                                "rata2":   {"avg": {"field": "total_biaya"}},
-                                "top3_terbesar": {
-                                    "top_hits": {
-                                        "size": 3,
-                                        "sort": [{"total_biaya": {"order": "desc"}}],
-                                        "_source": ["bill_id","patient_id","total_biaya","tanggal_tagihan"]
-                                    }
-                                },
-                                "top3_terkecil": {
-                                    "top_hits": {
-                                        "size": 3,
-                                        "sort": [{"total_biaya": {"order": "asc"}}],
-                                        "_source": ["bill_id","patient_id","total_biaya","tanggal_tagihan"]
-                                    }
-                                }
-                            }
-                        },
-                        "per_bulan": {
-                            "date_histogram": {
-                                "field": "tanggal_tagihan",
-                                "calendar_interval": "month",
-                                "format": "yyyy-MM"
-                            },
-                            "aggs": {"total_bulan": {"sum": {"field": "total_biaya"}}}
-                        }
-                    }
-                })
-                agg = r["aggregations"]
-                total_t = client.count(index="hospital_bills")["count"]
-
-                parts.append(f"Statistik tagihan (total {total_t:,} tagihan):")
-                parts.append(f"  Total nilai keseluruhan : Rp {agg['total_nilai']['value']:,.0f}")
-                parts.append(f"  Tagihan terbesar (ever) : Rp {agg['max_semua']['value']:,.0f}")
-                parts.append(f"  Tagihan terkecil (ever) : Rp {agg['min_semua']['value']:,.0f}")
-                parts.append(f"  Rata-rata tagihan       : Rp {agg['avg_semua']['value']:,.0f}")
-
-                # Tagihan terbesar & terkecil absolut
-                tb = agg["tagihan_terbesar_ever"]["hits"]["hits"]
-                tk = agg["tagihan_terkecil_ever"]["hits"]["hits"]
-                if tb:
-                    s = tb[0]["_source"]
-                    parts.append(f"  Tagihan terbesar: Bill #{s['bill_id']} Pasien #{s['patient_id']} "
-                                  f"Rp {s['total_biaya']:,} ({s['status_tagihan']}) tgl {s.get('tanggal_tagihan','')}")
-                if tk:
-                    s = tk[0]["_source"]
-                    parts.append(f"  Tagihan terkecil: Bill #{s['bill_id']} Pasien #{s['patient_id']} "
-                                  f"Rp {s['total_biaya']:,} ({s['status_tagihan']}) tgl {s.get('tanggal_tagihan','')}")
-
-                parts.append("")
-                parts.append("Rincian per status tagihan:")
-                for b in agg["per_status"]["buckets"]:
-                    status = b["key"]
-                    parts.append(f"  [{status}] {b['doc_count']:,} tagihan")
-                    parts.append(f"    Total nilai : Rp {b['total']['value']:,.0f}")
-                    parts.append(f"    Terbesar    : Rp {b['maximum']['value']:,.0f}")
-                    parts.append(f"    Terkecil    : Rp {b['minimum']['value']:,.0f}")
-                    parts.append(f"    Rata-rata   : Rp {b['rata2']['value']:,.0f}")
-                    # 3 terbesar per status
-                    hits_b = b["top3_terbesar"]["hits"]["hits"]
-                    if hits_b:
-                        parts.append(f"    3 terbesar:")
-                        for h in hits_b:
-                            s = h["_source"]
-                            parts.append(f"      Bill #{s['bill_id']} | Pasien #{s['patient_id']} | "
-                                          f"Rp {s['total_biaya']:,} | {s.get('tanggal_tagihan','')}")
-                    # 3 terkecil per status
-                    hits_k = b["top3_terkecil"]["hits"]["hits"]
-                    if hits_k:
-                        parts.append(f"    3 terkecil:")
-                        for h in hits_k:
-                            s = h["_source"]
-                            parts.append(f"      Bill #{s['bill_id']} | Pasien #{s['patient_id']} | "
-                                          f"Rp {s['total_biaya']:,} | {s.get('tanggal_tagihan','')}")
-
-                # Tren bulanan
-                monthly = [b for b in agg["per_bulan"]["buckets"] if b["doc_count"] > 0]
-                if monthly and any(k in q for k in ["bulan","tren","per bulan","bulanan"]):
-                    parts.append("")
-                    parts.append("Tagihan per bulan:")
-                    for m in monthly[-6:]:
-                        parts.append(f"  {m['key_as_string']}: {m['doc_count']:,} tagihan, "
-                                      f"Rp {m['total_bulan']['value']:,.0f}")
-
-            except Exception as e:
-                print(f"Bills agg err: {e}")
-
-        # ── 5. PEMBAYARAN — lengkap ────────────────────────────────────────────
-        if "hospital_payments" in relevant or any(k in q for k in
-                ["pembayaran","bayar","metode bayar","transfer","tunai","qris",
-                 "kartu kredit","bpjs bayar","berhasil","gagal","pending"]):
-            try:
-                r = client.search(index="hospital_payments", body={
-                    "size": 0,
-                    "aggs": {
-                        "total_bayar":  {"sum": {"field": "jumlah_bayar"}},
-                        "max_bayar":    {"max": {"field": "jumlah_bayar"}},
-                        "min_bayar":    {"min": {"field": "jumlah_bayar"}},
-                        "avg_bayar":    {"avg": {"field": "jumlah_bayar"}},
-                        "per_metode": {
-                            "terms": {"field": "metode_pembayaran", "size": 10},
-                            "aggs": {
-                                "total_m": {"sum": {"field": "jumlah_bayar"}},
-                                "avg_m":   {"avg": {"field": "jumlah_bayar"}},
-                            }
-                        },
-                        "per_status": {
-                            "terms": {"field": "status_pembayaran", "size": 10},
-                            "aggs": {
-                                "total_s": {"sum": {"field": "jumlah_bayar"}},
-                            }
-                        },
-                        "per_metode_status": {
-                            "terms": {"field": "metode_pembayaran", "size": 10},
-                            "aggs": {
-                                "per_status_nested": {
-                                    "terms": {"field": "status_pembayaran", "size": 5}
-                                }
-                            }
-                        }
-                    }
-                })
-                agg = r["aggregations"]
-                total_pay = client.count(index="hospital_payments")["count"]
-                parts.append(f"Statistik pembayaran (total {total_pay:,} transaksi):")
-                parts.append(f"  Total nilai keseluruhan: Rp {agg['total_bayar']['value']:,.0f}")
-                parts.append(f"  Pembayaran terbesar    : Rp {agg['max_bayar']['value']:,.0f}")
-                parts.append(f"  Pembayaran terkecil    : Rp {agg['min_bayar']['value']:,.0f}")
-                parts.append(f"  Rata-rata pembayaran   : Rp {agg['avg_bayar']['value']:,.0f}")
-                parts.append("  Rincian per metode pembayaran:")
-                for b in agg["per_metode"]["buckets"]:
-                    parts.append(f"    - {b['key']}: {b['doc_count']:,} transaksi | "
-                                  f"Total Rp {b['total_m']['value']:,.0f} | "
-                                  f"Avg Rp {b['avg_m']['value']:,.0f}")
-                parts.append("  Rincian per status pembayaran:")
-                for b in agg["per_status"]["buckets"]:
-                    parts.append(f"    - {b['key']}: {b['doc_count']:,} transaksi | "
-                                  f"Total Rp {b['total_s']['value']:,.0f}")
-                # Breakdown metode x status
-                if any(k in q for k in ["berhasil","gagal","pending","sukses"]):
-                    parts.append("  Breakdown metode x status:")
-                    for b in agg["per_metode_status"]["buckets"]:
-                        for s in b["per_status_nested"]["buckets"]:
-                            parts.append(f"    {b['key']} - {s['key']}: {s['doc_count']:,}")
-            except Exception as e:
-                print(f"Payments agg err: {e}")
-
-        # ── 6. LAYANAN — lengkap ───────────────────────────────────────────────
-        if "hospital_services" in relevant or any(k in q for k in
-                ["layanan","rawat inap","rawat jalan","operasi","laboratorium","radiologi",
-                 "tarif","harga","biaya layanan","termahal","termurah","terjangkau"]):
-            try:
-                r = client.search(index="hospital_services", body={
-                    "size": 0,
-                    "aggs": {
-                        "total_layanan": {"value_count": {"field": "service_id"}},
-                        "tarif_max":  {"max": {"field": "tarif_dasar"}},
-                        "tarif_min":  {"min": {"field": "tarif_dasar"}},
-                        "tarif_avg":  {"avg": {"field": "tarif_dasar"}},
-                        "tarif_sum":  {"sum": {"field": "tarif_dasar"}},
-                        "per_jenis": {
-                            "terms": {"field": "jenis_layanan", "size": 10},
-                            "aggs": {
-                                "max_j": {"max": {"field": "tarif_dasar"}},
-                                "min_j": {"min": {"field": "tarif_dasar"}},
-                                "avg_j": {"avg": {"field": "tarif_dasar"}},
-                                "layanan_termahal": {
-                                    "top_hits": {
-                                        "size": 3,
-                                        "sort": [{"tarif_dasar": {"order": "desc"}}],
-                                        "_source": ["service_id","nama_layanan","jenis_layanan","tarif_dasar"]
-                                    }
-                                },
-                                "layanan_termurah": {
-                                    "top_hits": {
-                                        "size": 3,
-                                        "sort": [{"tarif_dasar": {"order": "asc"}}],
-                                        "_source": ["service_id","nama_layanan","jenis_layanan","tarif_dasar"]
-                                    }
-                                }
-                            }
-                        },
-                        "layanan_termahal_ever": {
-                            "top_hits": {
-                                "size": 3,
-                                "sort": [{"tarif_dasar": {"order": "desc"}}],
-                                "_source": ["service_id","nama_layanan","jenis_layanan","tarif_dasar"]
-                            }
-                        },
-                        "layanan_termurah_ever": {
-                            "top_hits": {
-                                "size": 3,
-                                "sort": [{"tarif_dasar": {"order": "asc"}}],
-                                "_source": ["service_id","nama_layanan","jenis_layanan","tarif_dasar"]
-                            }
-                        }
-                    }
-                })
-                agg = r["aggregations"]
-                total_svc = client.count(index="hospital_services")["count"]
-                parts.append(f"Statistik layanan (total {total_svc:,} layanan):")
-                parts.append(f"  Tarif tertinggi: Rp {agg['tarif_max']['value']:,.0f}")
-                parts.append(f"  Tarif terendah : Rp {agg['tarif_min']['value']:,.0f}")
-                parts.append(f"  Rata-rata tarif: Rp {agg['tarif_avg']['value']:,.0f}")
-
-                # Layanan termahal & termurah absolut
-                tmahal = agg["layanan_termahal_ever"]["hits"]["hits"]
-                tmurah = agg["layanan_termurah_ever"]["hits"]["hits"]
-                if tmahal:
-                    parts.append("  3 layanan termahal:")
-                    for h in tmahal:
-                        s = h["_source"]
-                        parts.append(f"    - {s['nama_layanan']} ({s['jenis_layanan']}): Rp {s['tarif_dasar']:,}")
-                if tmurah:
-                    parts.append("  3 layanan termurah:")
-                    for h in tmurah:
-                        s = h["_source"]
-                        parts.append(f"    - {s['nama_layanan']} ({s['jenis_layanan']}): Rp {s['tarif_dasar']:,}")
-
-                parts.append("  Rincian per jenis layanan:")
-                for b in agg["per_jenis"]["buckets"]:
-                    parts.append(f"    [{b['key']}] {b['doc_count']:,} layanan | "
-                                  f"Tarif: min Rp {b['min_j']['value']:,.0f} | "
-                                  f"max Rp {b['max_j']['value']:,.0f} | "
-                                  f"avg Rp {b['avg_j']['value']:,.0f}")
-                    for h in b["layanan_termahal"]["hits"]["hits"][:1]:
-                        s = h["_source"]
-                        parts.append(f"      Termahal: {s['nama_layanan']} Rp {s['tarif_dasar']:,}")
-                    for h in b["layanan_termurah"]["hits"]["hits"][:1]:
-                        s = h["_source"]
-                        parts.append(f"      Termurah: {s['nama_layanan']} Rp {s['tarif_dasar']:,}")
-            except Exception as e:
-                print(f"Services agg err: {e}")
-
-        # ── 7. TIM & TIM DOKTER ────────────────────────────────────────────────
-        if "hospital_teams" in relevant or any(k in q for k in
-                ["tim","team","jumlah tim","berapa tim"]):
-            try:
-                total_tim = client.count(index="hospital_teams")["count"]
-                parts.append(f"Total tim medis: {total_tim:,}")
-            except Exception as e:
-                print(f"Teams agg err: {e}")
-
-        # ── 8. RINGKASAN UMUM — jika pertanyaan tentang keseluruhan rumah sakit ─
-        if any(k in q for k in ["ringkasan","overview","gambaran","keseluruhan","semua data",
-                                  "total keseluruhan","statistik rumah sakit"]):
-            try:
-                parts.append("=== RINGKASAN RUMAH SAKIT SEHAT SELALU ===")
-                for index in INDICES:
-                    count = client.count(index=index)["count"]
-                    name = index.replace("hospital_", "")
-                    parts.append(f"  {name}: {count:,} dokumen")
-            except Exception as e:
-                print(f"Summary agg err: {e}")
-
-    except Exception as e:
-        print(f"Agg context error (outer): {e}")
-
-    return "\n".join(parts) if parts else ""
-
-# ── Join Engine — resolve relasi antar collection di OpenSearch ────────────────
-def build_join_context(question: str) -> str:
-    """
-    Untuk pertanyaan relasional (dokter-pasien, pasien-tagihan, dll),
-    lakukan join manual antar index OpenSearch.
-
-    Relasi data:
-    doctors ──(doctor_id)──> tim_dokter ──(team_id)──> teams
-                                                          │
-                                                       (team_id)
-                                                          ▼
-    services <──(service_id)── bills <──(patient_id)── patients
-                                  │
-                               (bill_id)
-                                  ▼
-                              payments
-    """
-    client = get_os_client()
-    q = question.lower()
-    parts = []
-
-    # ── Deteksi pola: pasien siapa yang ditangani dokter X ─────────────────────
-    doc_patient_patterns = [
-        "pasien.*dokter", "dokter.*pasien", "ditangani dokter",
-        "pasien dari dokter", "pasien dokter", "dokter menangani"
-    ]
-    import re as _re
-    is_doc_patient = any(_re.search(p, q) for p in doc_patient_patterns)
-
-    if is_doc_patient or ("dokter" in q and "pasien" in q):
+    # ── 1. OBAT ───────────────────────────────────────────────────────────────
+    if "cost_obat" in relevant or any(k in q for k in ["obat","farmasi","apotek"]):
         try:
-            # Cari dokter yang disebutkan di pertanyaan
-            resp = client.search(index="hospital_doctors", body={
-                "query": {"multi_match": {"query": question, "fields": ["nama_dokter", "spesialisasi"]}},
-                "size": 5,
+            r = client.search(index="cost_obat", body={
+                "size": 0,
+                "aggs": {
+                    "total_pemakaian": {"sum": {"field": "biaya_pemakaian_bulan"}},
+                    "per_kategori": {"terms": {"field": "kategori_obat", "size": 10},
+                                     "aggs": {"biaya": {"sum": {"field": "biaya_pemakaian_bulan"}}}},
+                    "per_supplier": {"terms": {"field": "supplier", "size": 10},
+                                     "aggs": {"biaya": {"sum": {"field": "biaya_pemakaian_bulan"}}}},
+                    "avg_harga": {"avg": {"field": "harga_satuan"}},
+                    "stok_rendah": {"filter": {"range": {"stok_tersedia": {"lte": 50}}}},
+                }
             })
-            matched_doctors = [h["_source"] for h in resp["hits"]["hits"]]
-
-            if not matched_doctors:
-                # Fallback: cari berdasarkan ID jika ada angka di pertanyaan
-                numbers = _re.findall(r'\b(\d+)\b', question)
-                if numbers:
-                    for num in numbers[:3]:
-                        r2 = client.search(index="hospital_doctors", body={
-                            "query": {"term": {"doctor_id": int(num)}}, "size": 1
-                        })
-                        matched_doctors += [h["_source"] for h in r2["hits"]["hits"]]
-
-            for doctor in matched_doctors[:3]:
-                doc_id = doctor["doctor_id"]
-                doc_name = doctor["nama_dokter"]
-                spec = doctor["spesialisasi"]
-
-                # Step 1: doctor_id → team_id via tim_dokter
-                tim_resp = client.search(index="hospital_tim_dokter", body={
-                    "query": {"term": {"doctor_id": doc_id}}, "size": 50
-                })
-                team_ids = [h["_source"]["team_id"] for h in tim_resp["hits"]["hits"]]
-
-                if not team_ids:
-                    parts.append(f"Dokter {doc_name} (ID:{doc_id}) belum ditugaskan ke tim manapun.")
-                    continue
-
-                # Step 2: team_id → patients
-                patient_resp = client.search(index="hospital_patients", body={
-                    "query": {"terms": {"team_id": team_ids}}, "size": 100
-                })
-                patients_data = [h["_source"] for h in patient_resp["hits"]["hits"]]
-
-                parts.append(f"Dokter: {doc_name} (ID:{doc_id}) | {spec}")
-                parts.append(f"Tim yang ditangani: {team_ids}")
-                parts.append(f"Jumlah pasien: {len(patients_data)}")
-
-                if patients_data:
-                    parts.append("Daftar pasien:")
-                    for p in patients_data:
-                        # Step 3: patient_id → bills
-                        bill_resp = client.search(index="hospital_bills", body={
-                            "query": {"term": {"patient_id": p["patient_id"]}}, "size": 10
-                        })
-                        bills_data = [h["_source"] for h in bill_resp["hits"]["hits"]]
-                        bill_info = ""
-                        if bills_data:
-                            b = bills_data[0]
-                            bill_info = f" | Tagihan: Rp {b['total_biaya']:,} ({b['status_tagihan']})"
-                        parts.append(
-                            f"  - {p['nama_pasien']} (ID:{p['patient_id']}) | "
-                            f"Tipe: {p['tipe_pasien']}{bill_info}"
-                        )
+            agg = r["aggregations"]
+            total_obat = client.count(index="cost_obat")["count"]
+            parts.append(f"=== BIAYA OBAT & FARMASI ===")
+            parts.append(f"Total item obat terdaftar: {total_obat:,}")
+            parts.append(f"Total biaya pemakaian bulan ini: Rp {int(agg['total_pemakaian']['value']):,}")
+            parts.append(f"Harga satuan rata-rata: Rp {int(agg['avg_harga']['value']):,}")
+            parts.append(f"Obat dengan stok rendah (≤50): {agg['stok_rendah']['doc_count']:,} item")
+            parts.append("Rincian biaya per kategori obat:")
+            for b in sorted(agg["per_kategori"]["buckets"], key=lambda x: x["biaya"]["value"], reverse=True):
+                parts.append(f"  - {b['key']}: Rp {int(b['biaya']['value']):,} ({b['doc_count']} item)")
+            parts.append("Rincian biaya per supplier:")
+            for b in sorted(agg["per_supplier"]["buckets"], key=lambda x: x["biaya"]["value"], reverse=True):
+                parts.append(f"  - {b['key']}: Rp {int(b['biaya']['value']):,}")
         except Exception as e:
-            print(f"Join doctor-patient error: {e}")
+            print(f"Obat agg err: {e}")
 
-    # ── Deteksi pola: tagihan / riwayat pasien X ───────────────────────────────
-    patient_bill_patterns = ["tagihan.*pasien", "pasien.*tagihan", "riwayat pasien",
-                              "bayaran pasien", "biaya pasien"]
-    is_patient_bill = any(_re.search(p, q) for p in patient_bill_patterns)
-
-    if is_patient_bill or ("pasien" in q and ("tagihan" in q or "biaya" in q or "bayar" in q)):
+    # ── 2. ALAT MEDIS ─────────────────────────────────────────────────────────
+    if "cost_alat_medis" in relevant or any(k in q for k in ["alat","peralatan","depresiasi"]):
         try:
-            resp = client.search(index="hospital_patients", body={
-                "query": {"multi_match": {"query": question, "fields": ["nama_pasien", "tipe_pasien"]}},
-                "size": 5,
+            r = client.search(index="cost_alat_medis", body={
+                "size": 0,
+                "aggs": {
+                    "total_depresiasi": {"sum": {"field": "biaya_depresiasi_tahunan"}},
+                    "total_servis":     {"sum": {"field": "biaya_servis_tahunan"}},
+                    "total_operasional":{"sum": {"field": "biaya_operasional_bulan"}},
+                    "per_jenis": {"terms": {"field": "jenis_alat", "size": 10},
+                                  "aggs": {
+                                      "depresiasi": {"sum": {"field": "biaya_depresiasi_tahunan"}},
+                                      "nilai_beli":  {"sum": {"field": "harga_beli"}},
+                                  }},
+                    "per_kondisi": {"terms": {"field": "kondisi", "size": 5},
+                                    "aggs": {"servis_cost": {"sum": {"field": "biaya_servis_tahunan"}}}},
+                    "per_vendor": {"terms": {"field": "vendor", "size": 5},
+                                   "aggs": {"nilai": {"sum": {"field": "harga_beli"}}}},
+                }
             })
-            matched_patients = [h["_source"] for h in resp["hits"]["hits"]]
-
-            # Coba cari berdasarkan ID juga
-            numbers = _re.findall(r'\b(\d+)\b', question)
-            if numbers and not matched_patients:
-                for num in numbers[:2]:
-                    r2 = client.search(index="hospital_patients", body={
-                        "query": {"term": {"patient_id": int(num)}}, "size": 1
-                    })
-                    matched_patients += [h["_source"] for h in r2["hits"]["hits"]]
-
-            for patient in matched_patients[:3]:
-                pid = patient["patient_id"]
-                # bills
-                bill_resp = client.search(index="hospital_bills", body={
-                    "query": {"term": {"patient_id": pid}}, "size": 20
-                })
-                bills_data = [h["_source"] for h in bill_resp["hits"]["hits"]]
-
-                parts.append(f"Pasien: {patient['nama_pasien']} (ID:{pid}) | Tipe: {patient['tipe_pasien']}")
-                parts.append(f"Jumlah tagihan: {len(bills_data)}")
-                for b in bills_data:
-                    # payments for this bill
-                    pay_resp = client.search(index="hospital_payments", body={
-                        "query": {"term": {"bill_id": b["bill_id"]}}, "size": 5
-                    })
-                    pays = [h["_source"] for h in pay_resp["hits"]["hits"]]
-                    pay_info = ""
-                    if pays:
-                        pay_info = f" | Bayar: Rp {pays[0]['jumlah_bayar']:,} ({pays[0]['metode_pembayaran']}, {pays[0]['status_pembayaran']})"
-                    parts.append(
-                        f"  - Bill #{b['bill_id']}: Rp {b['total_biaya']:,} "
-                        f"({b['status_tagihan']}) tgl {b.get('tanggal_tagihan','?')}{pay_info}"
-                    )
+            agg = r["aggregations"]
+            total_alat = client.count(index="cost_alat_medis")["count"]
+            parts.append(f"\n=== BIAYA ALAT MEDIS ===")
+            parts.append(f"Total item alat medis: {total_alat:,}")
+            parts.append(f"Total biaya depresiasi tahunan: Rp {int(agg['total_depresiasi']['value']):,}")
+            parts.append(f"Total biaya servis tahunan: Rp {int(agg['total_servis']['value']):,}")
+            parts.append(f"Total biaya operasional/bulan: Rp {int(agg['total_operasional']['value']):,}")
+            parts.append("Rincian per jenis alat:")
+            for b in sorted(agg["per_jenis"]["buckets"], key=lambda x: x["depresiasi"]["value"], reverse=True):
+                parts.append(f"  - {b['key']}: depresiasi Rp {int(b['depresiasi']['value']):,}/th | nilai Rp {int(b['nilai_beli']['value']):,}")
+            parts.append("Kondisi alat & biaya servis:")
+            for b in agg["per_kondisi"]["buckets"]:
+                parts.append(f"  - {b['key']}: {b['doc_count']} unit | servis Rp {int(b['servis_cost']['value']):,}")
+            parts.append("Rincian per vendor:")
+            for b in sorted(agg["per_vendor"]["buckets"], key=lambda x: x["nilai"]["value"], reverse=True):
+                parts.append(f"  - {b['key']}: nilai aset Rp {int(b['nilai']['value']):,}")
         except Exception as e:
-            print(f"Join patient-bill error: {e}")
+            print(f"Alat agg err: {e}")
 
-    # ── Deteksi pola: detail bill tertentu (bill #N / bill N) ─────────────────
-    import re as _re2
-    bill_id_patterns = [
-        r'\bbill\s*#?\s*(\d+)\b',
-        r'\btagihan\s*#?\s*(\d+)\b',
-        r'\btagihan\s+ke[- ]?(\d+)\b',
-        r'\bfaktur\s*#?\s*(\d+)\b',
-    ]
-    bill_ids_mentioned = []
-    for pat in bill_id_patterns:
-        bill_ids_mentioned += [int(m) for m in _re2.findall(pat, q)]
-    bill_ids_mentioned = list(set(bill_ids_mentioned))
-
-    if bill_ids_mentioned:
+    # ── 3. LAB ────────────────────────────────────────────────────────────────
+    if "cost_lab" in relevant or any(k in q for k in ["lab","laboratorium","reagen","reagent"]):
         try:
-            for bid in bill_ids_mentioned[:3]:
-                # Step 1: ambil bill exact by bill_id
-                b_resp = client.search(index="hospital_bills", body={
-                    "query": {"term": {"bill_id": bid}}, "size": 1
-                })
-                if not b_resp["hits"]["hits"]:
-                    parts.append(f"Bill #{bid}: tidak ditemukan.")
-                    continue
-                bill = b_resp["hits"]["hits"][0]["_source"]
-
-                # Step 2: join ke service
-                svc = None
-                if "service_id" in bill:
-                    s_resp = client.search(index="hospital_services", body={
-                        "query": {"term": {"service_id": bill["service_id"]}}, "size": 1
-                    })
-                    if s_resp["hits"]["hits"]:
-                        svc = s_resp["hits"]["hits"][0]["_source"]
-
-                # Step 3: join ke patient
-                pat = None
-                if "patient_id" in bill:
-                    p_resp = client.search(index="hospital_patients", body={
-                        "query": {"term": {"patient_id": bill["patient_id"]}}, "size": 1
-                    })
-                    if p_resp["hits"]["hits"]:
-                        pat = p_resp["hits"]["hits"][0]["_source"]
-
-                # Step 4: join ke payment
-                pay_resp = client.search(index="hospital_payments", body={
-                    "query": {"term": {"bill_id": bid}}, "size": 5
-                })
-                pays = [h["_source"] for h in pay_resp["hits"]["hits"]]
-
-                # Rangkum
-                parts.append(f"=== Detail Bill #{bid} ===")
-                parts.append(f"  Total biaya    : Rp {bill['total_biaya']:,}")
-                parts.append(f"  Status tagihan : {bill['status_tagihan']}")
-                parts.append(f"  Tanggal tagihan: {bill.get('tanggal_tagihan', '-')}")
-                if pat:
-                    parts.append(f"  Pasien         : {pat['nama_pasien']} (ID:{pat['patient_id']}) | Tipe: {pat['tipe_pasien']}")
-                if svc:
-                    parts.append(f"  Layanan        : {svc['nama_layanan']} | Jenis: {svc['jenis_layanan']} | Tarif dasar: Rp {svc['tarif_dasar']:,}")
-                if pays:
-                    parts.append(f"  Pembayaran ({len(pays)} transaksi):")
-                    for p in pays:
-                        parts.append(f"    - Rp {p['jumlah_bayar']:,} via {p['metode_pembayaran']} | Status: {p['status_pembayaran']} | Tgl: {p.get('tanggal_pembayaran','-')}")
-                else:
-                    parts.append(f"  Pembayaran     : Belum ada data pembayaran")
-        except Exception as e:
-            print(f"Join bill detail error: {e}")
-
-    # ── Deteksi pola: dokter di departemen X ──────────────────────────────────
-    if "departemen" in q and "dokter" in q:
-        try:
-            dept_resp = client.search(index="hospital_departments", body={
-                "query": {"multi_match": {"query": question, "fields": ["nama_departemen"]}},
-                "size": 3,
+            r = client.search(index="cost_lab", body={
+                "size": 0,
+                "aggs": {
+                    "total_pendapatan": {"sum": {"field": "total_pendapatan_bulan"}},
+                    "total_reagent":    {"sum": {"field": "total_biaya_reagent_bulan"}},
+                    "total_volume":     {"sum": {"field": "volume_pemeriksaan_bulan"}},
+                    "per_jenis": {"terms": {"field": "jenis_pemeriksaan", "size": 10},
+                                  "aggs": {
+                                      "pendapatan": {"sum": {"field": "total_pendapatan_bulan"}},
+                                      "reagent":    {"sum": {"field": "total_biaya_reagent_bulan"}},
+                                      "volume":     {"sum": {"field": "volume_pemeriksaan_bulan"}},
+                                  }},
+                    "avg_tarif": {"avg": {"field": "tarif_pemeriksaan"}},
+                }
             })
-            for dept in [h["_source"] for h in dept_resp["hits"]["hits"]][:2]:
-                doc_resp = client.search(index="hospital_doctors", body={
-                    "query": {"term": {"dept_id": dept["dept_id"]}}, "size": 20
-                })
-                docs = [h["_source"] for h in doc_resp["hits"]["hits"]]
-                parts.append(f"Departemen: {dept['nama_departemen']} (ID:{dept['dept_id']})")
-                parts.append(f"Jumlah dokter: {len(docs)}")
-                for d in docs[:10]:
-                    parts.append(f"  - {d['nama_dokter']} | {d['spesialisasi']}")
+            agg = r["aggregations"]
+            total_test = client.count(index="cost_lab")["count"]
+            total_pend = int(agg["total_pendapatan"]["value"])
+            total_reag = int(agg["total_reagent"]["value"])
+            margin = total_pend - total_reag
+            parts.append(f"\n=== BIAYA LABORATORIUM ===")
+            parts.append(f"Total jenis pemeriksaan: {total_test:,}")
+            parts.append(f"Total volume pemeriksaan bulan ini: {int(agg['total_volume']['value']):,} tes")
+            parts.append(f"Total pendapatan lab bulan ini: Rp {total_pend:,}")
+            parts.append(f"Total biaya reagent bulan ini: Rp {total_reag:,}")
+            parts.append(f"Margin kotor lab: Rp {margin:,}")
+            parts.append(f"Tarif pemeriksaan rata-rata: Rp {int(agg['avg_tarif']['value']):,}")
+            parts.append("Rincian per jenis pemeriksaan:")
+            for b in sorted(agg["per_jenis"]["buckets"], key=lambda x: x["pendapatan"]["value"], reverse=True):
+                pend = int(b["pendapatan"]["value"])
+                reag = int(b["reagent"]["value"])
+                parts.append(
+                    f"  - {b['key']}: pendapatan Rp {pend:,} | reagent Rp {reag:,} | "
+                    f"volume {int(b['volume']['value']):,}"
+                )
         except Exception as e:
-            print(f"Join dept-doctor error: {e}")
+            print(f"Lab agg err: {e}")
 
-    # ── Deteksi pola: layanan / service tertentu ───────────────────────────────
-    service_id_patterns = [r'\blayanan\s*#?\s*(\d+)\b', r'\bservice\s*#?\s*(\d+)\b']
-    svc_ids = []
-    for pat in service_id_patterns:
-        svc_ids += [int(m) for m in _re2.findall(pat, q)]
-    svc_ids = list(set(svc_ids))
-
-    if svc_ids:
+    # ── 4. SDM ────────────────────────────────────────────────────────────────
+    if "cost_sdm" in relevant or any(k in q for k in ["sdm","karyawan","gaji","kompensasi"]):
         try:
-            for sid in svc_ids[:3]:
-                s_resp = client.search(index="hospital_services", body={
-                    "query": {"term": {"service_id": sid}}, "size": 1
-                })
-                if s_resp["hits"]["hits"]:
-                    svc = s_resp["hits"]["hits"][0]["_source"]
-                    parts.append(f"=== Detail Layanan #{sid} ===")
-                    parts.append(f"  Nama    : {svc['nama_layanan']}")
-                    parts.append(f"  Jenis   : {svc['jenis_layanan']}")
-                    parts.append(f"  Tarif   : Rp {svc['tarif_dasar']:,}")
+            r = client.search(index="cost_sdm", body={
+                "size": 0,
+                "aggs": {
+                    "total_kompensasi": {"sum": {"field": "total_kompensasi_bulanan"}},
+                    "total_lembur":     {"sum": {"field": "biaya_lembur"}},
+                    "total_bpjs_kes":   {"sum": {"field": "bpjs_kesehatan"}},
+                    "total_bpjs_tk":    {"sum": {"field": "bpjs_ketenagakerjaan"}},
+                    "per_jabatan": {"terms": {"field": "jabatan", "size": 15},
+                                   "aggs": {
+                                       "kompensasi": {"sum": {"field": "total_kompensasi_bulanan"}},
+                                       "avg_gaji":   {"avg": {"field": "gaji_pokok"}},
+                                   }},
+                    "per_status": {"terms": {"field": "status_karyawan", "size": 5},
+                                   "aggs": {"kompensasi": {"sum": {"field": "total_kompensasi_bulanan"}}}},
+                    "per_dept": {"terms": {"field": "dept_id", "size": 10},
+                                 "aggs": {"kompensasi": {"sum": {"field": "total_kompensasi_bulanan"}}}},
+                }
+            })
+            agg = r["aggregations"]
+            total_sdm = client.count(index="cost_sdm")["count"]
+            total_komp = int(agg["total_kompensasi"]["value"])
+            parts.append(f"\n=== BIAYA SDM & TENAGA KERJA ===")
+            parts.append(f"Total karyawan: {total_sdm:,}")
+            parts.append(f"Total biaya kompensasi/bulan: Rp {total_komp:,}")
+            parts.append(f"Total biaya lembur/bulan: Rp {int(agg['total_lembur']['value']):,}")
+            parts.append(f"Total BPJS Kesehatan: Rp {int(agg['total_bpjs_kes']['value']):,}")
+            parts.append(f"Total BPJS Ketenagakerjaan: Rp {int(agg['total_bpjs_tk']['value']):,}")
+            parts.append("Rincian biaya per jabatan:")
+            for b in sorted(agg["per_jabatan"]["buckets"], key=lambda x: x["kompensasi"]["value"], reverse=True):
+                parts.append(
+                    f"  - {b['key']} ({b['doc_count']} orang): "
+                    f"total Rp {int(b['kompensasi']['value']):,} | avg gaji Rp {int(b['avg_gaji']['value']):,}"
+                )
+            parts.append("Rincian per status karyawan:")
+            for b in agg["per_status"]["buckets"]:
+                parts.append(f"  - {b['key']}: {b['doc_count']} orang | Rp {int(b['kompensasi']['value']):,}")
         except Exception as e:
-            print(f"Join service detail error: {e}")
+            print(f"SDM agg err: {e}")
 
-    # ── Deteksi pola: pasien tertentu by ID ───────────────────────────────────
-    patient_id_patterns = [r'\bpasien\s*#?\s*(\d+)\b', r'\bpatient\s*#?\s*(\d+)\b']
-    pat_ids = []
-    for pat in patient_id_patterns:
-        pat_ids += [int(m) for m in _re2.findall(pat, q)]
-    pat_ids = list(set(pat_ids))
-
-    if pat_ids:
+    # ── 5. UTILITAS ───────────────────────────────────────────────────────────
+    if "cost_utilitas" in relevant or any(k in q for k in ["utilitas","listrik","air","gas","limbah","overhead"]):
         try:
-            for pid in pat_ids[:3]:
-                p_resp = client.search(index="hospital_patients", body={
-                    "query": {"term": {"patient_id": pid}}, "size": 1
-                })
-                if not p_resp["hits"]["hits"]:
-                    continue
-                patient = p_resp["hits"]["hits"][0]["_source"]
-
-                # Tagihan pasien ini
-                b_resp = client.search(index="hospital_bills", body={
-                    "query": {"term": {"patient_id": pid}}, "size": 20
-                })
-                bills_data = [h["_source"] for h in b_resp["hits"]["hits"]]
-
-                parts.append(f"=== Detail Pasien #{pid} ===")
-                parts.append(f"  Nama      : {patient['nama_pasien']}")
-                parts.append(f"  Tipe      : {patient['tipe_pasien']}")
-                parts.append(f"  Team ID   : {patient['team_id']}")
-                parts.append(f"  Tagihan ({len(bills_data)} total):")
-                for b in bills_data:
-                    # join service
-                    svc_r = client.search(index="hospital_services", body={
-                        "query": {"term": {"service_id": b["service_id"]}}, "size": 1
-                    })
-                    svc_name = svc_r["hits"]["hits"][0]["_source"]["nama_layanan"] if svc_r["hits"]["hits"] else "?"
-                    jenis    = svc_r["hits"]["hits"][0]["_source"]["jenis_layanan"] if svc_r["hits"]["hits"] else "?"
-                    parts.append(
-                        f"    Bill #{b['bill_id']}: Rp {b['total_biaya']:,} "
-                        f"({b['status_tagihan']}) | {svc_name} ({jenis}) | {b.get('tanggal_tagihan','-')}"
-                    )
+            r = client.search(index="cost_utilitas", body={
+                "size": 0,
+                "aggs": {
+                    "total_biaya":   {"sum": {"field": "total_biaya"}},
+                    "per_jenis": {"terms": {"field": "jenis_utilitas", "size": 10},
+                                  "aggs": {"biaya": {"sum": {"field": "total_biaya"}}}},
+                    "per_dept": {"terms": {"field": "dept_id", "size": 10},
+                                 "aggs": {"biaya": {"sum": {"field": "total_biaya"}}}},
+                    "pending": {"filter": {"term": {"status_pembayaran": "Pending"}}},
+                }
+            })
+            agg = r["aggregations"]
+            total_util = client.count(index="cost_utilitas")["count"]
+            parts.append(f"\n=== BIAYA UTILITAS & OVERHEAD ===")
+            parts.append(f"Total record utilitas: {total_util:,}")
+            parts.append(f"Total biaya utilitas keseluruhan: Rp {int(agg['total_biaya']['value']):,}")
+            parts.append(f"Tagihan utilitas pending: {agg['pending']['doc_count']:,} transaksi")
+            parts.append("Rincian biaya per jenis utilitas:")
+            for b in sorted(agg["per_jenis"]["buckets"], key=lambda x: x["biaya"]["value"], reverse=True):
+                parts.append(f"  - {b['key']}: Rp {int(b['biaya']['value']):,}")
         except Exception as e:
-            print(f"Join patient detail error: {e}")
+            print(f"Utilitas agg err: {e}")
 
-    # ── Deteksi pola: dokter tertentu by ID ───────────────────────────────────
-    doctor_id_patterns = [r'\bdokter\s*#?\s*(\d+)\b', r'\bdr\.?\s*(\d+)\b']
-    doc_ids = []
-    for pat in doctor_id_patterns:
-        doc_ids += [int(m) for m in _re2.findall(pat, q)]
-    doc_ids = list(set(doc_ids))
-
-    if doc_ids and "pasien" not in q:  # kalau ada pasien, sudah dihandle di atas
+    # ── 6. MONTHLY COST TREND ─────────────────────────────────────────────────
+    if "cost_monthly" in relevant or any(k in q for k in ["bulanan","tren","anggaran","realisasi","per bulan"]):
         try:
-            for did in doc_ids[:3]:
-                d_resp = client.search(index="hospital_doctors", body={
-                    "query": {"term": {"doctor_id": did}}, "size": 1
-                })
-                if not d_resp["hits"]["hits"]:
-                    continue
-                doc = d_resp["hits"]["hits"][0]["_source"]
-                # dept
-                dept_r = client.search(index="hospital_departments", body={
-                    "query": {"term": {"dept_id": doc["dept_id"]}}, "size": 1
-                })
-                dept_name = dept_r["hits"]["hits"][0]["_source"]["nama_departemen"] if dept_r["hits"]["hits"] else "?"
-
-                parts.append(f"=== Detail Dokter #{did} ===")
-                parts.append(f"  Nama         : {doc['nama_dokter']}")
-                parts.append(f"  Spesialisasi : {doc['spesialisasi']}")
-                parts.append(f"  Departemen   : {dept_name} (ID:{doc['dept_id']})")
+            r = client.search(index="cost_monthly", body={
+                "size": 0,
+                "aggs": {
+                    "total_obat_all":    {"sum": {"field": "biaya_obat"}},
+                    "total_alat_all":    {"sum": {"field": "biaya_alat_medis"}},
+                    "total_lab_all":     {"sum": {"field": "biaya_lab"}},
+                    "total_sdm_all":     {"sum": {"field": "biaya_sdm"}},
+                    "total_utilitas_all":{"sum": {"field": "biaya_utilitas"}},
+                    "grand_total":       {"sum": {"field": "total_biaya_operasional"}},
+                    "per_tahun": {
+                        "terms": {"field": "tahun", "size": 5},
+                        "aggs": {
+                            "total": {"sum": {"field": "total_biaya_operasional"}},
+                            "obat":  {"sum": {"field": "biaya_obat"}},
+                            "sdm":   {"sum": {"field": "biaya_sdm"}},
+                        }
+                    },
+                }
+            })
+            agg = r["aggregations"]
+            grand = int(agg["grand_total"]["value"])
+            parts.append(f"\n=== RINGKASAN BIAYA OPERASIONAL KESELURUHAN ===")
+            parts.append(f"GRAND TOTAL biaya operasional: Rp {grand:,}")
+            obat_t = int(agg["total_obat_all"]["value"])
+            alat_t = int(agg["total_alat_all"]["value"])
+            lab_t  = int(agg["total_lab_all"]["value"])
+            sdm_t  = int(agg["total_sdm_all"]["value"])
+            util_t = int(agg["total_utilitas_all"]["value"])
+            parts.append("Komposisi biaya:")
+            parts.append(f"  - Biaya Obat:       Rp {obat_t:,} ({obat_t/grand*100:.1f}%)")
+            parts.append(f"  - Biaya Alat Medis: Rp {alat_t:,} ({alat_t/grand*100:.1f}%)")
+            parts.append(f"  - Biaya Lab:        Rp {lab_t:,} ({lab_t/grand*100:.1f}%)")
+            parts.append(f"  - Biaya SDM:        Rp {sdm_t:,} ({sdm_t/grand*100:.1f}%)")
+            parts.append(f"  - Biaya Utilitas:   Rp {util_t:,} ({util_t/grand*100:.1f}%)")
+            parts.append("Rincian per tahun:")
+            for b in sorted(agg["per_tahun"]["buckets"], key=lambda x: x["key"]):
+                parts.append(
+                    f"  - {b['key']}: total Rp {int(b['total']['value']):,} | "
+                    f"obat Rp {int(b['obat']['value']):,} | SDM Rp {int(b['sdm']['value']):,}"
+                )
         except Exception as e:
-            print(f"Join doctor detail error: {e}")
+            print(f"Monthly agg err: {e}")
 
     return "\n".join(parts) if parts else ""
 
 
-# ── Search OpenSearch — sample dokumen ────────────────────────────────────────
+# ── Search OpenSearch ──────────────────────────────────────────────────────────
 def search_opensearch(question: str, size: int = 8) -> list:
     client = get_os_client()
     results = []
@@ -831,15 +393,13 @@ def search_opensearch(question: str, size: int = 8) -> list:
             )
             hits = resp["hits"]["hits"]
             if not hits:
-                resp = client.search(index=index,
-                                     body={"query": {"match_all": {}}, "size": size})
+                resp = client.search(index=index, body={"query": {"match_all": {}}, "size": size})
                 hits = resp["hits"]["hits"]
-
             for hit in hits:
                 results.append({
                     "index": index,
                     "score": hit.get("_score") or 1.0,
-                    "data": hit["_source"],
+                    "data":  hit["_source"],
                 })
         except Exception as e:
             print(f"Search error {index}: {e}")
@@ -848,51 +408,48 @@ def search_opensearch(question: str, size: int = 8) -> list:
     results.sort(key=lambda x: x["score"], reverse=True)
     return results[:size * 3]
 
+
 # ── Build context ──────────────────────────────────────────────────────────────
 def build_context(question: str, results: list) -> str:
     parts = []
 
-    # 1. Join context — untuk pertanyaan relasional antar collection
-    join = build_join_context(question)
-    if join:
-        parts.append("=== DATA RELASI (JOIN ANTAR COLLECTION) ===")
-        parts.append(join)
-        parts.append("")
-
-    # 2. Aggregation context — untuk pertanyaan count/sum/group
     agg = build_agg_context(question)
     if agg:
-        parts.append("=== STATISTIK NYATA DARI OPENSEARCH ===")
+        parts.append("=== STATISTIK BIAYA DARI OPENSEARCH ===")
         parts.append(agg)
         parts.append("")
 
-    # 3. Sample dokumen sebagai konteks tambahan
     if results:
-        parts.append("=== SAMPLE DOKUMEN ===")
-        for r in results[:10]:
-            idx = r["index"].replace("hospital_", "").upper()
+        parts.append("=== SAMPLE DOKUMEN TERKAIT ===")
+        for r in results[:8]:
+            idx = r["index"].replace("cost_", "").upper()
             parts.append(f"[{idx}] {json.dumps(r['data'], ensure_ascii=False)}")
 
     return "\n".join(parts) if parts else "Tidak ada data relevan ditemukan."
 
+
 # ── Ask Groq ───────────────────────────────────────────────────────────────────
 def ask_groq(question: str, context: str) -> str:
-    system = """Kamu adalah asisten QA untuk Rumah Sakit Sehat Selalu.
-Jawab pertanyaan berdasarkan data yang diberikan dari database rumah sakit.
-Gunakan Bahasa Indonesia yang jelas dan profesional.
+    system = """Kamu adalah analis biaya operasional untuk Rumah Sakit Sehat Selalu.
+Tugasmu adalah menjawab pertanyaan tentang biaya operasional rumah sakit berdasarkan data dari database.
 
-PENTING — DATA:
-- Bagian "DATA RELASI" berisi hasil JOIN antar collection. Gunakan untuk pertanyaan relasi dokter-pasien, detail bill, dll.
-- Bagian "STATISTIK NYATA DARI OPENSEARCH" berisi angka AKURAT dari seluruh database. Gunakan untuk pertanyaan total/jumlah/count.
-- Jangan menghitung dari sample dokumen untuk pertanyaan agregasi — gunakan angka dari statistik.
+KATEGORI BIAYA YANG TERSEDIA:
+- Biaya Obat & Farmasi: pengadaan, pemakaian, stok obat
+- Biaya Alat Medis: depresiasi, servis, operasional peralatan
+- Biaya Laboratorium: reagent, pemeriksaan, pendapatan lab
+- Biaya SDM: gaji, tunjangan, insentif, BPJS, lembur
+- Biaya Utilitas: listrik, air, gas medis, limbah, gedung
+
+PENTING — ANALISIS BIAYA:
+- Bagian "STATISTIK BIAYA" berisi angka AKURAT dari seluruh database. Gunakan untuk angka total/perbandingan.
+- Jika ada perbandingan antar kategori, tunjukkan persentasenya.
+- Jika ada tren, jelaskan kenaikan/penurunan biaya.
+- Berikan insight dan rekomendasi pengendalian biaya jika relevan.
 
 PENTING — MATEMATIKA:
-- Jika user tanya "total lunas DAN belum lunas", jumlahkan HANYA dua kategori tersebut, BUKAN total keseluruhan.
-- "Total keseluruhan" = semua status (Lunas + Belum Lunas + Diproses + dll).
-- "Total lunas" = hanya status Lunas.
-- "Total belum lunas" = hanya status Belum Lunas.
-- Selalu tunjukkan perhitungan jika menjumlahkan beberapa kategori. Contoh: "Rp X + Rp Y = Rp Z".
-- Jangan campurkan kategori yang tidak ditanyakan ke dalam hasil jumlah.
+- Selalu tunjukkan perhitungan jika menjumlahkan beberapa kategori.
+- Persentase dihitung dari total keseluruhan biaya operasional.
+- Jangan mencampur kategori yang berbeda tanpa penjelasan.
 
 ATURAN FORMAT:
 - Gunakan teks biasa tanpa markdown
@@ -900,11 +457,12 @@ ATURAN FORMAT:
 - Jangan gunakan simbol **, *, #, >, ---, atau backtick
 - Pisahkan bagian dengan baris kosong saja
 - Tulis angka dengan format: 1.000 (ribuan) atau Rp 1.234.567 (uang)
-- Jika data tidak cukup, katakan dengan jelas"""
+- Jika data tidak cukup, katakan dengan jelas
+- Selalu akhiri dengan catatan singkat tentang implikasi biaya jika relevan"""
 
     chat = get_groq_client().chat.completions.create(
         model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
-        max_tokens=1024,
+        max_tokens=1500,
         temperature=0.1,
         messages=[
             {"role": "system", "content": system},
@@ -914,10 +472,11 @@ ATURAN FORMAT:
     )
     return strip_markdown(chat.choices[0].message.content)
 
+
 # ── Endpoints ──────────────────────────────────────────────────────────────────
 @app.get("/")
 def root():
-    return {"status": "ok", "service": "Hospital QA API"}
+    return {"status": "ok", "service": "Hospital Cost Analytics API", "version": "2.0.0"}
 
 @app.get("/health")
 def health():
@@ -932,16 +491,16 @@ def ask(req: AskRequest):
     if not req.question.strip():
         raise HTTPException(status_code=400, detail="Pertanyaan tidak boleh kosong.")
     try:
-        results   = search_opensearch(req.question, size=req.max_results)
-        context   = build_context(req.question, results)
-        answer    = ask_groq(req.question, context)
+        results = search_opensearch(req.question, size=req.max_results)
+        context = build_context(req.question, results)
+        answer  = ask_groq(req.question, context)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
     sources = []
     seen = set()
     for r in results[:5]:
-        name = r["index"].replace("hospital_", "")
+        name = r["index"].replace("cost_", "")
         if name not in seen:
             seen.add(name)
             sources.append({"index": name, "score": round(r["score"], 3)})
@@ -953,10 +512,184 @@ def stats():
     data = {}
     for index in INDICES:
         try:
-            data[index.replace("hospital_", "")] = get_os_client().count(index=index)["count"]
+            data[index.replace("cost_", "")] = get_os_client().count(index=index)["count"]
         except Exception:
-            data[index.replace("hospital_", "")] = 0
+            data[index.replace("cost_", "")] = 0
     return {"indices": data}
+
+@app.get("/cost-summary")
+def cost_summary():
+    """
+    Endpoint untuk dashboard: ringkasan biaya per kategori + tren bulanan.
+    Dipakai oleh frontend untuk chart & KPI cards.
+    """
+    client = get_os_client()
+    result = {
+        "by_category": {},
+        "by_department": [],
+        "trend_monthly": [],
+        "top_obat": [],
+        "top_alat": [],
+        "top_sdm_jabatan": [],
+        "utilitas_breakdown": [],
+    }
+
+    # ── Per kategori
+    try:
+        r = client.search(index="cost_monthly", body={
+            "size": 0,
+            "aggs": {
+                "obat":      {"sum": {"field": "biaya_obat"}},
+                "alat":      {"sum": {"field": "biaya_alat_medis"}},
+                "lab":       {"sum": {"field": "biaya_lab"}},
+                "sdm":       {"sum": {"field": "biaya_sdm"}},
+                "utilitas":  {"sum": {"field": "biaya_utilitas"}},
+                "total":     {"sum": {"field": "total_biaya_operasional"}},
+            }
+        })
+        agg = r["aggregations"]
+        total = agg["total"]["value"]
+        result["by_category"] = {
+            "total":    int(total),
+            "obat":     {"value": int(agg["obat"]["value"]),     "pct": round(agg["obat"]["value"]/total*100, 1)     if total else 0},
+            "alat":     {"value": int(agg["alat"]["value"]),     "pct": round(agg["alat"]["value"]/total*100, 1)     if total else 0},
+            "lab":      {"value": int(agg["lab"]["value"]),      "pct": round(agg["lab"]["value"]/total*100, 1)      if total else 0},
+            "sdm":      {"value": int(agg["sdm"]["value"]),      "pct": round(agg["sdm"]["value"]/total*100, 1)      if total else 0},
+            "utilitas": {"value": int(agg["utilitas"]["value"]), "pct": round(agg["utilitas"]["value"]/total*100, 1) if total else 0},
+        }
+    except Exception as e:
+        print(f"Cost summary cat err: {e}")
+
+    # ── Per departemen
+    try:
+        r = client.search(index="cost_monthly", body={
+            "size": 0,
+            "aggs": {
+                "per_dept": {
+                    "terms": {"field": "dept_id", "size": 10},
+                    "aggs": {
+                        "nama":  {"terms": {"field": "nama_departemen", "size": 1}},
+                        "total": {"sum": {"field": "total_biaya_operasional"}},
+                        "obat":  {"sum": {"field": "biaya_obat"}},
+                        "sdm":   {"sum": {"field": "biaya_sdm"}},
+                    }
+                }
+            }
+        })
+        for b in r["aggregations"]["per_dept"]["buckets"]:
+            dept_name = b["nama"]["buckets"][0]["key"] if b["nama"]["buckets"] else f"Dept {b['key']}"
+            result["by_department"].append({
+                "dept_id":   b["key"],
+                "nama":      dept_name,
+                "total":     int(b["total"]["value"]),
+                "obat":      int(b["obat"]["value"]),
+                "sdm":       int(b["sdm"]["value"]),
+            })
+        result["by_department"].sort(key=lambda x: x["total"], reverse=True)
+    except Exception as e:
+        print(f"Cost summary dept err: {e}")
+
+    # ── Tren bulanan (ambil per periode)
+    try:
+        r = client.search(index="cost_monthly", body={
+            "size": 0,
+            "aggs": {
+                "per_periode": {
+                    "terms": {"field": "periode", "size": 24,
+                              "order": {"_key": "asc"}},
+                    "aggs": {
+                        "total":    {"sum": {"field": "total_biaya_operasional"}},
+                        "obat":     {"sum": {"field": "biaya_obat"}},
+                        "alat":     {"sum": {"field": "biaya_alat_medis"}},
+                        "lab":      {"sum": {"field": "biaya_lab"}},
+                        "sdm":      {"sum": {"field": "biaya_sdm"}},
+                        "utilitas": {"sum": {"field": "biaya_utilitas"}},
+                        "anggaran": {"sum": {"field": "anggaran_bulan"}},
+                    }
+                }
+            }
+        })
+        for b in r["aggregations"]["per_periode"]["buckets"]:
+            result["trend_monthly"].append({
+                "periode":   b["key"],
+                "total":     int(b["total"]["value"]),
+                "obat":      int(b["obat"]["value"]),
+                "alat":      int(b["alat"]["value"]),
+                "lab":       int(b["lab"]["value"]),
+                "sdm":       int(b["sdm"]["value"]),
+                "utilitas":  int(b["utilitas"]["value"]),
+                "anggaran":  int(b["anggaran"]["value"]),
+            })
+    except Exception as e:
+        print(f"Cost trend err: {e}")
+
+    # ── Top 5 obat terpemakai
+    try:
+        r = client.search(index="cost_obat", body={
+            "size": 5,
+            "sort": [{"biaya_pemakaian_bulan": {"order": "desc"}}],
+            "_source": ["nama_obat", "kategori_obat", "biaya_pemakaian_bulan", "stok_tersedia"],
+        })
+        result["top_obat"] = [h["_source"] for h in r["hits"]["hits"]]
+    except Exception as e:
+        print(f"Top obat err: {e}")
+
+    # ── Top 5 alat biaya tertinggi
+    try:
+        r = client.search(index="cost_alat_medis", body={
+            "size": 5,
+            "sort": [{"biaya_depresiasi_tahunan": {"order": "desc"}}],
+            "_source": ["nama_alat", "jenis_alat", "biaya_depresiasi_tahunan", "kondisi"],
+        })
+        result["top_alat"] = [h["_source"] for h in r["hits"]["hits"]]
+    except Exception as e:
+        print(f"Top alat err: {e}")
+
+    # ── SDM per jabatan
+    try:
+        r = client.search(index="cost_sdm", body={
+            "size": 0,
+            "aggs": {
+                "per_jabatan": {
+                    "terms": {"field": "jabatan", "size": 12},
+                    "aggs": {
+                        "total": {"sum": {"field": "total_kompensasi_bulanan"}},
+                        "count": {"value_count": {"field": "sdm_id"}},
+                    }
+                }
+            }
+        })
+        for b in sorted(r["aggregations"]["per_jabatan"]["buckets"],
+                        key=lambda x: x["total"]["value"], reverse=True):
+            result["top_sdm_jabatan"].append({
+                "jabatan": b["key"],
+                "count":   b["doc_count"],
+                "total":   int(b["total"]["value"]),
+            })
+    except Exception as e:
+        print(f"SDM jabatan err: {e}")
+
+    # ── Utilitas breakdown
+    try:
+        r = client.search(index="cost_utilitas", body={
+            "size": 0,
+            "aggs": {
+                "per_jenis": {
+                    "terms": {"field": "jenis_utilitas", "size": 10},
+                    "aggs": {"biaya": {"sum": {"field": "total_biaya"}}}
+                }
+            }
+        })
+        for b in sorted(r["aggregations"]["per_jenis"]["buckets"],
+                        key=lambda x: x["biaya"]["value"], reverse=True):
+            result["utilitas_breakdown"].append({
+                "jenis": b["key"],
+                "total": int(b["biaya"]["value"]),
+            })
+    except Exception as e:
+        print(f"Utilitas breakdown err: {e}")
+
+    return result
 
 @app.get("/debug")
 def debug():
@@ -965,25 +698,16 @@ def debug():
     counts = {}
     for index in INDICES:
         try:
-            r = client.search(index=index, body={"query":{"match_all":{}},"size":1})
+            r = client.search(index=index, body={"query": {"match_all": {}}, "size": 1})
             counts[index] = r["hits"]["total"]["value"]
         except Exception as e:
             counts[index] = f"ERROR: {e}"
     result["indices"] = counts
-    # Test agg
-    try:
-        r = client.search(index="hospital_patients", body={
-            "size": 0,
-            "aggs": {"per_tipe": {"terms": {"field": "tipe_pasien", "size": 5}}}
-        })
-        result["agg_test"] = r["aggregations"]["per_tipe"]["buckets"]
-    except Exception as e:
-        result["agg_test"] = f"ERROR: {e}"
     try:
         get_groq_client().chat.completions.create(
-            model=os.getenv("GROQ_MODEL","llama-3.1-8b-instant"),
+            model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
             max_tokens=5,
-            messages=[{"role":"user","content":"hi"}],
+            messages=[{"role": "user", "content": "hi"}],
         )
         result["groq"] = "ok"
     except Exception as e:
