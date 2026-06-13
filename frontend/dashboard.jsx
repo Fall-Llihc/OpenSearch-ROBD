@@ -117,7 +117,6 @@ function Sparkline({ data }) {
   );
 }
 
-<<<<<<< HEAD
 function DeptBars({ data }) {
   const depts=(data.by_department||[]).slice(0,5);
   if(!depts.length) return <div className="font-mono text-[11px] text-on-surface-variant">Memuat…</div>;
@@ -129,24 +128,6 @@ function DeptBars({ data }) {
           <div className="flex justify-between font-mono text-[10px] mb-1">
             <span className="text-on-surface-variant truncate max-w-[145px]">{d.name}</span>
             <span className="text-primary-fixed-dim">{(d.total/1000).toFixed(0)}M</span>
-=======
-/* ---- Department Cost Bars ---- */
-function DeptTable({ data }) {
-  const { formatRp } = window.HData;
-  // Tampilkan semua departemen, bukan hanya 6
-  const depts = (data.by_department || []);
-  if (!depts.length) return (
-    <div style={{ fontSize: 11, color: "var(--text-4)", padding: "8px 0" }}>Memuat data…</div>
-  );
-  const maxVal = depts[0]?.total || 1;
-  return (
-    <div className="dept-list">
-      {depts.map((d, i) => (
-        <div className="dept-row" key={i}>
-          <div className="dept-info">
-            <span className="dept-name">{d.name}</span>
-            <span className="dept-val mono">{formatRp(d.total)}</span>
->>>>>>> 07ebd3c8e34156caa6749f49894db559c333555e
           </div>
           <div className="h-1 bg-surface-container-highest rounded-full overflow-hidden">
             <div className="h-full rounded-full bg-gradient-to-r from-primary-container to-secondary-container"
