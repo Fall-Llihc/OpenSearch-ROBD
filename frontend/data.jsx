@@ -20,11 +20,11 @@ const CAT_CONFIG = {
 let DASHBOARD = {
   grand_total: 0,
   by_category: {
-    obat:       { total: 0, pct: 20 },
-    alat_medis: { total: 0, pct: 20 },
-    lab:        { total: 0, pct: 20 },
-    sdm:        { total: 0, pct: 20 },
-    utilitas:   { total: 0, pct: 20 },
+    obat:       { total: 0, pct: 0 },
+    alat_medis: { total: 0, pct: 0 },
+    lab:        { total: 0, pct: 0 },
+    sdm:        { total: 0, pct: 0 },
+    utilitas:   { total: 0, pct: 0 },
   },
   trend_monthly: Array.from({ length: 12 }, (_, i) => ({ periode: `Bln ${i+1}`, total: 0 })),
   by_department: [],

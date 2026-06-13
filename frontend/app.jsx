@@ -1,181 +1,190 @@
 /* ============================================================
-   CostPulse — App (Orchestration)
-   Terintegrasi penuh dengan FastAPI backend via HData.answerFor()
+   CostPulse App — Stitch "Lumina Analytics" Design
+   WebGL Aurora · Glassmorphism · Material Symbols
    ============================================================ */
-const CostSidebar = window.DashSidebar;
 const { Message, SearchIndicator } = window.ChatUI;
+const { AuroraShader }             = window;
+const Sidebar                      = window.DashSidebar;
 
 const WELCOME = {
-  id: "welcome",
-  role: "bot",
-  noAnim: true,
-  content: [
-    { type: "text", text: "Selamat datang di CostPulse — Sistem Analisis Biaya Operasional!", lead: true },
-    { type: "text", text: "Saya asisten berbasis RAG yang menganalisis data biaya operasional rumah sakit secara real-time. Setiap jawaban ditarik langsung dari indeks OpenSearch dan dirangkum oleh Groq LLM." },
-    { type: "checks", title: "Komponen biaya yang tersedia", items: [
-      { name: "Biaya Obat & Farmasi",    sub: "1.000 records · cost_obat" },
-      { name: "Biaya Alat Medis",        sub: "1.000 records · cost_alat_medis" },
-      { name: "Biaya Laboratorium",      sub: "1.000 records · cost_lab" },
-      { name: "Biaya SDM & Nakes",       sub: "1.000 records · cost_sdm" },
-      { name: "Biaya Utilitas & Overhead", sub: "2.520 records · cost_utilitas" },
-      { name: "Ringkasan Bulanan",       sub: "360 records · cost_monthly (3 tahun)" },
+  id:"welcome", role:"bot", noAnim:true,
+  content:[
+    { type:"text", lead:true,
+      text:"Selamat datang di CostPulse Analytics Intelligence." },
+    { type:"text",
+      text:"Saya analis berbasis RAG yang menganalisis biaya operasional rumah sakit secara real-time. Setiap jawaban ditarik langsung dari indeks OpenSearch dan dirangkum oleh Groq LLM." },
+    { type:"checks", title:"Komponen biaya yang tersedia", items:[
+      { name:"Biaya Obat & Farmasi",       sub:"1.000 records · cost_obat" },
+      { name:"Biaya Alat Medis",           sub:"1.000 records · cost_alat_medis" },
+      { name:"Biaya Laboratorium",         sub:"1.000 records · cost_lab" },
+      { name:"Biaya SDM & Nakes",          sub:"1.000 records · cost_sdm" },
+      { name:"Biaya Utilitas & Overhead",  sub:"2.520 records · cost_utilitas" },
+      { name:"Ringkasan Bulanan 3 Tahun",  sub:"360 records · cost_monthly" },
     ]},
-    { type: "text", text: "Ketik pertanyaan analitik atau pilih contoh di sidebar untuk memulai." },
+    { type:"text", text:"Ketik pertanyaan analitik di bawah atau pilih contoh di sidebar untuk memulai." },
   ],
 };
 
-const PLUSES = [
-  { left: "18%", size: 16, dur: 17, delay: 0 },
-  { left: "34%", size: 11, dur: 22, delay: 5 },
-  { left: "52%", size: 20, dur: 19, delay: 9 },
-  { left: "68%", size: 13, dur: 24, delay: 3 },
-  { left: "82%", size: 15, dur: 21, delay: 12 },
-];
+/* ── Top KPI bar — ditampilkan di header main ── */
+function TopKpiBar({ summary }) {
+  const cat = summary?.by_category || {};
+  const grand = cat.total || 0;
+  const { formatRp } = window.HData;
 
-function AuroraBg() {
-  const ref = React.useRef(null);
-  React.useEffect(() => {
-    let cleanup = null;
-    const mount = () => {
-      if (window.mountAurora && ref.current && !cleanup) {
-        cleanup = window.mountAurora(ref.current, {
-          colorStops: ["#D4896E", "#A8706A", "#53354A"],
-          amplitude: 0.9, blend: 0.5, speed: 0.45,
-        });
-      }
-    };
-    if (window.mountAurora) mount();
-    else window.addEventListener("aurora-ready", mount, { once: true });
-    return () => {
-      if (cleanup) cleanup();
-      window.removeEventListener("aurora-ready", mount);
-    };
-  }, []);
-  return <div ref={ref} className="aurora-container"></div>;
-}
+  const items = [
+    { label:"Total OpEx", val: grand>=1000000000 ? "Rp "+(grand/1000000000).toFixed(2)+" M" : formatRp(Math.round(grand/1000000)), icon:"account_balance_wallet", color:"text-primary-container" },
+    { label:"Biaya SDM",  val: formatRp(Math.round((cat.sdm?.value||0)/1000000)),   icon:"group",      color:"text-secondary" },
+    { label:"Biaya Obat", val: formatRp(Math.round((cat.obat?.value||0)/1000000)),  icon:"medication", color:"text-primary-fixed" },
+    { label:"Utilitas",   val: formatRp(Math.round((cat.utilitas?.value||0)/1000000)), icon:"bolt",   color:"text-error" },
+  ];
 
-function BgDecor() {
   return (
-    <div className="bg-deco" aria-hidden="true">
-      <AuroraBg />
-      <span className="aurora-veil"></span>
-      {PLUSES.map((p, i) => (
-        <span key={i} className="deco-plus"
-          style={{ left: p.left, bottom: "-30px", animationDuration: p.dur + "s", animationDelay: p.delay + "s" }}>
-          <Ico.Cross s={p.size} />
-        </span>
+    <div className="flex gap-3">
+      {items.map((item,i)=>(
+        <div key={i} className="glass-card border border-outline-variant/25 rounded-xl px-3 py-2 flex items-center gap-2.5 flex-shrink-0">
+          <span className={"material-symbols-outlined ms-sm "+item.color}>{item.icon}</span>
+          <div>
+            <div className="font-mono text-[9px] text-on-surface-variant uppercase">{item.label}</div>
+            <div className={"font-grotesk font-bold text-xs "+item.color+" tabular-nums"}>{item.val||"–"}</div>
+          </div>
+        </div>
       ))}
     </div>
   );
 }
 
 function App() {
-  const [messages, setMessages] = React.useState([WELCOME]);
-  const [input, setInput]       = React.useState("");
-  const [busy, setBusy]         = React.useState(false);
-  const [scan, setScan]         = React.useState([]);
+  const [messages,setMessages] = React.useState([WELCOME]);
+  const [input,setInput]       = React.useState("");
+  const [busy,setBusy]         = React.useState(false);
+  const [scan,setScan]         = React.useState([]);
+  const [summary,setSummary]   = React.useState(null);
   const threadRef = React.useRef(null);
   const taRef     = React.useRef(null);
 
-  const scrollDown = () => {
-    requestAnimationFrame(() => {
-      const el = threadRef.current;
-      if (el) el.scrollTop = el.scrollHeight;
-    });
-  };
-  React.useEffect(scrollDown, [messages, busy]);
+  React.useEffect(()=>{
+    function onReady(){ setSummary({...window.HData.DASHBOARD}); }
+    window.addEventListener("costpulse-data-ready",onReady);
+    return ()=>window.removeEventListener("costpulse-data-ready",onReady);
+  },[]);
 
-  async function send(text) {
-    const q = (text != null ? text : input).trim();
-    if (!q || busy) return;
+  React.useEffect(()=>{
+    if(threadRef.current) threadRef.current.scrollTop = threadRef.current.scrollHeight;
+  },[messages,busy]);
 
-    setMessages(m => [...m, { id: "u" + Date.now(), role: "user", content: q }]);
+  async function send(text){
+    const q=(text!=null?text:input).trim();
+    if(!q||busy) return;
+    setMessages(m=>[...m,{id:"u"+Date.now(),role:"user",content:q}]);
     setInput("");
-    if (taRef.current) taRef.current.style.height = "auto";
+    if(taRef.current){ taRef.current.style.height="auto"; }
     setScan(window.HData.scanIndicesFor(q));
     setBusy(true);
-
-    try {
+    try{
       const ans = await window.HData.answerFor(q);
-      setMessages(m => [...m, { id: "b" + Date.now(), role: "bot", content: ans.blocks }]);
-    } catch (e) {
-      setMessages(m => [...m, {
-        id: "b" + Date.now(), role: "bot",
-        content: [{ type: "text", text: "Terjadi kesalahan: " + e.message, lead: true }],
-      }]);
-    } finally {
-      setBusy(false);
-    }
+      setMessages(m=>[...m,{id:"b"+Date.now(),role:"bot",content:ans.blocks}]);
+    }catch(e){
+      setMessages(m=>[...m,{id:"b"+Date.now(),role:"bot",content:[{type:"text",lead:true,text:"Terjadi kesalahan: "+e.message}]}]);
+    }finally{ setBusy(false); }
   }
 
-  function reset() {
-    setMessages([WELCOME]);
-    setInput("");
-    setBusy(false);
-  }
-
-  function onKey(e) {
-    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); }
-  }
-
-  function onInput(e) {
+  function onKey(e){ if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send();} }
+  function onInput(e){
     setInput(e.target.value);
-    e.target.style.height = "auto";
-    e.target.style.height = Math.min(e.target.scrollHeight, 160) + "px";
+    e.target.style.height="auto";
+    e.target.style.height=Math.min(e.target.scrollHeight,160)+"px";
   }
+  const canSend = !busy && input.trim().length>0;
 
   return (
-    <div className="app">
-      <CostSidebar onPick={q => send(q)} />
-      <main className="main">
-        <BgDecor />
+    <div className="relative h-screen w-screen overflow-hidden">
+      {/* WebGL Aurora Background */}
+      <div className="absolute inset-0 z-0"><AuroraShader/></div>
+      {/* Veil overlay to darken aurora slightly */}
+      <div className="absolute inset-0 z-0" style={{background:"rgba(5,20,36,0.55)"}}/>
 
-        <header className="topbar">
-          <div className="topbar-titles">
-            <h1>Analisis Biaya Operasional</h1>
-            <div className="sub">
-              <span className="pill">RAG</span>
-              OpenSearch (retriever) + Groq LLM (generator)
-            </div>
-          </div>
-          <button className="btn-reset" onClick={reset}>
-            <Ico.Reset s={14} /> Reset
-          </button>
-        </header>
+      {/* App layout */}
+      <div className="relative z-10 flex h-full w-full">
+        <Sidebar onPick={q=>send(q)}/>
 
-        <div className="thread-wrap" ref={threadRef}>
-          <div className="thread">
-            {messages.map(m => <Message m={m} key={m.id} />)}
-            {busy && <SearchIndicator indices={scan} />}
-          </div>
-        </div>
+        {/* Main canvas */}
+        <main className="ml-[280px] flex-1 flex flex-col h-full overflow-hidden">
 
-        <div className="composer-wrap">
-          <div className="composer">
-            <div className="input-shell">
-              <textarea
-                ref={taRef} rows={1}
-                value={input} onChange={onInput} onKeyDown={onKey}
-                placeholder="Ketik pertanyaan tentang biaya operasional…"
-              ></textarea>
-              <div className="input-foot">
-                <span><span className="kbd">Enter</span> kirim · <span className="kbd">Shift+Enter</span> baris baru</span>
-                <span>{input.length > 0 ? input.length + " karakter" : "7 indeks · 6.890 records"}</span>
+          {/* Top bar */}
+          <header className="flex-shrink-0 px-8 pt-6 pb-4">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h2 className="font-grotesk font-bold text-2xl text-on-surface tracking-tight">Financial Insights Dashboard</h2>
+                <p className="text-on-surface-variant text-sm mt-0.5 font-mono">
+                  <span className="text-primary-container">RAG</span>
+                  <span className="mx-2 opacity-40">·</span>
+                  OpenSearch retriever + Groq LLM generator
+                </p>
+              </div>
+              <div className="flex items-center gap-3 flex-shrink-0">
+                <TopKpiBar summary={summary}/>
+                <button
+                  onClick={()=>setMessages([WELCOME])}
+                  className="glass-card border border-outline-variant/30 text-on-surface-variant hover:text-on-surface rounded-xl px-3 py-2 text-sm flex items-center gap-2 transition-all hover:border-primary-container/30">
+                  <span className="material-symbols-outlined ms-sm">refresh</span>
+                  Reset
+                </button>
               </div>
             </div>
-            <button className="btn-send" onClick={() => send()} disabled={busy || !input.trim()}>
-              {busy ? <Ico.Spinner s={15} /> : <Ico.Send s={15} />}
-              {busy ? "Menganalisis…" : "Kirim"}
-            </button>
+          </header>
+
+          {/* Chat thread */}
+          <div ref={threadRef} className="flex-1 overflow-y-auto px-8 pb-4">
+            <div className="max-w-[800px] mx-auto space-y-6">
+              {messages.map(m=><Message key={m.id} m={m}/>)}
+              {busy && <SearchIndicator indices={scan}/>}
+              <div style={{height:8}}/>
+            </div>
           </div>
-          <div className="disclaimer">
-            <Ico.Shield s={12} />
-            Jawaban dihasilkan AI dari data internal. Validasi dengan laporan keuangan resmi sebelum pengambilan keputusan.
+
+          {/* Composer — floating glass pill */}
+          <div className="flex-shrink-0 px-8 pb-6">
+            <div className="max-w-[800px] mx-auto">
+              <div className="glass-input rounded-2xl p-1 flex items-end gap-2">
+                <textarea
+                  ref={taRef} rows={1} value={input}
+                  onChange={onInput} onKeyDown={onKey}
+                  placeholder="Ketik pertanyaan tentang biaya operasional rumah sakit…"
+                  className="flex-1 bg-transparent text-on-surface placeholder-on-surface-variant text-sm leading-relaxed resize-none outline-none px-4 py-3"
+                  style={{minHeight:48,maxHeight:160}}
+                />
+                <button
+                  onClick={()=>send()} disabled={!canSend}
+                  className={"rounded-xl m-1 px-4 py-2.5 flex items-center gap-2 font-medium text-sm transition-all flex-shrink-0 "+(
+                    canSend
+                      ? "bg-gradient-to-r from-primary-container to-secondary-container text-on-primary btn-glow hover:opacity-90"
+                      : "bg-surface-container-high text-on-surface-variant opacity-50 cursor-not-allowed"
+                  )}>
+                  {busy
+                    ? <span className="material-symbols-outlined ms-sm spin">refresh</span>
+                    : <span className="material-symbols-outlined ms-sm">send</span>}
+                  {busy ? "Analisis…" : "Kirim"}
+                </button>
+              </div>
+              <div className="flex justify-between items-center mt-2 px-1">
+                <span className="font-mono text-[10px] text-on-surface-variant">
+                  <kbd className="glass-card border border-outline-variant/30 rounded px-1 py-0.5 text-[9px]">Enter</kbd> kirim &nbsp;·&nbsp;
+                  <kbd className="glass-card border border-outline-variant/30 rounded px-1 py-0.5 text-[9px]">Shift+Enter</kbd> baris baru
+                </span>
+                <span className="font-mono text-[10px] text-on-surface-variant">
+                  {input.length>0 ? input.length+" karakter" : "7 indeks · 6.890 records"}
+                </span>
+              </div>
+              <p className="font-mono text-[9px] text-on-surface-variant text-center mt-2 opacity-60 flex items-center justify-center gap-1">
+                <span className="material-symbols-outlined ms-xs">shield</span>
+                Jawaban dihasilkan AI dari data internal. Validasi dengan laporan keuangan resmi sebelum pengambilan keputusan.
+              </p>
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);

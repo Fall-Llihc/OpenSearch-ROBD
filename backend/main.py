@@ -71,7 +71,7 @@ COST_CATEGORIES = {
 # ── Models ─────────────────────────────────────────────────────────────────────
 class AskRequest(BaseModel):
     question: str
-    max_results: Optional[int] = 8
+    max_results: Optional[int] = 4
 
 class AskResponse(BaseModel):
     answer: str
@@ -128,7 +128,10 @@ def get_relevant_indices(question: str) -> list:
         "cost_utilitas":    ["utilitas","listrik","air","gas","internet","telekomunikasi",
                              "limbah","gedung","hvac","ac","overhead","pln","pdam"],
         "cost_monthly":     ["bulanan","per bulan","tren","trend","historis","anggaran",
-                             "realisasi","periode","total operasional","biaya operasional"],
+                             "realisasi","periode","total operasional","biaya operasional",
+                             "icu","rawat intensif","bedah","kardiologi","neurologi","radiologi",
+                             "farmasi","laboratorium klinik","pediatri","ortopedi","gizi",
+                             "departemen","dept","bagian","per departemen","tiap departemen"],
         "cost_departments": ["departemen","dept","bagian","instalasi","unit","divisi"],
     }
     selected = []
@@ -369,6 +372,68 @@ def build_agg_context(question: str) -> str:
         except Exception as e:
             print(f"Monthly agg err: {e}")
 
+    # ── Per departemen — selalu coba ambil jika ada keyword nama dept ────────
+    DEPT_KEYWORDS = {
+        "icu":              "ICU & Rawat Intensif",
+        "rawat intensif":   "ICU & Rawat Intensif",
+        "bedah":            "Bedah Umum",
+        "kardiologi":       "Kardiologi",
+        "neurologi":        "Neurologi",
+        "radiologi":        "Radiologi & Imaging",
+        "farmasi":          "Instalasi Farmasi",
+        "laboratorium":     "Unit Laboratorium Klinik",
+        "pediatri":         "Pediatri",
+        "ortopedi":         "Ortopedi",
+        "gizi":             "Instalasi Gizi",
+    }
+    matched_dept = None
+    for kw, dept_name in DEPT_KEYWORDS.items():
+        if kw in q:
+            matched_dept = dept_name
+            break
+
+    if matched_dept or any(k in q for k in ["departemen","per departemen","tiap departemen"]):
+        try:
+            body = {
+                "size": 0,
+                "aggs": {
+                    "per_dept": {
+                        "terms": {"field": "nama_departemen", "size": 10},
+                        "aggs": {
+                            "total":    {"sum": {"field": "total_biaya_operasional"}},
+                            "obat":     {"sum": {"field": "biaya_obat"}},
+                            "alat":     {"sum": {"field": "biaya_alat_medis"}},
+                            "lab":      {"sum": {"field": "biaya_lab"}},
+                            "sdm":      {"sum": {"field": "biaya_sdm"}},
+                            "utilitas": {"sum": {"field": "biaya_utilitas"}},
+                        }
+                    }
+                }
+            }
+            if matched_dept:
+                body["query"] = {"term": {"nama_departemen": matched_dept}}
+
+            r = client.search(index="cost_monthly", body=body)
+            buckets = r["aggregations"]["per_dept"]["buckets"]
+
+            if matched_dept and buckets:
+                b = buckets[0]
+                total = int(b["total"]["value"])
+                parts.append(f"\n=== BIAYA OPERASIONAL: {matched_dept.upper()} ===")
+                parts.append(f"Total biaya operasional (semua periode): Rp {total:,}")
+                parts.append(f"  - Obat:     Rp {int(b['obat']['value']):,} ({int(b['obat']['value'])/total*100:.1f}%)")
+                parts.append(f"  - Alat:     Rp {int(b['alat']['value']):,} ({int(b['alat']['value'])/total*100:.1f}%)")
+                parts.append(f"  - Lab:      Rp {int(b['lab']['value']):,} ({int(b['lab']['value'])/total*100:.1f}%)")
+                parts.append(f"  - SDM:      Rp {int(b['sdm']['value']):,} ({int(b['sdm']['value'])/total*100:.1f}%)")
+                parts.append(f"  - Utilitas: Rp {int(b['utilitas']['value']):,} ({int(b['utilitas']['value'])/total*100:.1f}%)")
+            elif not matched_dept:
+                parts.append(f"\n=== BIAYA OPERASIONAL PER DEPARTEMEN ===")
+                for b in sorted(buckets, key=lambda x: x["total"]["value"], reverse=True):
+                    total = int(b["total"]["value"])
+                    parts.append(f"  - {b['key']}: Rp {total:,}")
+        except Exception as e:
+            print(f"Dept agg err: {e}")
+
     return "\n".join(parts) if parts else ""
 
 
@@ -406,7 +471,7 @@ def search_opensearch(question: str, size: int = 8) -> list:
             continue
 
     results.sort(key=lambda x: x["score"], reverse=True)
-    return results[:size * 3]
+    return results[:size]
 
 
 # ── Build context ──────────────────────────────────────────────────────────────
@@ -415,54 +480,43 @@ def build_context(question: str, results: list) -> str:
 
     agg = build_agg_context(question)
     if agg:
+        # Potong aggregation jika terlalu panjang (max ~2000 karakter)
+        if len(agg) > 2000:
+            agg = agg[:2000] + "\n...(dipotong untuk efisiensi)"
         parts.append("=== STATISTIK BIAYA DARI OPENSEARCH ===")
         parts.append(agg)
         parts.append("")
 
     if results:
         parts.append("=== SAMPLE DOKUMEN TERKAIT ===")
-        for r in results[:8]:
+        for r in results[:3]:
             idx = r["index"].replace("cost_", "").upper()
-            parts.append(f"[{idx}] {json.dumps(r['data'], ensure_ascii=False)}")
+            # Hanya tampilkan field kunci, bukan seluruh dokumen
+            d = r["data"]
+            keys = ["nama_obat","nama_alat","nama_pemeriksaan","jabatan","jenis_utilitas","nama_departemen","periode","total_biaya_operasional","biaya_pemakaian_bulan","biaya_depresiasi_tahunan","total_kompensasi_bulanan","total_biaya","gaji_pokok"]
+            slim = {k: d[k] for k in keys if k in d}
+            parts.append(f"[{idx}] {json.dumps(slim, ensure_ascii=False)}")
 
     return "\n".join(parts) if parts else "Tidak ada data relevan ditemukan."
 
 
 # ── Ask Groq ───────────────────────────────────────────────────────────────────
 def ask_groq(question: str, context: str) -> str:
-    system = """Kamu adalah analis biaya operasional untuk Rumah Sakit Sehat Selalu.
-Tugasmu adalah menjawab pertanyaan tentang biaya operasional rumah sakit berdasarkan data dari database.
+    system = """Kamu adalah analis keuangan senior Rumah Sakit Sehat Selalu. Jawab pertanyaan biaya operasional secara langsung, akurat, dan profesional.
 
-KATEGORI BIAYA YANG TERSEDIA:
-- Biaya Obat & Farmasi: pengadaan, pemakaian, stok obat
-- Biaya Alat Medis: depresiasi, servis, operasional peralatan
-- Biaya Laboratorium: reagent, pemeriksaan, pendapatan lab
-- Biaya SDM: gaji, tunjangan, insentif, BPJS, lembur
-- Biaya Utilitas: listrik, air, gas medis, limbah, gedung
-
-PENTING — ANALISIS BIAYA:
-- Bagian "STATISTIK BIAYA" berisi angka AKURAT dari seluruh database. Gunakan untuk angka total/perbandingan.
-- Jika ada perbandingan antar kategori, tunjukkan persentasenya.
-- Jika ada tren, jelaskan kenaikan/penurunan biaya.
-- Berikan insight dan rekomendasi pengendalian biaya jika relevan.
-
-PENTING — MATEMATIKA:
-- Selalu tunjukkan perhitungan jika menjumlahkan beberapa kategori.
-- Persentase dihitung dari total keseluruhan biaya operasional.
-- Jangan mencampur kategori yang berbeda tanpa penjelasan.
-
-ATURAN FORMAT:
-- Gunakan teks biasa tanpa markdown
-- Gunakan tanda hubung (-) untuk daftar
-- Jangan gunakan simbol **, *, #, >, ---, atau backtick
-- Pisahkan bagian dengan baris kosong saja
-- Tulis angka dengan format: 1.000 (ribuan) atau Rp 1.234.567 (uang)
-- Jika data tidak cukup, katakan dengan jelas
-- Selalu akhiri dengan catatan singkat tentang implikasi biaya jika relevan"""
+INSTRUKSI:
+- Gunakan HANYA angka dari bagian "STATISTIK BIAYA" — jangan hitung ulang dari sample dokumen
+- Jawab langsung ke poin, tanpa basa-basi atau pengulangan
+- Format angka: Rp 1.234.567 atau Rp 1,23 M (miliar)
+- Jika ada breakdown per komponen, tampilkan dalam format: Nama: Rp X (Y%)
+- Maksimal 150 kata — ringkas dan padat
+- Jangan gunakan markdown (**, *, #) — gunakan teks biasa
+- Jangan ulangi pertanyaan user
+- Jangan tambahkan catatan "perlu dicari lebih lanjut" jika data sudah cukup"""
 
     chat = get_groq_client().chat.completions.create(
         model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
-        max_tokens=1500,
+        max_tokens=800,
         temperature=0.1,
         messages=[
             {"role": "system", "content": system},
