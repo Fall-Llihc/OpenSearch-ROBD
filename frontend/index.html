@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>CostPulse — Analytics Intelligence</title>
 
-<!-- Stitch Design Fonts -->
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
-<!-- Tailwind CDN with Stitch config -->
+<!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <script>
 tailwind.config = {
@@ -61,55 +61,138 @@ tailwind.config = {
 </script>
 
 <style>
-  /* ── Stitch glass system ── */
+  /* ── Glass system ── */
   .glass-panel {
-    background: rgba(12, 20, 40, 0.55);
+    background: rgba(5, 12, 30, 0.60);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
   }
   .glass-card {
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,255,255,0.045);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: inset 1px 1px 0 rgba(255,255,255,0.09);
+    box-shadow: inset 1px 1px 0 rgba(255,255,255,0.09), inset -1px -1px 0 rgba(0,0,0,0.15);
+  }
+  .glass-card-hover:hover {
+    background: rgba(255,255,255,0.07);
+    box-shadow: inset 1px 1px 0 rgba(255,255,255,0.12), inset -1px -1px 0 rgba(0,0,0,0.15);
   }
   .glass-input {
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.055);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    box-shadow: inset 1px 1px 0 rgba(255,255,255,0.08), 0 0 0 1px rgba(132,147,150,0.25);
+    box-shadow: inset 1px 1px 0 rgba(255,255,255,0.08), 0 0 0 1px rgba(132,147,150,0.22);
   }
+
   /* ── Material Symbols ── */
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
-    font-size: 20px; line-height: 1;
+    font-size: 20px; line-height: 1; display: inline-block;
   }
-  .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1; }
-  .ms-sm { font-size: 16px !important; }
-  .ms-xs { font-size: 14px !important; }
+  .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .ms-xl  { font-size: 28px !important; }
+  .ms-lg  { font-size: 22px !important; }
+  .ms-sm  { font-size: 16px !important; }
+  .ms-xs  { font-size: 13px !important; }
+
   /* ── Animations ── */
-  @keyframes fadeUp   { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
-  @keyframes spin     { to   { transform:rotate(360deg); } }
-  @keyframes pulse-dot{ 0%,100%{opacity:.3;transform:scale(.8)} 50%{opacity:1;transform:scale(1)} }
-  .fade-up  { animation: fadeUp .28s ease; }
-  .spin     { animation: spin .85s linear infinite; }
+  @keyframes fadeUp    { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+  @keyframes fadeIn    { from { opacity:0; } to { opacity:1; } }
+  @keyframes spin      { to   { transform:rotate(360deg); } }
+  @keyframes pulse-dot { 0%,100%{opacity:.25;transform:scale(.75)} 50%{opacity:1;transform:scale(1)} }
+  @keyframes shimmer   { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+  @keyframes growBar   { from{width:0} to{width:var(--bar-w)} }
+
+  .fade-up   { animation: fadeUp .32s cubic-bezier(.22,.68,0,1.2); }
+  .fade-in   { animation: fadeIn .24s ease; }
+  .spin      { animation: spin .85s linear infinite; }
+  .grow-bar  { animation: growBar .7s cubic-bezier(.22,.68,0,1) forwards; }
+
   /* scrollbar */
-  ::-webkit-scrollbar { width:4px; }
-  ::-webkit-scrollbar-track { background:transparent; }
-  ::-webkit-scrollbar-thumb { background:#273647; border-radius:4px; }
-  /* chat bubble shapes — Stitch spec */
-  .bubble-user { border-radius: 1rem 1rem 0.25rem 1rem; }
-  .bubble-bot  { border-radius: 1rem 1rem 1rem 0.25rem; }
-  /* glow on send */
-  .btn-glow { box-shadow: 0 0 18px rgba(0,229,255,.35); }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #1c2b3c; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #273647; }
+
+  /* chat bubbles */
+  .bubble-user { border-radius: 1.25rem 1.25rem 0.3rem 1.25rem; }
+  .bubble-bot  { border-radius: 1.25rem 1.25rem 1.25rem 0.3rem; }
+
+  /* send glow */
+  .btn-glow { box-shadow: 0 0 20px rgba(0,229,255,.4), 0 4px 12px rgba(0,229,255,.15); }
+  .btn-glow:hover { box-shadow: 0 0 28px rgba(0,229,255,.55), 0 4px 16px rgba(0,229,255,.2); }
+
   /* typing dots */
-  .dot-typing i { display:inline-block; width:5px; height:5px; border-radius:50%; background:#00daf3; margin:0 2px; animation: pulse-dot 1.1s ease infinite; }
-  .dot-typing i:nth-child(2){ animation-delay:.2s; }
-  .dot-typing i:nth-child(3){ animation-delay:.4s; }
+  .dot-typing i { display:inline-block; width:5px; height:5px; border-radius:50%; background:#00daf3; margin:0 2px; animation: pulse-dot 1.2s ease infinite; }
+  .dot-typing i:nth-child(2){ animation-delay:.18s; }
+  .dot-typing i:nth-child(3){ animation-delay:.36s; }
+
+  /* tab active */
+  .tab-active {
+    background: rgba(0,229,255,0.10);
+    color: #00daf3;
+    border-bottom: 2px solid #00daf3;
+  }
+  .tab-inactive {
+    color: #bac9cc;
+    border-bottom: 2px solid transparent;
+  }
+  .tab-inactive:hover { color: #d4e4fa; background: rgba(255,255,255,0.04); }
+
+  /* chart tooltip */
+  .chart-tooltip {
+    position: absolute;
+    background: rgba(7,20,40,0.92);
+    border: 1px solid rgba(0,229,255,0.25);
+    border-radius: 8px;
+    padding: 8px 12px;
+    pointer-events: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #d4e4fa;
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    white-space: nowrap;
+  }
+
+  /* dashboard grid */
+  .dash-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .dash-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  /* skeleton shimmer */
+  .skeleton {
+    background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.07) 50%, rgba(255,255,255,0.03) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 6px;
+  }
+
+  /* chart bar glow */
+  .bar-glow-cyan  { box-shadow: 0 0 10px rgba(0,218,243,0.45); }
+  .bar-glow-purple{ box-shadow: 0 0 10px rgba(216,185,255,0.35); }
+
+  /* table */
+  .data-table th { font-family: 'JetBrains Mono',monospace; font-size:10px; font-weight:500; text-transform:uppercase; letter-spacing:.08em; color:#849396; padding: 8px 12px; border-bottom: 1px solid rgba(59,73,76,0.5); }
+  .data-table td { font-size:12px; color:#d4e4fa; padding: 8px 12px; border-bottom: 1px solid rgba(59,73,76,0.2); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: rgba(255,255,255,0.025); }
+
+  /* number highlight in chat */
+  .num-highlight { color: #00daf3; font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; }
+
+  /* sidebar active nav */
+  .nav-active { background: rgba(0,229,255,0.1); color: #00daf3; }
 </style>
 </head>
-<body class="bg-background text-on-background font-inter overflow-hidden h-screen w-screen relative">
-
+<body class="bg-background text-on-background font-inter overflow-hidden h-screen w-screen">
 <div id="root"></div>
 
 <!-- API config -->
@@ -122,10 +205,11 @@ tailwind.config = {
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
 
-<!-- WebGL Aurora shader from Stitch -->
+<!-- Chart.js for visualizations -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<!-- Modules -->
 <script type="text/babel" src="shader.jsx"></script>
-<!-- JSX modules -->
-<script type="text/babel" src="icons.jsx"></script>
 <script type="text/babel" src="data.jsx"></script>
 <script type="text/babel" src="dashboard.jsx"></script>
 <script type="text/babel" src="chat.jsx"></script>
